@@ -1,0 +1,82 @@
+[
+  {
+    "id": "2025-11-28T00:41:41.952823+00:00_CNG",
+    "timestamp": "2025-11-28T00:41:41.952823+00:00",
+    "customer_id": "CNG",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010WHTMM2252",
+        "description": "ABS 0.040 48x96 Black Haircell",
+        "quantity": 10.0,
+        "weight_per_unit": 12.0,
+        "base_cost_per_unit": 17.88,
+        "sell_price_per_unit": 55.0,
+        "extended_sell_price": 550.0,
+        "total_column": 37
+      }
+    ],
+    "quote_total": 550.0
+  },
+  {
+    "id": "2025-11-28T00:41:44.755913+00:00_CNG",
+    "timestamp": "2025-11-28T00:41:44.755913+00:00",
+    "customer_id": "CNG",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010WHTMM2252",
+        "description": "ABS 0.040 48x96 Black Haircell",
+        "quantity": 10.0,
+        "weight_per_unit": 12.0,
+        "base_cost_per_unit": 17.88,
+        "sell_price_per_unit": 55.0,
+        "extended_sell_price": 550.0,
+        "total_column": 37
+      }
+    ],
+    "quote_total": 550.0
+  },
+  {
+    "id": "2025-11-28T02:02:25.658551+00:00_CNG",
+    "timestamp": "2025-11-28T02:02:25.658551+00:00",
+    "customer_id": "CNG",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010WHTMM2252",
+        "description": "ABS 0.040 48x96 Black Haircell",
+        "quantity": 5.0,
+        "weight_per_unit": 12.0,
+        "base_cost_per_unit": 17.88,
+        "sell_price_per_unit": 110.0,
+        "extended_sell_price": 550.0,
+        "total_column": 37
+      }
+    ],
+    "quote_total": 550.0
+  },
+  {
+    "id": "2025-11-28T02:10:24.258553+00:00_CNG",
+    "timestamp": "2025-11-28T02:10:24.258553+00:00",
+    "customer_id": "CNG",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010WHTMM2252",
+        "description": "ABS 0.040 48x96 Black Haircell",
+        "quantity": 5.0,
+        "weight_per_unit": 12.0,
+        "base_cost_per_unit": 17.88,
+        "sell_price_per_unit": 110.0,
+        "extended_sell_price": 550.0,
+        "total_column": 37
+      }
+    ],
+    "quote_total": 550.0
+  }
+]

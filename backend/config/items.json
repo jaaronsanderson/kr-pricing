@@ -1,0 +1,22 @@
+[
+  {
+    "sku": "VN010WHTMM2252",
+    "description": "ABS 0.040 48x96 Black Haircell",
+    "material": "Styrene",
+    "material_code": "ST",
+    "color": "Black",
+    "surface": "Gloss/Matte",
+    "weight_per_unit": 12.0,
+    "width": 48.0
+  },
+  {
+    "sku": "VN020WHTMM2552",
+    "description": "Vinyl 0.060 48x96 White",
+    "material": "Vinyl",
+    "material_code": "VN",
+    "color": "White",
+    "surface": "Gloss/Gloss",
+    "weight_per_unit": 15.0,
+    "width": 48.0
+  }
+]

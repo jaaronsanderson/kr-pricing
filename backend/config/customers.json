@@ -1,0 +1,14 @@
+{
+  "CNG": {
+    "name": "CNG",
+    "zip": "77001",
+    "column_break": "VN10ST20AP15",
+    "freight_column_offset": 0
+  },
+  "MEDGEN": {
+    "name": "Medegen Medical",
+    "zip": "38116",
+    "column_break": "VN8ST18AP12",
+    "freight_column_offset": -4
+  }
+}
