@@ -1,17 +1,21 @@
-from fastapi import FastAPI, HTTPException
+from typing import List, Dict, Any
+
+from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
+from auth import get_current_user, CurrentUser
 from pricing.models import QuoteRequest, QuoteResponse
 from pricing.settings_loader import load_settings
 from pricing.core import calculate_quote
 from pricing.quote_log import (
     append_quote_record,
-    list_quote_records,
-    get_quote_record,
+    load_quote_summaries,
+    load_quote_by_id,
 )
 
-app = FastAPI()
+app = FastAPI(title="KR Pricing Backend", version="1.0.0")
 
+# CORS so the React app can call us from localhost:5173
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
@@ -25,6 +29,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Load all JSON-backed settings once on startup
+# (items, customers, base_costs, weight_breaks, column_multipliers, etc.)
 SETTINGS = load_settings()
 
 
@@ -33,8 +39,25 @@ def root():
     return {"status": "K&R Pricing API running"}
 
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
+# -------------------------------------------------------------------
+# Data endpoints (protected by Microsoft login)
+# -------------------------------------------------------------------
+
+
 @app.get("/customers")
-def list_customers():
+def list_customers(user: CurrentUser = Depends(get_current_user)):
+    """
+    Return a simple list of customers:
+    [
+      { "id": "CNG", "name": "CNG" },
+      ...
+    ]
+    """
     customers = SETTINGS["customers"]
     return [
         {
@@ -46,7 +69,14 @@ def list_customers():
 
 
 @app.get("/items")
-def list_items():
+def list_items(user: CurrentUser = Depends(get_current_user)):
+    """
+    Return a simple list of items:
+    [
+      { "sku": "VN10ST20AP15", "description": "..." },
+      ...
+    ]
+    """
     items = SETTINGS["items"]
     return [
         {
@@ -57,45 +87,61 @@ def list_items():
     ]
 
 
-@app.post("/quote", response_model=QuoteResponse)
-def create_quote(req: QuoteRequest):
-    quote = calculate_quote(req, SETTINGS)
+# -------------------------------------------------------------------
+# Quote endpoints (protected)
+# -------------------------------------------------------------------
 
-    # Pydantic v2: use model_dump instead of dict (avoids deprecation warnings)
+
+@app.post("/quote", response_model=QuoteResponse)
+def create_quote(
+    req: QuoteRequest,
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Calculate a quote using the core pricing engine and log it.
+    Only available to authenticated users.
+    """
+    try:
+        quote = calculate_quote(req, SETTINGS)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Failed to calculate quote: {exc}",
+        ) from exc
+
+    # Pydantic v2: use model_dump for clean dict
     record_dict = quote.model_dump()
+
+    # Store who requested the quote (from Microsoft identity) if available
+    requested_by = user.preferred_username or user.name
+    if requested_by:
+        record_dict.setdefault("requested_by", requested_by)
+
     append_quote_record(record_dict)
 
     return quote
 
 
 @app.get("/quotes")
-def list_quotes():
+def list_quotes(user: CurrentUser = Depends(get_current_user)) -> List[Dict[str, Any]]:
     """
-    Return a summarized list of all quotes that have been logged.
+    Return a summarized list of all quotes for the history panel.
+    Shape is whatever pricing.quote_log.load_quote_summaries() returns,
+    typically:
+      { id, customer_id, include_freight, quote_total, num_lines, created_at, ... }
     """
-    records = list_quote_records()
-    summaries = []
-    for rec in records:
-        lines = rec.get("lines") or []
-        summaries.append(
-            {
-                "id": rec.get("id"),
-                "customer_id": rec.get("customer_id"),
-                "include_freight": rec.get("include_freight"),
-                "quote_total": rec.get("quote_total"),
-                "created_at": rec.get("created_at"),
-                "num_lines": len(lines),
-            }
-        )
-    return summaries
+    return load_quote_summaries()
 
 
 @app.get("/quotes/{quote_id}")
-def get_quote(quote_id: int):
+def get_quote_detail(
+    quote_id: int,
+    user: CurrentUser = Depends(get_current_user),
+) -> Dict[str, Any]:
     """
     Return the full stored quote (as logged), by ID.
     """
-    rec = get_quote_record(quote_id)
+    rec = load_quote_by_id(quote_id)
     if not rec:
         raise HTTPException(status_code=404, detail="Quote not found")
     return rec

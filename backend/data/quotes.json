@@ -78,5 +78,118 @@
       }
     ],
     "quote_total": 550.0
+  },
+  {
+    "customer_id": "CNG",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010WHTMM2252",
+        "description": "ABS 0.040 48x96 Black Haircell",
+        "quantity": 1000.0,
+        "weight_per_unit": 12.0,
+        "base_cost_per_unit": 17.88,
+        "sell_price_per_unit": 19.668,
+        "extended_sell_price": 19668.0,
+        "total_column": 69
+      }
+    ],
+    "quote_total": 19668.0,
+    "id": 1,
+    "created_at": "2025-11-28T20:01:23Z"
+  },
+  {
+    "customer_id": "CNG",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010WHTMM2252",
+        "description": "ABS 0.040 48x96 Black Haircell",
+        "quantity": 1100.0,
+        "weight_per_unit": 12.0,
+        "base_cost_per_unit": 17.88,
+        "sell_price_per_unit": 19.668,
+        "extended_sell_price": 21634.8,
+        "total_column": 69
+      }
+    ],
+    "quote_total": 21634.8,
+    "id": 2,
+    "created_at": "2025-11-28T20:09:50Z"
+  },
+  {
+    "customer_id": "CNG",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010WHTMM2252",
+        "description": "ABS 0.040 48x96 Black Haircell",
+        "quantity": 1100.0,
+        "weight_per_unit": 12.0,
+        "base_cost_per_unit": 17.88,
+        "sell_price_per_unit": 19.668,
+        "extended_sell_price": 21634.8,
+        "total_column": 69
+      },
+      {
+        "type": "stock",
+        "sku": "VN010WHTMM2252",
+        "description": "ABS 0.040 48x96 Black Haircell",
+        "quantity": 200.0,
+        "weight_per_unit": 12.0,
+        "base_cost_per_unit": 17.88,
+        "sell_price_per_unit": 20.3832,
+        "extended_sell_price": 4076.64,
+        "total_column": 61
+      }
+    ],
+    "quote_total": 25711.44,
+    "id": 3,
+    "created_at": "2025-11-28T20:10:32Z"
+  },
+  {
+    "customer_id": "MEDGEN",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010WHTMM2252",
+        "description": "ABS 0.040 48x96 Black Haircell",
+        "quantity": 100.0,
+        "weight_per_unit": 12.0,
+        "base_cost_per_unit": 17.88,
+        "sell_price_per_unit": 21.8136,
+        "extended_sell_price": 2181.36,
+        "total_column": 53
+      }
+    ],
+    "quote_total": 2181.36,
+    "id": 4,
+    "created_at": "2025-11-28T21:06:00Z"
+  },
+  {
+    "customer_id": "CNG",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": "fdghfd",
+        "quantity": 1000.0,
+        "weight_per_unit": 1000.0,
+        "base_cost_per_unit": 1000.0,
+        "sell_price_per_unit": 1440.0,
+        "extended_sell_price": 1440000.0,
+        "total_column": 32
+      }
+    ],
+    "quote_total": 1440000.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 5,
+    "created_at": "2025-11-28T22:57:22Z",
+    "num_lines": 1
   }
 ]
