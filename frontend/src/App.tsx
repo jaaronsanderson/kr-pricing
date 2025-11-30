@@ -8,12 +8,22 @@ import type {
   Item,
   StockLine,
   CustomLine,
+  AdHocLine,
   QuoteLineInput,
   QuoteResponse,
   QuoteSummary,
   QuoteRecord,
   QuoteRequest,
   BackendLineItemRequest,
+} from "./types";
+
+import {
+  MATERIALS,
+  VINYL_COLORS,
+  STYRENE_COLORS,
+  VINYL_SURFACES,
+  STYRENE_SURFACES,
+  STANDARD_SURFACES,
 } from "./types";
 
 import {
@@ -61,6 +71,30 @@ function App() {
     return "-";
   };
 
+  // ---------------- Get access token ----------------
+  const getAccessToken = async (): Promise<string | undefined> => {
+    if (!account) return undefined;
+    
+    try {
+      const response = await msalInstance.acquireTokenSilent({
+        scopes: ["User.Read"],
+        account: account,
+      });
+      return response.accessToken;
+    } catch (error) {
+      console.warn("Silent token acquisition failed, trying popup:", error);
+      try {
+        const response = await msalInstance.acquireTokenPopup({
+          scopes: ["User.Read"],
+        });
+        return response.accessToken;
+      } catch (popupError) {
+        console.error("Token acquisition failed:", popupError);
+        return undefined;
+      }
+    }
+  };
+
   // ---------------- Auth: init existing account ----------------
 
   useEffect(() => {
@@ -83,7 +117,7 @@ function App() {
       if (resp.account) {
         msalInstance.setActiveAccount(resp.account);
         setAccount(resp.account);
-        setError(null); // clear any 401 noise after login
+        setError(null);
       }
     } catch (e: any) {
       console.error("Login error:", e);
@@ -114,7 +148,6 @@ function App() {
 
   useEffect(() => {
     if (!account) {
-      // Not signed in yet; don't hit the backend
       return;
     }
 
@@ -122,9 +155,10 @@ function App() {
       setLoadingInit(true);
       setError(null);
       try {
+        const token = await getAccessToken();
         const [customerData, itemData] = await Promise.all([
-          fetchCustomers(),
-          fetchItems(),
+          fetchCustomers(token),
+          fetchItems(token),
         ]);
         setCustomers(customerData ?? []);
         setItems(itemData ?? []);
@@ -151,7 +185,8 @@ function App() {
     setLoadingHistory(true);
     setError(null);
     try {
-      const data = await fetchQuotesHistory();
+      const token = await getAccessToken();
+      const data = await fetchQuotesHistory(token);
       setQuotesHistory(data ?? []);
     } catch (err: any) {
       console.error("History load error:", err);
@@ -171,7 +206,8 @@ function App() {
     setSelectedQuote(null);
     setError(null);
     try {
-      const data = await fetchQuoteDetail(id);
+      const token = await getAccessToken();
+      const data = await fetchQuoteDetail(id, token);
       setSelectedQuote(data);
     } catch (err: any) {
       console.error("Quote detail error:", err);
@@ -199,6 +235,21 @@ function App() {
   function addCustomLine() {
     const line: CustomLine = {
       kind: "custom",
+      material: "Vinyl",
+      color: "White",
+      surface: "Gloss/Gloss",
+      gauge: 10,
+      width: 48,
+      length: 96,
+      sheets: 100,
+      description: "",
+    };
+    setLines((prev) => [...prev, line]);
+  }
+
+  function addAdHocLine() {
+    const line: AdHocLine = {
+      kind: "ad_hoc",
       description: "",
       weightPerUnit: 1,
       landedCostPerUnit: 0,
@@ -242,6 +293,8 @@ function App() {
     setShowRawQuoteJson(false);
 
     try {
+      const token = await getAccessToken();
+      
       const backendLines: BackendLineItemRequest[] = lines.map((line) => {
         if (line.kind === "stock") {
           return {
@@ -249,7 +302,21 @@ function App() {
             quantity: Number(line.quantity) || 0,
             sku: line.itemSku,
           };
+        } else if (line.kind === "custom") {
+          return {
+            type: "custom",
+            quantity: Number(line.sheets) || 0,
+            material: line.material,
+            color: line.color,
+            surface: line.surface,
+            gauge: Number(line.gauge) || 0,
+            width: Number(line.width) || 0,
+            length: Number(line.length) || 0,
+            sheets: Number(line.sheets) || 0,
+            description: line.description,
+          };
         } else {
+          // ad_hoc
           return {
             type: "ad_hoc",
             quantity: Number(line.quantity) || 0,
@@ -266,10 +333,9 @@ function App() {
         lines: backendLines,
       };
 
-      const data = await createQuote(payload);
+      const data = await createQuote(payload, token);
       setQuote(data);
 
-      // Refresh history (best-effort)
       loadQuotesHistoryHandler().catch((err) =>
         console.warn("History refresh failed:", err)
       );
@@ -285,6 +351,18 @@ function App() {
 
   // ---------------- Render helpers ----------------
 
+  function getColorOptions(material: string): readonly string[] {
+    if (material === "Vinyl") return VINYL_COLORS;
+    if (material === "Styrene") return STYRENE_COLORS;
+    return ["White", "Clear"];
+  }
+
+  function getSurfaceOptions(material: string): readonly string[] {
+    if (material === "Vinyl") return VINYL_SURFACES;
+    if (material === "Styrene") return STYRENE_SURFACES;
+    return STANDARD_SURFACES;
+  }
+
   function renderLine(line: QuoteLineInput, idx: number) {
     if (line.kind === "stock") {
       return (
@@ -295,6 +373,7 @@ function App() {
             padding: "1rem",
             border: "1px solid #ccc",
             borderRadius: "4px",
+            background: "#f9f9f9",
           }}
         >
           <h3>Stock Line #{idx + 1}</h3>
@@ -341,18 +420,185 @@ function App() {
       );
     }
 
-    // custom line
+    if (line.kind === "custom") {
+      return (
+        <div
+          key={idx}
+          style={{
+            marginTop: "1rem",
+            padding: "1rem",
+            border: "1px solid #4CAF50",
+            borderRadius: "4px",
+            background: "#f1f8f4",
+          }}
+        >
+          <h3>Custom Line #{idx + 1}</h3>
+          
+          <div style={{ marginBottom: "0.5rem" }}>
+            <label>Material: </label>
+            <select
+              value={line.material}
+              onChange={(e) => {
+                const newMaterial = e.target.value;
+                const colors = getColorOptions(newMaterial);
+                const surfaces = getSurfaceOptions(newMaterial);
+                updateLine(idx, {
+                  material: newMaterial,
+                  color: colors[0] as string,
+                  surface: surfaces[0] as string,
+                } as QuoteLineInput);
+              }}
+              style={{ width: "150px" }}
+            >
+              {MATERIALS.map((m) => (
+                <option key={m} value={m}>
+                  {m}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div style={{ marginBottom: "0.5rem" }}>
+            <label>Color: </label>
+            <select
+              value={line.color}
+              onChange={(e) =>
+                updateLine(idx, {
+                  color: e.target.value,
+                } as QuoteLineInput)
+              }
+              style={{ width: "150px" }}
+            >
+              {getColorOptions(line.material).map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div style={{ marginBottom: "0.5rem" }}>
+            <label>Surface: </label>
+            <select
+              value={line.surface}
+              onChange={(e) =>
+                updateLine(idx, {
+                  surface: e.target.value,
+                } as QuoteLineInput)
+              }
+              style={{ width: "150px" }}
+            >
+              {getSurfaceOptions(line.material).map((s) => (
+                <option key={s} value={s}>
+                  {s}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div style={{ marginBottom: "0.5rem" }}>
+            <label>Gauge (mils): </label>
+            <input
+              type="number"
+              step={1}
+              min={1}
+              value={line.gauge}
+              onChange={(e) =>
+                updateLine(idx, {
+                  gauge: Number(e.target.value) || 0,
+                } as QuoteLineInput)
+              }
+              style={{ width: "80px" }}
+            />
+          </div>
+
+          <div style={{ marginBottom: "0.5rem" }}>
+            <label>Width (inches): </label>
+            <input
+              type="number"
+              step={0.1}
+              min={0}
+              value={line.width}
+              onChange={(e) =>
+                updateLine(idx, {
+                  width: Number(e.target.value) || 0,
+                } as QuoteLineInput)
+              }
+              style={{ width: "80px" }}
+            />
+            {" × "}
+            <label>Length (inches): </label>
+            <input
+              type="number"
+              step={0.1}
+              min={0}
+              value={line.length}
+              onChange={(e) =>
+                updateLine(idx, {
+                  length: Number(e.target.value) || 0,
+                } as QuoteLineInput)
+              }
+              style={{ width: "80px" }}
+            />
+          </div>
+
+          <div style={{ marginBottom: "0.5rem" }}>
+            <label>Number of Sheets: </label>
+            <input
+              type="number"
+              step={1}
+              min={1}
+              value={line.sheets}
+              onChange={(e) =>
+                updateLine(idx, {
+                  sheets: Number(e.target.value) || 0,
+                } as QuoteLineInput)
+              }
+              style={{ width: "100px" }}
+            />
+          </div>
+
+          <div style={{ marginBottom: "0.5rem" }}>
+            <label>Description (optional): </label>
+            <input
+              style={{ width: "260px" }}
+              placeholder="Custom description"
+              value={line.description || ""}
+              onChange={(e) =>
+                updateLine(idx, {
+                  description: e.target.value,
+                } as QuoteLineInput)
+              }
+            />
+          </div>
+
+          <div style={{ fontSize: "0.85rem", color: "#666", marginTop: "0.5rem" }}>
+            <em>Backend will calculate weight and apply 2,000 lb minimum run</em>
+          </div>
+
+          <button
+            onClick={() => removeLine(idx)}
+            style={{ marginTop: "0.5rem" }}
+          >
+            Remove Line
+          </button>
+        </div>
+      );
+    }
+
+    // ad_hoc line
     return (
       <div
         key={idx}
         style={{
           marginTop: "1rem",
           padding: "1rem",
-          border: "1px solid #ccc",
+          border: "1px solid #FF9800",
           borderRadius: "4px",
+          background: "#fff8e1",
         }}
       >
-        <h3>Custom Line #{idx + 1}</h3>
+        <h3>Ad-Hoc Line #{idx + 1}</h3>
         <div style={{ marginBottom: "0.5rem" }}>
           <label>Description: </label>
           <input
@@ -429,7 +675,6 @@ function App() {
       <div style={{ marginTop: "1.5rem" }}>
         <h2>Current Quote Result</h2>
 
-        {/* Summary */}
         <div
           style={{
             marginTop: "0.5rem",
@@ -465,7 +710,6 @@ function App() {
           )}
         </div>
 
-        {/* Line items table */}
         {lineItems.length > 0 && (
           <div style={{ marginTop: "1rem" }}>
             <table
@@ -549,49 +793,28 @@ function App() {
                   >
                     Extended
                   </th>
+                  <th
+                    style={{
+                      borderBottom: "1px solid #ccc",
+                      textAlign: "right",
+                      padding: "0.3rem",
+                    }}
+                  >
+                    Column
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {lineItems.map((line, idx) => {
-                  const type =
-                    line.type ||
-                    line.kind ||
-                    (line.is_custom ? "custom" : "stock");
-
+                  const type = line.type || "unknown";
                   const skuOrDesc =
-                    line.sku ||
-                    line.item_sku ||
-                    line.description ||
-                    line.item_description ||
-                    "";
-
-                  const qty = line.quantity ?? line.qty ?? "";
-
-                  const weight =
-                    line.weight_per_unit ??
-                    line.weightPerUnit ??
-                    line.unit_weight ??
-                    "";
-
-                  const costPerUnit =
-                    line.landed_cost_per_unit ??
-                    line.landedCostPerUnit ??
-                    line.cost_per_unit ??
-                    "";
-
-                  const sellPerUnit =
-                    line.sell_price_per_unit ??
-                    line.price_per_unit ??
-                    line.unit_price ??
-                    "";
-
-                  const extended =
-                    line.extended_price ??
-                    line.line_total ??
-                    (typeof qty === "number" &&
-                    typeof sellPerUnit === "number"
-                      ? qty * sellPerUnit
-                      : undefined);
+                    line.sku || line.description || "";
+                  const qty = line.quantity ?? "";
+                  const weight = line.weight_per_unit ?? "";
+                  const costPerUnit = line.base_cost_per_unit ?? "";
+                  const sellPerUnit = line.sell_price_per_unit ?? "";
+                  const extended = line.extended_sell_price ?? "";
+                  const column = line.total_column ?? "";
 
                   return (
                     <tr key={idx}>
@@ -662,7 +885,16 @@ function App() {
                           textAlign: "right",
                         }}
                       >
-                        {extended !== undefined ? formatMoney(extended) : "-"}
+                        {extended !== "" ? formatMoney(extended) : "-"}
+                      </td>
+                      <td
+                        style={{
+                          borderBottom: "1px solid #eee",
+                          padding: "0.3rem",
+                          textAlign: "right",
+                        }}
+                      >
+                        {column}
                       </td>
                     </tr>
                   );
@@ -672,7 +904,6 @@ function App() {
           </div>
         )}
 
-        {/* Raw JSON toggle */}
         <div style={{ marginTop: "1rem" }}>
           <button
             onClick={() => setShowRawQuoteJson((prev) => !prev)}
@@ -713,9 +944,7 @@ function App() {
         alignItems: "flex-start",
       }}
     >
-      {/* LEFT COLUMN: Quote builder */}
       <div>
-        {/* Header with KR title + auth block */}
         <div
           style={{
             display: "flex",
@@ -762,7 +991,6 @@ function App() {
           {loadingInit && <div>Loading customer/item data...</div>}
         </div>
 
-        {/* Customer + freight */}
         <div style={{ marginTop: "1rem" }}>
           <label>Customer: </label>
           <select
@@ -791,7 +1019,6 @@ function App() {
           </label>
         </div>
 
-        {/* Lines */}
         <div style={{ marginTop: "1.5rem" }}>
           <h2>Quote Lines</h2>
           <button onClick={addStockLine} disabled={!account}>
@@ -799,34 +1026,37 @@ function App() {
           </button>
           <button
             onClick={addCustomLine}
-            style={{ marginLeft: "0.75rem" }}
+            style={{ marginLeft: "0.5rem" }}
             disabled={!account}
           >
             Add Custom Line
+          </button>
+          <button
+            onClick={addAdHocLine}
+            style={{ marginLeft: "0.5rem" }}
+            disabled={!account}
+          >
+            Add Ad-Hoc Line
           </button>
 
           {lines.map((line, idx) => renderLine(line, idx))}
         </div>
 
-        {/* Submit */}
         <div style={{ marginTop: "1.5rem" }}>
           <button onClick={submitQuote} disabled={loadingQuote || !account}>
             {loadingQuote ? "Calculating..." : "Calculate Quote"}
           </button>
         </div>
 
-        {/* Error */}
         {error && (
           <div style={{ marginTop: "1rem", color: "red" }}>
             <strong>Error:</strong> {error}
           </div>
         )}
 
-        {/* Quote result */}
         {renderQuoteResult()}
       </div>
 
-      {/* RIGHT COLUMN: Quote history */}
       <div>
         <h2>Quote History</h2>
         <div style={{ marginBottom: "0.5rem" }}>
@@ -878,7 +1108,6 @@ function App() {
                 <div style={{ fontSize: "0.85rem", color: "#666" }}>
                   Lines: {q.num_lines ?? "?"} |{" "}
                   {q.created_at ?? "no timestamp"}
-                  {q.requested_by ? " | by " + q.requested_by : ""}
                 </div>
               </div>
             ))}

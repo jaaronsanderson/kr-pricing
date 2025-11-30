@@ -1,195 +1,233 @@
 [
   {
-    "id": "2025-11-28T00:41:41.952823+00:00_CNG",
-    "timestamp": "2025-11-28T00:41:41.952823+00:00",
-    "customer_id": "CNG",
+    "customer_id": "ABOX",
     "include_freight": true,
     "lines": [
       {
         "type": "stock",
-        "sku": "VN010WHTMM2252",
-        "description": "ABS 0.040 48x96 Black Haircell",
-        "quantity": 10.0,
-        "weight_per_unit": 12.0,
-        "base_cost_per_unit": 17.88,
-        "sell_price_per_unit": 55.0,
-        "extended_sell_price": 550.0,
-        "total_column": 37
-      }
-    ],
-    "quote_total": 550.0
-  },
-  {
-    "id": "2025-11-28T00:41:44.755913+00:00_CNG",
-    "timestamp": "2025-11-28T00:41:44.755913+00:00",
-    "customer_id": "CNG",
-    "include_freight": true,
-    "lines": [
-      {
-        "type": "stock",
-        "sku": "VN010WHTMM2252",
-        "description": "ABS 0.040 48x96 Black Haircell",
-        "quantity": 10.0,
-        "weight_per_unit": 12.0,
-        "base_cost_per_unit": 17.88,
-        "sell_price_per_unit": 55.0,
-        "extended_sell_price": 550.0,
-        "total_column": 37
-      }
-    ],
-    "quote_total": 550.0
-  },
-  {
-    "id": "2025-11-28T02:02:25.658551+00:00_CNG",
-    "timestamp": "2025-11-28T02:02:25.658551+00:00",
-    "customer_id": "CNG",
-    "include_freight": true,
-    "lines": [
-      {
-        "type": "stock",
-        "sku": "VN010WHTMM2252",
-        "description": "ABS 0.040 48x96 Black Haircell",
-        "quantity": 5.0,
-        "weight_per_unit": 12.0,
-        "base_cost_per_unit": 17.88,
-        "sell_price_per_unit": 110.0,
-        "extended_sell_price": 550.0,
-        "total_column": 37
-      }
-    ],
-    "quote_total": 550.0
-  },
-  {
-    "id": "2025-11-28T02:10:24.258553+00:00_CNG",
-    "timestamp": "2025-11-28T02:10:24.258553+00:00",
-    "customer_id": "CNG",
-    "include_freight": true,
-    "lines": [
-      {
-        "type": "stock",
-        "sku": "VN010WHTMM2252",
-        "description": "ABS 0.040 48x96 Black Haircell",
-        "quantity": 5.0,
-        "weight_per_unit": 12.0,
-        "base_cost_per_unit": 17.88,
-        "sell_price_per_unit": 110.0,
-        "extended_sell_price": 550.0,
-        "total_column": 37
-      }
-    ],
-    "quote_total": 550.0
-  },
-  {
-    "customer_id": "CNG",
-    "include_freight": true,
-    "lines": [
-      {
-        "type": "stock",
-        "sku": "VN010WHTMM2252",
-        "description": "ABS 0.040 48x96 Black Haircell",
+        "sku": "VN010WHTGG4052",
+        "description": ".010 White Gloss/ Gloss Vinyl 40X52",
         "quantity": 1000.0,
-        "weight_per_unit": 12.0,
-        "base_cost_per_unit": 17.88,
-        "sell_price_per_unit": 19.668,
-        "extended_sell_price": 19668.0,
-        "total_column": 69
+        "weight_per_unit": 0.988,
+        "base_cost_per_unit": 1.4128,
+        "sell_price_per_unit": 3.4897,
+        "extended_sell_price": 3489.71,
+        "total_column": 11
       }
     ],
-    "quote_total": 19668.0,
-    "id": 1,
-    "created_at": "2025-11-28T20:01:23Z"
+    "quote_total": 3489.71,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 9,
+    "created_at": "2025-11-30T01:31:13Z",
+    "num_lines": 1
   },
   {
-    "customer_id": "CNG",
+    "customer_id": "ABOX",
     "include_freight": true,
     "lines": [
       {
-        "type": "stock",
-        "sku": "VN010WHTMM2252",
-        "description": "ABS 0.040 48x96 Black Haircell",
-        "quantity": 1100.0,
-        "weight_per_unit": 12.0,
-        "base_cost_per_unit": 17.88,
-        "sell_price_per_unit": 19.668,
-        "extended_sell_price": 21634.8,
-        "total_column": 69
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 10.0ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1843.2000000000003,
+        "base_cost_per_unit": 2672.64,
+        "sell_price_per_unit": 2939.904,
+        "extended_sell_price": 29399040.0,
+        "total_column": 78
       }
     ],
-    "quote_total": 21634.8,
-    "id": 2,
-    "created_at": "2025-11-28T20:09:50Z"
+    "quote_total": 29399040.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 10,
+    "created_at": "2025-11-30T01:32:52Z",
+    "num_lines": 1
   },
   {
-    "customer_id": "CNG",
+    "customer_id": "ABOX",
     "include_freight": true,
     "lines": [
       {
-        "type": "stock",
-        "sku": "VN010WHTMM2252",
-        "description": "ABS 0.040 48x96 Black Haircell",
-        "quantity": 1100.0,
-        "weight_per_unit": 12.0,
-        "base_cost_per_unit": 17.88,
-        "sell_price_per_unit": 19.668,
-        "extended_sell_price": 21634.8,
-        "total_column": 69
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9666,
+        "extended_sell_price": 29666.3,
+        "total_column": 64
+      }
+    ],
+    "quote_total": 29666.3,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 11,
+    "created_at": "2025-11-30T01:33:19Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 67
+      }
+    ],
+    "quote_total": 29399.04,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 12,
+    "created_at": "2025-11-30T01:45:27Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 67
       },
-      {
-        "type": "stock",
-        "sku": "VN010WHTMM2252",
-        "description": "ABS 0.040 48x96 Black Haircell",
-        "quantity": 200.0,
-        "weight_per_unit": 12.0,
-        "base_cost_per_unit": 17.88,
-        "sell_price_per_unit": 20.3832,
-        "extended_sell_price": 4076.64,
-        "total_column": 61
-      }
-    ],
-    "quote_total": 25711.44,
-    "id": 3,
-    "created_at": "2025-11-28T20:10:32Z"
-  },
-  {
-    "customer_id": "MEDGEN",
-    "include_freight": true,
-    "lines": [
-      {
-        "type": "stock",
-        "sku": "VN010WHTMM2252",
-        "description": "ABS 0.040 48x96 Black Haircell",
-        "quantity": 100.0,
-        "weight_per_unit": 12.0,
-        "base_cost_per_unit": 17.88,
-        "sell_price_per_unit": 21.8136,
-        "extended_sell_price": 2181.36,
-        "total_column": 53
-      }
-    ],
-    "quote_total": 2181.36,
-    "id": 4,
-    "created_at": "2025-11-28T21:06:00Z"
-  },
-  {
-    "customer_id": "CNG",
-    "include_freight": true,
-    "lines": [
       {
         "type": "ad_hoc",
         "sku": null,
-        "description": "fdghfd",
+        "description": "Ad-hoc line",
         "quantity": 1000.0,
-        "weight_per_unit": 1000.0,
-        "base_cost_per_unit": 1000.0,
-        "sell_price_per_unit": 1440.0,
-        "extended_sell_price": 1440000.0,
-        "total_column": 32
+        "weight_per_unit": 1.0,
+        "base_cost_per_unit": 5.0,
+        "sell_price_per_unit": 18.0,
+        "extended_sell_price": 18000.0,
+        "total_column": 5
       }
     ],
-    "quote_total": 1440000.0,
+    "quote_total": 47399.04,
     "requested_by": "jaaron@krplastic.com",
-    "id": 5,
-    "created_at": "2025-11-28T22:57:22Z",
-    "num_lines": 1
+    "id": 13,
+    "created_at": "2025-11-30T01:47:42Z",
+    "num_lines": 2
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": false,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 68
+      },
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": "Ad-hoc line",
+        "quantity": 1000.0,
+        "weight_per_unit": 1.0,
+        "base_cost_per_unit": 5.0,
+        "sell_price_per_unit": 17.25,
+        "extended_sell_price": 17250.0,
+        "total_column": 6
+      }
+    ],
+    "quote_total": 46649.04,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 14,
+    "created_at": "2025-11-30T01:48:21Z",
+    "num_lines": 2
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": false,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 68
+      },
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": "Ad-hoc line",
+        "quantity": 1000.0,
+        "weight_per_unit": 1.0,
+        "base_cost_per_unit": 5.0,
+        "sell_price_per_unit": 17.25,
+        "extended_sell_price": 17250.0,
+        "total_column": 6
+      }
+    ],
+    "quote_total": 46649.04,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 15,
+    "created_at": "2025-11-30T01:48:26Z",
+    "num_lines": 2
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 67
+      },
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": "Ad-hoc line",
+        "quantity": 1000.0,
+        "weight_per_unit": 1.0,
+        "base_cost_per_unit": 5.0,
+        "sell_price_per_unit": 18.0,
+        "extended_sell_price": 18000.0,
+        "total_column": 5
+      },
+      {
+        "type": "stock",
+        "sku": "1015M40CPT",
+        "description": ".040 Clear PETG Faceshield 10X15",
+        "quantity": 10000.0,
+        "weight_per_unit": 0.288,
+        "base_cost_per_unit": 0.288,
+        "sell_price_per_unit": 0.8352,
+        "extended_sell_price": 8352.0,
+        "total_column": 9
+      }
+    ],
+    "quote_total": 55751.04,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 16,
+    "created_at": "2025-11-30T01:51:26Z",
+    "num_lines": 3
   }
 ]

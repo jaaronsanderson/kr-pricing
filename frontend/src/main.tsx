@@ -1,15 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import App from "./App";
+import { msalInstance } from "./authConfig";
 import "./index.css";
 
-import { MsalProvider } from "@azure/msal-react";
-import { msalInstance } from "./authConfig";
+async function bootstrap() {
+  try {
+    // 🔑 IMPORTANT: initialize MSAL before any other MSAL API calls
+    await msalInstance.initialize();
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <MsalProvider instance={msalInstance}>
-      <App />
-    </MsalProvider>
-  </React.StrictMode>
-);
+    const rootElement = document.getElementById("root");
+    if (!rootElement) {
+      throw new Error("Root element #root not found");
+    }
+
+    const root = ReactDOM.createRoot(rootElement);
+
+    root.render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+  } catch (err) {
+    console.error("Failed to initialize MSAL or render app:", err);
+  }
+}
+
+bootstrap();

@@ -15,9 +15,8 @@ if (!clientId) {
   );
 }
 
-const authorityTenant = tenantId && tenantId.trim().length > 0
-  ? tenantId
-  : "common";
+const authorityTenant =
+  tenantId && tenantId.trim().length > 0 ? tenantId : "common";
 
 if (!tenantId) {
   console.warn(

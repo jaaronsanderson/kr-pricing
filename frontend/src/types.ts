@@ -12,7 +12,7 @@ export interface Item {
 
 // ---------------- UI line input types ----------------
 
-export type LineKind = "stock" | "custom";
+export type LineKind = "stock" | "custom" | "ad_hoc";
 
 export interface StockLine {
   kind: "stock";
@@ -22,13 +22,25 @@ export interface StockLine {
 
 export interface CustomLine {
   kind: "custom";
+  material: string;      // "Vinyl", "Styrene", "APET", "Polycarbonate", "Polyethylene"
+  color: string;         // e.g., "White", "Clear", "Dead White"
+  surface: string;       // e.g., "Gloss/Gloss", "Velvet/Gloss"
+  gauge: number;         // thickness in mils
+  width: number;         // inches
+  length: number;        // inches
+  sheets: number;        // number of sheets
+  description?: string;  // optional custom description
+}
+
+export interface AdHocLine {
+  kind: "ad_hoc";
   description: string;
   weightPerUnit: number;
   landedCostPerUnit: number;
   quantity: number;
 }
 
-export type QuoteLineInput = StockLine | CustomLine;
+export type QuoteLineInput = StockLine | CustomLine | AdHocLine;
 
 // ---------------- Backend request/response models ----------------
 
@@ -37,6 +49,18 @@ export type BackendLineItemRequest =
       type: "stock";
       quantity: number;
       sku: string;
+    }
+  | {
+      type: "custom";
+      quantity: number;
+      material: string;
+      color: string;
+      surface: string;
+      gauge: number;
+      width: number;
+      length: number;
+      sheets: number;
+      description?: string;
     }
   | {
       type: "ad_hoc";
@@ -53,7 +77,7 @@ export interface QuoteRequest {
 }
 
 export interface QuoteResponseLine {
-  type: string; // "stock" | "custom" | "ad_hoc" etc.
+  type: string; // "stock" | "custom" | "ad_hoc"
   sku?: string;
   description?: string;
   quantity: number;
@@ -90,3 +114,55 @@ export interface QuoteRecord extends QuoteResponse {
   num_lines?: number;
   [key: string]: any;
 }
+
+export interface Quote {
+  id: number;
+  customer_id: number;
+  created_at: string;
+  requested_by?: string;
+  status?: string;
+  total_price?: number;
+}
+
+// Material options for custom lines
+export const MATERIALS: readonly string[] = [
+  "Vinyl",
+  "Styrene",
+  "APET",
+  "Polycarbonate",
+  "Polyethylene",
+];
+
+export const VINYL_COLORS: readonly string[] = [
+  "White",
+  "Clear",
+  "Black",
+  "Red",
+  "Blue",
+  "Green",
+  "Yellow",
+];
+
+export const STYRENE_COLORS: readonly string[] = [
+  "White",
+  "Translucent White",
+  "Dead White",
+  "Clear",
+];
+
+export const VINYL_SURFACES: readonly string[] = [
+  "Gloss/Gloss",
+  "Gloss/Matte",
+  "Velvet/Gloss",
+  "Velvet One Side",
+];
+
+export const STYRENE_SURFACES: readonly string[] = [
+  "Gloss/Matte",
+  "Matte/Matte",
+];
+
+export const STANDARD_SURFACES: readonly string[] = [
+  "Gloss",
+  "Matte",
+];
