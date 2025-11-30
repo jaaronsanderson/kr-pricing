@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { AccountInfo } from "@azure/msal-browser";
 
 import { msalInstance, loginRequest } from "./authConfig";
@@ -18,21 +18,24 @@ import type {
 } from "./types";
 
 import {
-  MATERIALS,
-  VINYL_COLORS,
-  STYRENE_COLORS,
-  VINYL_SURFACES,
-  STYRENE_SURFACES,
-  STANDARD_SURFACES,
-} from "./types";
-
-import {
   fetchCustomers,
   fetchItems,
   createQuote,
   fetchQuotesHistory,
   fetchQuoteDetail,
 } from "./api";
+
+import {
+  Header,
+  QuoteResult,
+  QuoteHistory,
+  QuoteSummaryCard,
+  StockLineEditor,
+  CustomLineEditor,
+  AdHocLineEditor,
+} from "./components";
+
+import { cn } from "./lib/utils";
 
 function App() {
   // ---------- Auth state ----------
@@ -56,25 +59,10 @@ function App() {
   const [loadingHistory, setLoadingHistory] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [showRawQuoteJson, setShowRawQuoteJson] = useState(false);
-
-  // ---------------- Helpers ----------------
-
-  const formatMoney = (value: unknown): string => {
-    if (typeof value === "number" && !Number.isNaN(value)) {
-      return value.toFixed(2);
-    }
-    const n = Number(value);
-    if (!Number.isNaN(n)) {
-      return n.toFixed(2);
-    }
-    return "-";
-  };
-
   // ---------------- Get access token ----------------
   const getAccessToken = async (): Promise<string | undefined> => {
     if (!account) return undefined;
-    
+
     try {
       const response = await msalInstance.acquireTokenSilent({
         scopes: ["User.Read"],
@@ -96,7 +84,6 @@ function App() {
   };
 
   // ---------------- Auth: init existing account ----------------
-
   useEffect(() => {
     const active = msalInstance.getActiveAccount();
     if (active) {
@@ -119,9 +106,10 @@ function App() {
         setAccount(resp.account);
         setError(null);
       }
-    } catch (e: any) {
+    } catch (e: unknown) {
+      const err = e as Error;
       console.error("Login error:", e);
-      setAuthError(e?.message || "Failed to sign in with Microsoft.");
+      setAuthError(err?.message || "Failed to sign in with Microsoft.");
     }
   };
 
@@ -138,18 +126,16 @@ function App() {
 
     try {
       await msalInstance.logoutPopup();
-    } catch (e: any) {
+    } catch (e: unknown) {
+      const err = e as Error;
       console.error("Logout error:", e);
-      setAuthError(e?.message || "Failed to sign out.");
+      setAuthError(err?.message || "Failed to sign out.");
     }
   };
 
   // ---------------- Initial load: customers + items (after login) ----------------
-
   useEffect(() => {
-    if (!account) {
-      return;
-    }
+    if (!account) return;
 
     async function loadInitial() {
       setLoadingInit(true);
@@ -162,11 +148,10 @@ function App() {
         ]);
         setCustomers(customerData ?? []);
         setItems(itemData ?? []);
-      } catch (err: any) {
+      } catch (err: unknown) {
+        const error = err as Error;
         console.error("Initial load error:", err);
-        setError(
-          "Failed to load customers/items: " + (err?.message || String(err))
-        );
+        setError("Failed to load customers/items: " + (error?.message || String(err)));
       } finally {
         setLoadingInit(false);
       }
@@ -176,7 +161,6 @@ function App() {
   }, [account]);
 
   // ---------------- Load quote history ----------------
-
   async function loadQuotesHistoryHandler() {
     if (!account) {
       setError("Please sign in to view quote history.");
@@ -188,11 +172,10 @@ function App() {
       const token = await getAccessToken();
       const data = await fetchQuotesHistory(token);
       setQuotesHistory(data ?? []);
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const error = err as Error;
       console.error("History load error:", err);
-      setError(
-        "Failed to load quote history: " + (err?.message || String(err))
-      );
+      setError("Failed to load quote history: " + (error?.message || String(err)));
     } finally {
       setLoadingHistory(false);
     }
@@ -209,19 +192,26 @@ function App() {
       const token = await getAccessToken();
       const data = await fetchQuoteDetail(id, token);
       setSelectedQuote(data);
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const error = err as Error;
       console.error("Quote detail error:", err);
-      setError(
-        "Failed to load quote detail: " + (err?.message || String(err))
-      );
+      setError("Failed to load quote detail: " + (error?.message || String(err)));
     }
   }
 
   // ---------------- Line management ----------------
+  function clearQuote() {
+    setLines([]);
+    setQuote(null);
+    setSelectedQuote(null);
+    setCustomerId("");
+    setIncludeFreight(true);
+    setError(null);
+  }
 
   function addStockLine() {
     if (items.length === 0) {
-      alert("No items loaded yet.");
+      setError("No items loaded yet.");
       return;
     }
     const line: StockLine = {
@@ -270,19 +260,27 @@ function App() {
     setLines((prev) => prev.filter((_, i) => i !== index));
   }
 
-  // ---------------- Submit quote ----------------
+  function duplicateLine(index: number) {
+    setLines((prev) => {
+      const lineToDuplicate = prev[index];
+      const newLines = [...prev];
+      newLines.splice(index + 1, 0, { ...lineToDuplicate });
+      return newLines;
+    });
+  }
 
+  // ---------------- Submit quote ----------------
   async function submitQuote() {
     if (!account) {
-      alert("Please sign in with Microsoft first.");
+      setError("Please sign in with Microsoft first.");
       return;
     }
     if (!customerId) {
-      alert("Please select a customer first.");
+      setError("Please select a customer first.");
       return;
     }
     if (lines.length === 0) {
-      alert("Please add at least one line.");
+      setError("Please add at least one line.");
       return;
     }
 
@@ -290,11 +288,10 @@ function App() {
     setError(null);
     setQuote(null);
     setSelectedQuote(null);
-    setShowRawQuoteJson(false);
 
     try {
       const token = await getAccessToken();
-      
+
       const backendLines: BackendLineItemRequest[] = lines.map((line) => {
         if (line.kind === "stock") {
           return {
@@ -316,7 +313,6 @@ function App() {
             description: line.description,
           };
         } else {
-          // ad_hoc
           return {
             type: "ad_hoc",
             quantity: Number(line.quantity) || 0,
@@ -339,797 +335,276 @@ function App() {
       loadQuotesHistoryHandler().catch((err) =>
         console.warn("History refresh failed:", err)
       );
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const error = err as Error;
       console.error("Quote error:", err);
-      setError(
-        "Failed to calculate quote: " + (err?.message || JSON.stringify(err))
-      );
+      setError("Failed to calculate quote: " + (error?.message || JSON.stringify(err)));
     } finally {
       setLoadingQuote(false);
     }
   }
 
-  // ---------------- Render helpers ----------------
-
-  function getColorOptions(material: string): readonly string[] {
-    if (material === "Vinyl") return VINYL_COLORS;
-    if (material === "Styrene") return STYRENE_COLORS;
-    return ["White", "Clear"];
-  }
-
-  function getSurfaceOptions(material: string): readonly string[] {
-    if (material === "Vinyl") return VINYL_SURFACES;
-    if (material === "Styrene") return STYRENE_SURFACES;
-    return STANDARD_SURFACES;
-  }
-
-  function renderLine(line: QuoteLineInput, idx: number) {
-    if (line.kind === "stock") {
-      return (
-        <div
-          key={idx}
-          style={{
-            marginTop: "1rem",
-            padding: "1rem",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-            background: "#f9f9f9",
-          }}
-        >
-          <h3>Stock Line #{idx + 1}</h3>
-          <div style={{ marginBottom: "0.5rem" }}>
-            <label>Item: </label>
-            <select
-              value={line.itemSku}
-              onChange={(e) =>
-                updateLine(idx, {
-                  itemSku: e.target.value,
-                } as QuoteLineInput)
-              }
-            >
-              <option value="">Select item...</option>
-              {items.map((i) => (
-                <option key={i.sku} value={i.sku}>
-                  {i.sku} — {i.description}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label>Quantity: </label>
-            <input
-              type="number"
-              min={1}
-              step={1}
-              value={line.quantity}
-              onChange={(e) =>
-                updateLine(idx, {
-                  quantity: Number(e.target.value) || 0,
-                } as QuoteLineInput)
-              }
-              style={{ width: "80px" }}
-            />
-          </div>
-          <button
-            onClick={() => removeLine(idx)}
-            style={{ marginTop: "0.5rem" }}
-          >
-            Remove Line
-          </button>
-        </div>
-      );
-    }
-
-    if (line.kind === "custom") {
-      return (
-        <div
-          key={idx}
-          style={{
-            marginTop: "1rem",
-            padding: "1rem",
-            border: "1px solid #4CAF50",
-            borderRadius: "4px",
-            background: "#f1f8f4",
-          }}
-        >
-          <h3>Custom Line #{idx + 1}</h3>
-          
-          <div style={{ marginBottom: "0.5rem" }}>
-            <label>Material: </label>
-            <select
-              value={line.material}
-              onChange={(e) => {
-                const newMaterial = e.target.value;
-                const colors = getColorOptions(newMaterial);
-                const surfaces = getSurfaceOptions(newMaterial);
-                updateLine(idx, {
-                  material: newMaterial,
-                  color: colors[0] as string,
-                  surface: surfaces[0] as string,
-                } as QuoteLineInput);
-              }}
-              style={{ width: "150px" }}
-            >
-              {MATERIALS.map((m) => (
-                <option key={m} value={m}>
-                  {m}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div style={{ marginBottom: "0.5rem" }}>
-            <label>Color: </label>
-            <select
-              value={line.color}
-              onChange={(e) =>
-                updateLine(idx, {
-                  color: e.target.value,
-                } as QuoteLineInput)
-              }
-              style={{ width: "150px" }}
-            >
-              {getColorOptions(line.material).map((c) => (
-                <option key={c} value={c}>
-                  {c}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div style={{ marginBottom: "0.5rem" }}>
-            <label>Surface: </label>
-            <select
-              value={line.surface}
-              onChange={(e) =>
-                updateLine(idx, {
-                  surface: e.target.value,
-                } as QuoteLineInput)
-              }
-              style={{ width: "150px" }}
-            >
-              {getSurfaceOptions(line.material).map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div style={{ marginBottom: "0.5rem" }}>
-            <label>Gauge (mils): </label>
-            <input
-              type="number"
-              step={1}
-              min={1}
-              value={line.gauge}
-              onChange={(e) =>
-                updateLine(idx, {
-                  gauge: Number(e.target.value) || 0,
-                } as QuoteLineInput)
-              }
-              style={{ width: "80px" }}
-            />
-          </div>
-
-          <div style={{ marginBottom: "0.5rem" }}>
-            <label>Width (inches): </label>
-            <input
-              type="number"
-              step={0.1}
-              min={0}
-              value={line.width}
-              onChange={(e) =>
-                updateLine(idx, {
-                  width: Number(e.target.value) || 0,
-                } as QuoteLineInput)
-              }
-              style={{ width: "80px" }}
-            />
-            {" × "}
-            <label>Length (inches): </label>
-            <input
-              type="number"
-              step={0.1}
-              min={0}
-              value={line.length}
-              onChange={(e) =>
-                updateLine(idx, {
-                  length: Number(e.target.value) || 0,
-                } as QuoteLineInput)
-              }
-              style={{ width: "80px" }}
-            />
-          </div>
-
-          <div style={{ marginBottom: "0.5rem" }}>
-            <label>Number of Sheets: </label>
-            <input
-              type="number"
-              step={1}
-              min={1}
-              value={line.sheets}
-              onChange={(e) =>
-                updateLine(idx, {
-                  sheets: Number(e.target.value) || 0,
-                } as QuoteLineInput)
-              }
-              style={{ width: "100px" }}
-            />
-          </div>
-
-          <div style={{ marginBottom: "0.5rem" }}>
-            <label>Description (optional): </label>
-            <input
-              style={{ width: "260px" }}
-              placeholder="Custom description"
-              value={line.description || ""}
-              onChange={(e) =>
-                updateLine(idx, {
-                  description: e.target.value,
-                } as QuoteLineInput)
-              }
-            />
-          </div>
-
-          <div style={{ fontSize: "0.85rem", color: "#666", marginTop: "0.5rem" }}>
-            <em>Backend will calculate weight and apply 2,000 lb minimum run</em>
-          </div>
-
-          <button
-            onClick={() => removeLine(idx)}
-            style={{ marginTop: "0.5rem" }}
-          >
-            Remove Line
-          </button>
-        </div>
-      );
-    }
-
-    // ad_hoc line
-    return (
-      <div
-        key={idx}
-        style={{
-          marginTop: "1rem",
-          padding: "1rem",
-          border: "1px solid #FF9800",
-          borderRadius: "4px",
-          background: "#fff8e1",
-        }}
-      >
-        <h3>Ad-Hoc Line #{idx + 1}</h3>
-        <div style={{ marginBottom: "0.5rem" }}>
-          <label>Description: </label>
-          <input
-            style={{ width: "260px" }}
-            placeholder="Description"
-            value={line.description}
-            onChange={(e) =>
-              updateLine(idx, {
-                description: e.target.value,
-              } as QuoteLineInput)
-            }
-          />
-        </div>
-        <div style={{ marginBottom: "0.5rem" }}>
-          <label>Weight / unit (lb): </label>
-          <input
-            type="number"
-            step={0.01}
-            value={line.weightPerUnit}
-            onChange={(e) =>
-              updateLine(idx, {
-                weightPerUnit: Number(e.target.value) || 0,
-              } as QuoteLineInput)
-            }
-            style={{ width: "100px" }}
-          />
-        </div>
-        <div style={{ marginBottom: "0.5rem" }}>
-          <label>Landed cost / unit: </label>
-          <input
-            type="number"
-            step={0.01}
-            value={line.landedCostPerUnit}
-            onChange={(e) =>
-              updateLine(idx, {
-                landedCostPerUnit: Number(e.target.value) || 0,
-              } as QuoteLineInput)
-            }
-            style={{ width: "100px" }}
-          />
-        </div>
-        <div>
-          <label>Quantity: </label>
-          <input
-            type="number"
-            min={1}
-            step={1}
-            value={line.quantity}
-            onChange={(e) =>
-              updateLine(idx, {
-                quantity: Number(e.target.value) || 0,
-              } as QuoteLineInput)
-            }
-            style={{ width: "80px" }}
-          />
-        </div>
-        <button
-          onClick={() => removeLine(idx)}
-          style={{ marginTop: "0.5rem" }}
-        >
-          Remove Line
-        </button>
-      </div>
-    );
-  }
-
-  function renderQuoteResult() {
-    if (!quote) return null;
-
-    const q: any = quote as any;
-    const lineItems: any[] = Array.isArray(q.lines) ? q.lines : [];
-
-    return (
-      <div style={{ marginTop: "1.5rem" }}>
-        <h2>Current Quote Result</h2>
-
-        <div
-          style={{
-            marginTop: "0.5rem",
-            padding: "0.75rem 1rem",
-            border: "1px solid #ddd",
-            borderRadius: "4px",
-            background: "#fafafa",
-            fontSize: "0.95rem",
-          }}
-        >
-          <div style={{ marginBottom: "0.25rem" }}>
-            <strong>Customer:</strong> {quote.customer_id || "N/A"}
-          </div>
-          <div style={{ marginBottom: "0.25rem" }}>
-            <strong>Freight:</strong>{" "}
-            {quote.include_freight ? "Included" : "Excluded"}
-          </div>
-          <div style={{ marginBottom: "0.25rem" }}>
-            <strong>Total:</strong> {formatMoney(quote.quote_total)}
-          </div>
-          <div style={{ marginBottom: "0.25rem" }}>
-            <strong>Lines:</strong> {lineItems.length}
-          </div>
-          {q.created_at && (
-            <div style={{ marginBottom: "0.25rem" }}>
-              <strong>Created at:</strong> {q.created_at}
-            </div>
-          )}
-          {q.requested_by && (
-            <div>
-              <strong>Requested by:</strong> {q.requested_by}
-            </div>
-          )}
-        </div>
-
-        {lineItems.length > 0 && (
-          <div style={{ marginTop: "1rem" }}>
-            <table
-              style={{
-                width: "100%",
-                borderCollapse: "collapse",
-                fontSize: "0.9rem",
-              }}
-            >
-              <thead>
-                <tr>
-                  <th
-                    style={{
-                      borderBottom: "1px solid #ccc",
-                      textAlign: "left",
-                      padding: "0.3rem",
-                    }}
-                  >
-                    #
-                  </th>
-                  <th
-                    style={{
-                      borderBottom: "1px solid #ccc",
-                      textAlign: "left",
-                      padding: "0.3rem",
-                    }}
-                  >
-                    Type
-                  </th>
-                  <th
-                    style={{
-                      borderBottom: "1px solid #ccc",
-                      textAlign: "left",
-                      padding: "0.3rem",
-                    }}
-                  >
-                    SKU / Desc
-                  </th>
-                  <th
-                    style={{
-                      borderBottom: "1px solid #ccc",
-                      textAlign: "right",
-                      padding: "0.3rem",
-                    }}
-                  >
-                    Qty
-                  </th>
-                  <th
-                    style={{
-                      borderBottom: "1px solid #ccc",
-                      textAlign: "right",
-                      padding: "0.3rem",
-                    }}
-                  >
-                    Weight/Unit
-                  </th>
-                  <th
-                    style={{
-                      borderBottom: "1px solid #ccc",
-                      textAlign: "right",
-                      padding: "0.3rem",
-                    }}
-                  >
-                    Cost/Unit
-                  </th>
-                  <th
-                    style={{
-                      borderBottom: "1px solid #ccc",
-                      textAlign: "right",
-                      padding: "0.3rem",
-                    }}
-                  >
-                    Sell/Unit
-                  </th>
-                  <th
-                    style={{
-                      borderBottom: "1px solid #ccc",
-                      textAlign: "right",
-                      padding: "0.3rem",
-                    }}
-                  >
-                    Extended
-                  </th>
-                  <th
-                    style={{
-                      borderBottom: "1px solid #ccc",
-                      textAlign: "right",
-                      padding: "0.3rem",
-                    }}
-                  >
-                    Column
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {lineItems.map((line, idx) => {
-                  const type = line.type || "unknown";
-                  const skuOrDesc =
-                    line.sku || line.description || "";
-                  const qty = line.quantity ?? "";
-                  const weight = line.weight_per_unit ?? "";
-                  const costPerUnit = line.base_cost_per_unit ?? "";
-                  const sellPerUnit = line.sell_price_per_unit ?? "";
-                  const extended = line.extended_sell_price ?? "";
-                  const column = line.total_column ?? "";
-
-                  return (
-                    <tr key={idx}>
-                      <td
-                        style={{
-                          borderBottom: "1px solid #eee",
-                          padding: "0.3rem",
-                        }}
-                      >
-                        {idx + 1}
-                      </td>
-                      <td
-                        style={{
-                          borderBottom: "1px solid #eee",
-                          padding: "0.3rem",
-                        }}
-                      >
-                        {String(type)}
-                      </td>
-                      <td
-                        style={{
-                          borderBottom: "1px solid #eee",
-                          padding: "0.3rem",
-                        }}
-                      >
-                        {skuOrDesc}
-                      </td>
-                      <td
-                        style={{
-                          borderBottom: "1px solid #eee",
-                          padding: "0.3rem",
-                          textAlign: "right",
-                        }}
-                      >
-                        {qty}
-                      </td>
-                      <td
-                        style={{
-                          borderBottom: "1px solid #eee",
-                          padding: "0.3rem",
-                          textAlign: "right",
-                        }}
-                      >
-                        {weight !== "" ? weight : "-"}
-                      </td>
-                      <td
-                        style={{
-                          borderBottom: "1px solid #eee",
-                          padding: "0.3rem",
-                          textAlign: "right",
-                        }}
-                      >
-                        {costPerUnit !== "" ? formatMoney(costPerUnit) : "-"}
-                      </td>
-                      <td
-                        style={{
-                          borderBottom: "1px solid #eee",
-                          padding: "0.3rem",
-                          textAlign: "right",
-                        }}
-                      >
-                        {sellPerUnit !== "" ? formatMoney(sellPerUnit) : "-"}
-                      </td>
-                      <td
-                        style={{
-                          borderBottom: "1px solid #eee",
-                          padding: "0.3rem",
-                          textAlign: "right",
-                        }}
-                      >
-                        {extended !== "" ? formatMoney(extended) : "-"}
-                      </td>
-                      <td
-                        style={{
-                          borderBottom: "1px solid #eee",
-                          padding: "0.3rem",
-                          textAlign: "right",
-                        }}
-                      >
-                        {column}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        )}
-
-        <div style={{ marginTop: "1rem" }}>
-          <button
-            onClick={() => setShowRawQuoteJson((prev) => !prev)}
-            style={{ fontSize: "0.85rem" }}
-          >
-            {showRawQuoteJson ? "Hide raw JSON" : "Show raw JSON"}
-          </button>
-        </div>
-
-        {showRawQuoteJson && (
-          <pre
-            style={{
-              maxHeight: "300px",
-              overflow: "auto",
-              background: "#f5f5f5",
-              padding: "0.5rem",
-              marginTop: "0.5rem",
-              fontSize: "0.8rem",
-            }}
-          >
-            {JSON.stringify(quote, null, 2)}
-          </pre>
-        )}
-      </div>
-    );
-  }
-
   // ---------------- Render ----------------
-
   return (
-    <div
-      style={{
-        padding: "2rem",
-        fontFamily: "sans-serif",
-        display: "grid",
-        gridTemplateColumns: "2fr 1.2fr",
-        gap: "2rem",
-        alignItems: "flex-start",
-      }}
-    >
-      <div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "1rem",
-          }}
-        >
-          <h1 style={{ margin: 0 }}>KR Pricing System</h1>
-          <div style={{ fontSize: "0.9rem", textAlign: "right" }}>
-            {account ? (
-              <>
-                <div>
-                  Signed in as <strong>{account.name}</strong>
-                </div>
-                <button
-                  style={{ marginTop: "0.25rem", fontSize: "0.8rem" }}
-                  onClick={handleLogout}
-                >
-                  Sign out
-                </button>
-              </>
-            ) : (
-              <button onClick={handleLogin}>Sign in with Microsoft</button>
-            )}
-          </div>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-zinc-50 via-white to-zinc-100">
+      <Header
+        account={account}
+        onLogin={handleLogin}
+        onLogout={handleLogout}
+        authError={authError}
+        customersCount={customers.length}
+        itemsCount={items.length}
+        isLoading={loadingInit}
+      />
 
-        {authError && (
-          <div style={{ color: "red", marginBottom: "0.5rem" }}>
-            Auth error: {authError}
-          </div>
-        )}
-
-        <div
-          style={{
-            marginTop: "0.25rem",
-            fontSize: "0.9rem",
-            color: "#555",
-          }}
-        >
-          <div>Customers loaded: {customers.length}</div>
-          <div>Items loaded: {items.length}</div>
-          {loadingInit && <div>Loading customer/item data...</div>}
-        </div>
-
-        <div style={{ marginTop: "1rem" }}>
-          <label>Customer: </label>
-          <select
-            value={customerId}
-            onChange={(e) => setCustomerId(e.target.value)}
-            disabled={!account}
-          >
-            <option value="">Select...</option>
-            {customers.map((c) => (
-              <option key={c.id} value={c.id}>
-                {c.name} ({c.id})
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div style={{ marginTop: "0.75rem" }}>
-          <label>
-            <input
-              type="checkbox"
-              checked={includeFreight}
-              onChange={(e) => setIncludeFreight(e.target.checked)}
-              disabled={!account}
-            />{" "}
-            Include Freight
-          </label>
-        </div>
-
-        <div style={{ marginTop: "1.5rem" }}>
-          <h2>Quote Lines</h2>
-          <button onClick={addStockLine} disabled={!account}>
-            Add Stock Line
-          </button>
-          <button
-            onClick={addCustomLine}
-            style={{ marginLeft: "0.5rem" }}
-            disabled={!account}
-          >
-            Add Custom Line
-          </button>
-          <button
-            onClick={addAdHocLine}
-            style={{ marginLeft: "0.5rem" }}
-            disabled={!account}
-          >
-            Add Ad-Hoc Line
-          </button>
-
-          {lines.map((line, idx) => renderLine(line, idx))}
-        </div>
-
-        <div style={{ marginTop: "1.5rem" }}>
-          <button onClick={submitQuote} disabled={loadingQuote || !account}>
-            {loadingQuote ? "Calculating..." : "Calculate Quote"}
-          </button>
-        </div>
-
+      <main className="mx-auto max-w-7xl px-6 py-8">
+        {/* Error Banner */}
         {error && (
-          <div style={{ marginTop: "1rem", color: "red" }}>
-            <strong>Error:</strong> {error}
+          <div className="mb-6 flex items-center gap-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3">
+            <svg
+              className="h-5 w-5 flex-shrink-0 text-red-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+              />
+            </svg>
+            <p className="text-sm text-red-700">{error}</p>
+            <button
+              onClick={() => setError(null)}
+              className="ml-auto text-red-400 hover:text-red-600"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         )}
 
-        {renderQuoteResult()}
-      </div>
-
-      <div>
-        <h2>Quote History</h2>
-        <div style={{ marginBottom: "0.5rem" }}>
-          <button
-            onClick={loadQuotesHistoryHandler}
-            disabled={loadingHistory || !account}
-          >
-            {loadingHistory ? "Loading history..." : "Refresh History"}
-          </button>
-        </div>
-
-        {quotesHistory.length === 0 && !loadingHistory && (
-          <p style={{ fontSize: "0.9rem", color: "#555" }}>
-            No quotes logged yet, or history not loaded.
-          </p>
-        )}
-
-        {quotesHistory.length > 0 && (
-          <div
-            style={{
-              maxHeight: "250px",
-              overflow: "auto",
-              border: "1px solid #ddd",
-              padding: "0.5rem",
-              marginBottom: "1rem",
-              borderRadius: "4px",
-            }}
-          >
-            {quotesHistory.map((q) => (
-              <div
-                key={q.id}
-                style={{
-                  padding: "0.5rem",
-                  borderBottom: "1px solid #eee",
-                  cursor: "pointer",
-                  background:
-                    selectedQuote && selectedQuote.id === q.id
-                      ? "#eef5ff"
-                      : "transparent",
-                }}
-                onClick={() => loadQuoteById(q.id)}
-              >
+        <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
+          {/* Left Column - Quote Builder */}
+          <div className="space-y-6">
+            {/* Customer & Settings Card */}
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold text-zinc-900">Quote Settings</h2>
+                <button
+                  onClick={clearQuote}
+                  disabled={!account}
+                  className={cn(
+                    "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all",
+                    account
+                      ? "border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 hover:border-zinc-300"
+                      : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
+                  )}
+                >
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                  New Quote
+                </button>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {/* Customer Select */}
                 <div>
-                  <strong>#{q.id}</strong> – {q.customer_id} –{" "}
-                  {q.quote_total?.toFixed
-                    ? q.quote_total.toFixed(2)
-                    : q.quote_total}
+                  <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-zinc-500">
+                    Customer
+                  </label>
+                  <select
+                    value={customerId}
+                    onChange={(e) => setCustomerId(e.target.value)}
+                    disabled={!account}
+                    className={cn(
+                      "w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900",
+                      "focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20",
+                      "transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    )}
+                  >
+                    <option value="">Select customer...</option>
+                    {customers.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.name} ({c.id})
+                      </option>
+                    ))}
+                  </select>
                 </div>
-                <div style={{ fontSize: "0.85rem", color: "#666" }}>
-                  Lines: {q.num_lines ?? "?"} |{" "}
-                  {q.created_at ?? "no timestamp"}
+
+                {/* Freight Toggle */}
+                <div className="flex items-end">
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <div className="relative">
+                      <input
+                        type="checkbox"
+                        checked={includeFreight}
+                        onChange={(e) => setIncludeFreight(e.target.checked)}
+                        disabled={!account}
+                        className="peer sr-only"
+                      />
+                      <div className="h-6 w-11 rounded-full bg-zinc-200 transition-colors peer-checked:bg-emerald-500 peer-disabled:opacity-50" />
+                      <div className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
+                    </div>
+                    <span className="text-sm font-medium text-zinc-700">
+                      Include Freight
+                    </span>
+                  </label>
                 </div>
               </div>
-            ))}
-          </div>
-        )}
+            </div>
 
-        {selectedQuote && (
-          <div>
-            <h3>Selected Quote #{selectedQuote.id}</h3>
-            <pre
-              style={{
-                maxHeight: "300px",
-                overflow: "auto",
-                background: "#f5f5f5",
-                padding: "0.5rem",
-              }}
-            >
-              {JSON.stringify(selectedQuote, null, 2)}
-            </pre>
+            {/* Line Items Section */}
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold text-zinc-900">Line Items</h2>
+                <div className="flex gap-2">
+                  <button
+                    onClick={addStockLine}
+                    disabled={!account}
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all",
+                      account
+                        ? "bg-zinc-900 text-white hover:bg-zinc-800 shadow-sm"
+                        : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
+                    )}
+                  >
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    Stock
+                  </button>
+                  <button
+                    onClick={addCustomLine}
+                    disabled={!account}
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all",
+                      account
+                        ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-600 hover:to-teal-600 shadow-sm"
+                        : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
+                    )}
+                  >
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    Custom
+                  </button>
+                  <button
+                    onClick={addAdHocLine}
+                    disabled={!account}
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all",
+                      account
+                        ? "bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-sm"
+                        : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
+                    )}
+                  >
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    Ad-Hoc
+                  </button>
+                </div>
+              </div>
+
+              {/* Empty State */}
+              {lines.length === 0 && (
+                <div className="rounded-2xl border-2 border-dashed border-zinc-200 bg-zinc-50/50 py-12 text-center">
+                  <svg
+                    className="mx-auto h-10 w-10 text-zinc-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                    />
+                  </svg>
+                  <p className="mt-3 text-sm font-medium text-zinc-600">No line items yet</p>
+                  <p className="mt-1 text-xs text-zinc-400">
+                    Add stock, custom, or ad-hoc lines to build your quote
+                  </p>
+                </div>
+              )}
+
+              {/* Line Items List */}
+              <div className="space-y-4">
+                {lines.map((line, idx) => {
+                  if (line.kind === "stock") {
+                    return (
+                      <StockLineEditor
+                        key={idx}
+                        line={line}
+                        index={idx}
+                        items={items}
+                        onUpdate={updateLine}
+                        onRemove={removeLine}
+                        onDuplicate={duplicateLine}
+                      />
+                    );
+                  }
+                  if (line.kind === "custom") {
+                    return (
+                      <CustomLineEditor
+                        key={idx}
+                        line={line}
+                        index={idx}
+                        onUpdate={updateLine}
+                        onRemove={removeLine}
+                        onDuplicate={duplicateLine}
+                      />
+                    );
+                  }
+                  return (
+                    <AdHocLineEditor
+                      key={idx}
+                      line={line}
+                      index={idx}
+                      onUpdate={updateLine}
+                      onRemove={removeLine}
+                      onDuplicate={duplicateLine}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Quote Result */}
+            {quote && (
+              <div className="mt-8">
+                <h2 className="text-lg font-semibold text-zinc-900 mb-4">Quote Result</h2>
+                <QuoteResult quote={quote} />
+              </div>
+            )}
           </div>
-        )}
-      </div>
+
+          {/* Right Column - Summary & History */}
+          <div className="space-y-6">
+            <QuoteSummaryCard
+              lines={lines}
+              customerId={customerId}
+              includeFreight={includeFreight}
+              isCalculating={loadingQuote}
+              onCalculate={submitQuote}
+              disabled={!account}
+            />
+
+            <QuoteHistory
+              quotes={quotesHistory}
+              selectedQuote={selectedQuote}
+              isLoading={loadingHistory}
+              onRefresh={loadQuotesHistoryHandler}
+              onSelectQuote={loadQuoteById}
+              disabled={!account}
+            />
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
