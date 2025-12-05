@@ -1,0 +1,717 @@
+[
+  {
+    "customer_id": "ABOX",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010WHTGG4052",
+        "description": ".010 White Gloss/ Gloss Vinyl 40X52",
+        "quantity": 1000.0,
+        "weight_per_unit": 0.988,
+        "base_cost_per_unit": 1.4128,
+        "sell_price_per_unit": 3.4897,
+        "extended_sell_price": 3489.71,
+        "total_column": 11
+      }
+    ],
+    "quote_total": 3489.71,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 9,
+    "created_at": "2025-11-30T01:31:13Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ABOX",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 10.0ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1843.2000000000003,
+        "base_cost_per_unit": 2672.64,
+        "sell_price_per_unit": 2939.904,
+        "extended_sell_price": 29399040.0,
+        "total_column": 78
+      }
+    ],
+    "quote_total": 29399040.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 10,
+    "created_at": "2025-11-30T01:32:52Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ABOX",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9666,
+        "extended_sell_price": 29666.3,
+        "total_column": 64
+      }
+    ],
+    "quote_total": 29666.3,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 11,
+    "created_at": "2025-11-30T01:33:19Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 67
+      }
+    ],
+    "quote_total": 29399.04,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 12,
+    "created_at": "2025-11-30T01:45:27Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 67
+      },
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": "Ad-hoc line",
+        "quantity": 1000.0,
+        "weight_per_unit": 1.0,
+        "base_cost_per_unit": 5.0,
+        "sell_price_per_unit": 18.0,
+        "extended_sell_price": 18000.0,
+        "total_column": 5
+      }
+    ],
+    "quote_total": 47399.04,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 13,
+    "created_at": "2025-11-30T01:47:42Z",
+    "num_lines": 2
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": false,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 68
+      },
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": "Ad-hoc line",
+        "quantity": 1000.0,
+        "weight_per_unit": 1.0,
+        "base_cost_per_unit": 5.0,
+        "sell_price_per_unit": 17.25,
+        "extended_sell_price": 17250.0,
+        "total_column": 6
+      }
+    ],
+    "quote_total": 46649.04,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 14,
+    "created_at": "2025-11-30T01:48:21Z",
+    "num_lines": 2
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": false,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 68
+      },
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": "Ad-hoc line",
+        "quantity": 1000.0,
+        "weight_per_unit": 1.0,
+        "base_cost_per_unit": 5.0,
+        "sell_price_per_unit": 17.25,
+        "extended_sell_price": 17250.0,
+        "total_column": 6
+      }
+    ],
+    "quote_total": 46649.04,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 15,
+    "created_at": "2025-11-30T01:48:26Z",
+    "num_lines": 2
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 10000.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 2.9399,
+        "extended_sell_price": 29399.04,
+        "total_column": 67
+      },
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": "Ad-hoc line",
+        "quantity": 1000.0,
+        "weight_per_unit": 1.0,
+        "base_cost_per_unit": 5.0,
+        "sell_price_per_unit": 18.0,
+        "extended_sell_price": 18000.0,
+        "total_column": 5
+      },
+      {
+        "type": "stock",
+        "sku": "1015M40CPT",
+        "description": ".040 Clear PETG Faceshield 10X15",
+        "quantity": 10000.0,
+        "weight_per_unit": 0.288,
+        "base_cost_per_unit": 0.288,
+        "sell_price_per_unit": 0.8352,
+        "extended_sell_price": 8352.0,
+        "total_column": 9
+      }
+    ],
+    "quote_total": 55751.04,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 16,
+    "created_at": "2025-11-30T01:51:26Z",
+    "num_lines": 3
+  },
+  {
+    "customer_id": "ABOX",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "PC015GG4896",
+        "description": ".015 Clear Gloss/Gloss Polycarbonate 48X96",
+        "quantity": 1000.0,
+        "weight_per_unit": 3.31776,
+        "base_cost_per_unit": 8.958,
+        "sell_price_per_unit": 16.1243,
+        "extended_sell_price": 16124.31,
+        "total_column": 17
+      }
+    ],
+    "quote_total": 16124.31,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 17,
+    "created_at": "2025-11-30T03:11:25Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ABOX",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "PC015GG4896",
+        "description": ".015 Clear Gloss/Gloss Polycarbonate 48X96",
+        "quantity": 1000.0,
+        "weight_per_unit": 3.31776,
+        "base_cost_per_unit": 8.958,
+        "sell_price_per_unit": 16.1243,
+        "extended_sell_price": 16124.31,
+        "total_column": 17
+      },
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Vinyl 0.01ga 48.0x96.0",
+        "quantity": 873.0,
+        "weight_per_unit": 2.3040000000000003,
+        "base_cost_per_unit": 3.2947,
+        "sell_price_per_unit": 6.9189,
+        "extended_sell_price": 6040.21,
+        "total_column": 14
+      }
+    ],
+    "quote_total": 22164.52,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 18,
+    "created_at": "2025-11-30T03:12:35Z",
+    "num_lines": 2
+  },
+  {
+    "customer_id": "ABFPRINT",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": ".020 Gold",
+        "quantity": 100.0,
+        "weight_per_unit": 10.0,
+        "base_cost_per_unit": 23.0,
+        "sell_price_per_unit": 86.25,
+        "extended_sell_price": 8625.0,
+        "total_column": 4
+      }
+    ],
+    "quote_total": 8625.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 19,
+    "created_at": "2025-11-30T03:25:29Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ACWELLMAN",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": ".020 Gold",
+        "quantity": 1000.0,
+        "weight_per_unit": 10.0,
+        "base_cost_per_unit": 23.0,
+        "sell_price_per_unit": 71.3,
+        "extended_sell_price": 71300.0,
+        "total_column": 8
+      }
+    ],
+    "quote_total": 71300.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 20,
+    "created_at": "2025-11-30T03:26:02Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "AADRYSTRIP",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "PC030VM2448",
+        "description": ".030 Clear Velvet/Matte Polycarb 24X48",
+        "quantity": 300.0,
+        "weight_per_unit": 1.65888,
+        "base_cost_per_unit": 4.479,
+        "sell_price_per_unit": 12.989,
+        "extended_sell_price": 3896.71,
+        "total_column": 9
+      }
+    ],
+    "quote_total": 3896.71,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 21,
+    "created_at": "2025-11-30T03:39:11Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ABSINDUST",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010BLKMM2151",
+        "description": ".010 Black Matte/Matte Vinyl 21.5X51.5",
+        "quantity": 90.0,
+        "weight_per_unit": 0.52594375,
+        "base_cost_per_unit": 0.7679,
+        "sell_price_per_unit": 6.1111,
+        "extended_sell_price": 550.0,
+        "total_column": -7
+      }
+    ],
+    "quote_total": 550.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 22,
+    "created_at": "2025-11-30T03:44:01Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ABSINDUST",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010BLKMM2151",
+        "description": ".010 Black Matte/Matte Vinyl 21.5X51.5",
+        "quantity": 90.0,
+        "weight_per_unit": 0.52594375,
+        "base_cost_per_unit": 0.7679,
+        "sell_price_per_unit": 6.1111,
+        "extended_sell_price": 550.0,
+        "total_column": -7
+      },
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Vinyl 0.01ga 48.0x96.0",
+        "quantity": 873.0,
+        "weight_per_unit": 2.3040000000000003,
+        "base_cost_per_unit": 3.2947,
+        "sell_price_per_unit": 14.8262,
+        "extended_sell_price": 12943.31,
+        "total_column": 2
+      }
+    ],
+    "quote_total": 13493.31,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 23,
+    "created_at": "2025-11-30T03:44:36Z",
+    "num_lines": 2
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "1015M40CPT",
+        "description": ".040 Clear PETG Faceshield 10X15",
+        "quantity": 10.0,
+        "weight_per_unit": 0.288,
+        "base_cost_per_unit": 0.288,
+        "sell_price_per_unit": 15.0,
+        "extended_sell_price": 150.0,
+        "total_column": -1
+      }
+    ],
+    "quote_total": 150.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 24,
+    "created_at": "2025-11-30T03:45:19Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "1015M40CPT",
+        "description": ".040 Clear PETG Faceshield 10X15",
+        "quantity": 100.0,
+        "weight_per_unit": 0.288,
+        "base_cost_per_unit": 0.288,
+        "sell_price_per_unit": 1.5,
+        "extended_sell_price": 150.0,
+        "total_column": -1
+      }
+    ],
+    "quote_total": 150.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 25,
+    "created_at": "2025-11-30T03:45:24Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "A1BANNER",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "1015M40CPT",
+        "description": ".040 Clear PETG Faceshield 10X15",
+        "quantity": 100.0,
+        "weight_per_unit": 0.288,
+        "base_cost_per_unit": 0.288,
+        "sell_price_per_unit": 1.5,
+        "extended_sell_price": 150.0,
+        "total_column": -1
+      }
+    ],
+    "quote_total": 150.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 26,
+    "created_at": "2025-11-30T03:45:37Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "APCOSIGNS",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "815M60CPT",
+        "description": ".060 Clear PETG Faceshield 8X15.5",
+        "quantity": 1000.0,
+        "weight_per_unit": 0.35712,
+        "base_cost_per_unit": 0.3571,
+        "sell_price_per_unit": 1.3392,
+        "extended_sell_price": 1339.2,
+        "total_column": 4
+      }
+    ],
+    "quote_total": 1339.2,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 27,
+    "created_at": "2025-11-30T17:56:40Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "APCOSIGNS",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "815M60CPT",
+        "description": ".060 Clear PETG Faceshield 8X15.5",
+        "quantity": 1000.0,
+        "weight_per_unit": 0.35712,
+        "base_cost_per_unit": 0.3571,
+        "sell_price_per_unit": 1.3392,
+        "extended_sell_price": 1339.2,
+        "total_column": 4
+      },
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 10.0ga 48.0x96.0",
+        "quantity": 100000.0,
+        "weight_per_unit": 1843.2000000000003,
+        "base_cost_per_unit": 2672.64,
+        "sell_price_per_unit": 2939.904,
+        "extended_sell_price": 293990400.0,
+        "total_column": 74
+      }
+    ],
+    "quote_total": 293991739.2,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 28,
+    "created_at": "2025-11-30T17:56:50Z",
+    "num_lines": 2
+  },
+  {
+    "customer_id": "APCOSIGNS",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "815M60CPT",
+        "description": ".060 Clear PETG Faceshield 8X15.5",
+        "quantity": 1000.0,
+        "weight_per_unit": 0.35712,
+        "base_cost_per_unit": 0.3571,
+        "sell_price_per_unit": 1.3392,
+        "extended_sell_price": 1339.2,
+        "total_column": 4
+      },
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 10.0ga 48.0x96.0",
+        "quantity": 100000.0,
+        "weight_per_unit": 1843.2000000000003,
+        "base_cost_per_unit": 2672.64,
+        "sell_price_per_unit": 2939.904,
+        "extended_sell_price": 293990400.0,
+        "total_column": 74
+      },
+      {
+        "type": "ad_hoc",
+        "sku": null,
+        "description": "Ad-hoc line",
+        "quantity": 1500.0,
+        "weight_per_unit": 1.0,
+        "base_cost_per_unit": 2.25,
+        "sell_price_per_unit": 9.45,
+        "extended_sell_price": 14175.0,
+        "total_column": 1
+      }
+    ],
+    "quote_total": 294005914.2,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 29,
+    "created_at": "2025-11-30T17:57:09Z",
+    "num_lines": 3
+  },
+  {
+    "customer_id": "ABFPRINT",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010BLKMM2151",
+        "description": ".010 Black Matte/Matte Vinyl 21.5X51.5",
+        "quantity": 1000.0,
+        "weight_per_unit": 0.52594375,
+        "base_cost_per_unit": 0.7679,
+        "sell_price_per_unit": 2.9947,
+        "extended_sell_price": 2994.72,
+        "total_column": 3
+      }
+    ],
+    "quote_total": 2994.72,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 30,
+    "created_at": "2025-12-04T23:24:37Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ABFPRINT",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010BLKMM2151",
+        "description": ".010 Black Matte/Matte Vinyl 21.5X51.5",
+        "quantity": 100.0,
+        "weight_per_unit": 0.52594375,
+        "base_cost_per_unit": 0.7679,
+        "sell_price_per_unit": 5.5,
+        "extended_sell_price": 550.0,
+        "total_column": -1
+      }
+    ],
+    "quote_total": 550.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 31,
+    "created_at": "2025-12-04T23:25:26Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ABFPRINT",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010BLKMM2151",
+        "description": ".010 Black Matte/Matte Vinyl 21.5X51.5",
+        "quantity": 100.0,
+        "weight_per_unit": 0.52594375,
+        "base_cost_per_unit": 0.7679,
+        "sell_price_per_unit": 5.5,
+        "extended_sell_price": 550.0,
+        "total_column": -1
+      }
+    ],
+    "quote_total": 550.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 32,
+    "created_at": "2025-12-04T23:31:17Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ACCUFORM",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010BLKMM2151",
+        "description": ".010 Black Matte/Matte Vinyl 21.5X51.5",
+        "quantity": 100.0,
+        "weight_per_unit": 0.52594375,
+        "base_cost_per_unit": 0.7679,
+        "sell_price_per_unit": 5.5,
+        "extended_sell_price": 550.0,
+        "total_column": 0
+      }
+    ],
+    "quote_total": 550.0,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 33,
+    "created_at": "2025-12-04T23:31:49Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ACCUFORM",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010BLKMM2151",
+        "description": ".010 Black Matte/Matte Vinyl 21.5X51.5",
+        "quantity": 1000.0,
+        "weight_per_unit": 0.52594375,
+        "base_cost_per_unit": 0.7679,
+        "sell_price_per_unit": 2.8795,
+        "extended_sell_price": 2879.54,
+        "total_column": 4
+      }
+    ],
+    "quote_total": 2879.54,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 34,
+    "created_at": "2025-12-04T23:32:08Z",
+    "num_lines": 1
+  },
+  {
+    "customer_id": "ACCUFORM",
+    "include_freight": true,
+    "lines": [
+      {
+        "type": "stock",
+        "sku": "VN010BLKMM2151",
+        "description": ".010 Black Matte/Matte Vinyl 21.5X51.5",
+        "quantity": 1000.0,
+        "weight_per_unit": 0.52594375,
+        "base_cost_per_unit": 0.7679,
+        "sell_price_per_unit": 2.8795,
+        "extended_sell_price": 2879.54,
+        "total_column": 4
+      },
+      {
+        "type": "custom",
+        "sku": null,
+        "description": "Custom Styrene 0.01ga 48.0x96.0",
+        "quantity": 1091.0,
+        "weight_per_unit": 1.8432000000000002,
+        "base_cost_per_unit": 2.6726,
+        "sell_price_per_unit": 3.3408,
+        "extended_sell_price": 3644.81,
+        "total_column": 50
+      }
+    ],
+    "quote_total": 6524.35,
+    "requested_by": "jaaron@krplastic.com",
+    "id": 35,
+    "created_at": "2025-12-04T23:32:39Z",
+    "num_lines": 2
+  }
+]

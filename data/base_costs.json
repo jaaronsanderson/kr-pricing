@@ -1,0 +1,24 @@
+{
+  "vinyl": {
+    "base_per_lb": 1.40,
+    "clear_up": 0.05,
+    "gloss_up": 0.03,
+    "velvet_up": 0.04,
+    "color_up": 0.06
+  },
+  "styrene": {
+    "base_per_lb": 1.45,
+    "translucent_white_up": -0.05,
+    "dead_white_up": 0.17,
+    "gloss_up": 0.04
+  },
+  "apet": {
+    "base_per_lb": 1.30
+  },
+  "polycarbonate": {
+    "base_per_lb": 2.70
+  },
+  "polyethylene": {
+    "base_per_lb": 1.20
+  }
+}
