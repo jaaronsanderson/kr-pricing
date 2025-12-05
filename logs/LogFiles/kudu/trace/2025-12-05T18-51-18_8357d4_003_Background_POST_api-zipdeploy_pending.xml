@@ -1,0 +1,147 @@
+<step title="BackgroundTrace" date="2025-12-05T18:51:18.946" instance="8357d4" url="/api/zipdeploy" method="POST" >
+  <step title="Creating temporary deployment - FetchDeploymentManager" date="2025-12-05T18:51:19.246" /><!-- duration: 11ms -->
+  <step title="Creating temporary deployment" date="2025-12-05T18:51:19.267" /><!-- duration: 196ms -->
+  <step title="Performing fetch based deployment" date="2025-12-05T18:51:19.644" >
+    <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/d08cd165-5f3f-4117-86e5-8a531c343e29.zip (0.05 MB) to /tmp/zipdeploy/extracted" date="2025-12-05T18:51:21.025" >
+      <step title="ChmodRecursive Process exited with total time taken in ms: 190" date="2025-12-05T18:51:21.287" /><!-- duration: 48ms -->
+    </step><!-- duration: 322ms -->
+    <step title="Deployment timer started" date="2025-12-05T18:51:23.394" >
+      <step title="DeploymentManager.Deploy(id:165e3462-b2ca-49aa-83e1-b898f7b41323)" date="2025-12-05T18:51:23.414" >
+        <step title="Collecting changeset information" date="2025-12-05T18:51:23.443" /><!-- duration: 185ms -->
+        <step title="Updating submodules" date="2025-12-05T18:51:23.684" /><!-- duration: 1391ms -->
+        <step title="Determining deployment builder" date="2025-12-05T18:51:25.525" >
+          <step title="Builder is OryxBuilder" date="2025-12-05T18:51:25.573" /><!-- duration: 18ms -->
+        </step><!-- duration: 71ms -->
+        <step title="PreDeployment: context.CleanOutputPath False" date="2025-12-05T18:51:25.964" >
+          <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2025-12-05T18:51:26.145" >
+            <step title="Building" date="2025-12-05T18:51:26.285" >
+              <step title="Executing external process" date="2025-12-05T18:51:26.675" type="process" path="bash" arguments="-c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8de342f4acb4e1e --compress-destination-dir | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" >
+                <step title="Process dump" date="2025-12-05T18:51:32.715" exitCode="1" type="processOutput" /><!-- duration: 19ms -->
+              </step><!-- duration: 6076ms -->
+              <step title="Error occurred" date="2025-12-05T18:51:32.810" type="error" text="Error: Oops... An unexpected error has occurred.
+Error: Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Current JsonReader item is not an object: StartArray. Path &apos;&apos;, line 1, position 1.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Microsoft.Oryx.Detector.ParserHelper.ParseJsonFile(ISourceRepo sourceRepo, String filePath) in /__w/1/s/Oryx/src/Detector/ParserHelper.cs:line 86
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoJsonFile(ISourceRepo sourceRepo, String[] subPaths) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 229
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoApp(ISourceRepo sourceRepo, String&amp; appDirectory) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 157
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.Detect(DetectorContext context) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 49
+   at Microsoft.Oryx.BuildScriptGenerator.Hugo.HugoPlatform.Detect(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/Hugo/HugoPlatform.cs:line 61
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultPlatformsInformationProvider.GetPlatformsInfo(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultPlatformsInformationProvider.cs:line 65
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultBuildScriptGenerator.GenerateBashScript(BuildScriptGeneratorContext context, String&amp; script, List`1 checkerMessageSink) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultBuildScriptGenerator.cs:line 75
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildScriptGenerator.TryGenerateScript(String&amp; generatedScript, Exception&amp; exception) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/BuildScriptGenerator.cs:line 63
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildCommand.Execute(IServiceProvider serviceProvider, IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/BuildCommand.cs:line 278
+   at Microsoft.Oryx.BuildScriptGeneratorCli.CommandBase.OnExecute(IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/CommandBase.cs:line 87
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8de342f4acb4e1e --compress-destination-dir | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122" /><!-- duration: 8ms -->
+              <step title="Error occurred" date="2025-12-05T18:51:32.829" type="error" text="Error: Oops... An unexpected error has occurred.
+Error: Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Current JsonReader item is not an object: StartArray. Path &apos;&apos;, line 1, position 1.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Microsoft.Oryx.Detector.ParserHelper.ParseJsonFile(ISourceRepo sourceRepo, String filePath) in /__w/1/s/Oryx/src/Detector/ParserHelper.cs:line 86
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoJsonFile(ISourceRepo sourceRepo, String[] subPaths) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 229
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoApp(ISourceRepo sourceRepo, String&amp; appDirectory) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 157
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.Detect(DetectorContext context) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 49
+   at Microsoft.Oryx.BuildScriptGenerator.Hugo.HugoPlatform.Detect(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/Hugo/HugoPlatform.cs:line 61
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultPlatformsInformationProvider.GetPlatformsInfo(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultPlatformsInformationProvider.cs:line 65
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultBuildScriptGenerator.GenerateBashScript(BuildScriptGeneratorContext context, String&amp; script, List`1 checkerMessageSink) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultBuildScriptGenerator.cs:line 75
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildScriptGenerator.TryGenerateScript(String&amp; generatedScript, Exception&amp; exception) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/BuildScriptGenerator.cs:line 63
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildCommand.Execute(IServiceProvider serviceProvider, IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/BuildCommand.cs:line 278
+   at Microsoft.Oryx.BuildScriptGeneratorCli.CommandBase.OnExecute(IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/CommandBase.cs:line 87
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8de342f4acb4e1e --compress-destination-dir | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+   at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771" /><!-- duration: 18ms -->
+              <step title="Using PythonDeploymentLogParser" date="2025-12-05T18:51:33.090" /><!-- duration: 3ms -->
+            </step><!-- duration: 8313ms -->
+          </step><!-- duration: 8462ms -->
+          <step title="Error occurred" date="2025-12-05T18:51:34.611" type="error" text="Error: Oops... An unexpected error has occurred.
+Error: Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Current JsonReader item is not an object: StartArray. Path &apos;&apos;, line 1, position 1.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Microsoft.Oryx.Detector.ParserHelper.ParseJsonFile(ISourceRepo sourceRepo, String filePath) in /__w/1/s/Oryx/src/Detector/ParserHelper.cs:line 86
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoJsonFile(ISourceRepo sourceRepo, String[] subPaths) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 229
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoApp(ISourceRepo sourceRepo, String&amp; appDirectory) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 157
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.Detect(DetectorContext context) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 49
+   at Microsoft.Oryx.BuildScriptGenerator.Hugo.HugoPlatform.Detect(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/Hugo/HugoPlatform.cs:line 61
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultPlatformsInformationProvider.GetPlatformsInfo(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultPlatformsInformationProvider.cs:line 65
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultBuildScriptGenerator.GenerateBashScript(BuildScriptGeneratorContext context, String&amp; script, List`1 checkerMessageSink) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultBuildScriptGenerator.cs:line 75
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildScriptGenerator.TryGenerateScript(String&amp; generatedScript, Exception&amp; exception) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/BuildScriptGenerator.cs:line 63
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildCommand.Execute(IServiceProvider serviceProvider, IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/BuildCommand.cs:line 278
+   at Microsoft.Oryx.BuildScriptGeneratorCli.CommandBase.OnExecute(IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/CommandBase.cs:line 87
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8de342f4acb4e1e --compress-destination-dir | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+   at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840" /><!-- duration: 6ms -->
+          <step title="Cleaning up temp files" date="2025-12-05T18:51:34.694" /><!-- duration: 4ms -->
+          <step title="Cleaning up temp files" date="2025-12-05T18:51:34.706" /><!-- duration: 504ms -->
+          <step title="Error occurred" date="2025-12-05T18:51:35.283" type="error" text="Error: Oops... An unexpected error has occurred.
+Error: Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Current JsonReader item is not an object: StartArray. Path &apos;&apos;, line 1, position 1.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Microsoft.Oryx.Detector.ParserHelper.ParseJsonFile(ISourceRepo sourceRepo, String filePath) in /__w/1/s/Oryx/src/Detector/ParserHelper.cs:line 86
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoJsonFile(ISourceRepo sourceRepo, String[] subPaths) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 229
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoApp(ISourceRepo sourceRepo, String&amp; appDirectory) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 157
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.Detect(DetectorContext context) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 49
+   at Microsoft.Oryx.BuildScriptGenerator.Hugo.HugoPlatform.Detect(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/Hugo/HugoPlatform.cs:line 61
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultPlatformsInformationProvider.GetPlatformsInfo(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultPlatformsInformationProvider.cs:line 65
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultBuildScriptGenerator.GenerateBashScript(BuildScriptGeneratorContext context, String&amp; script, List`1 checkerMessageSink) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultBuildScriptGenerator.cs:line 75
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildScriptGenerator.TryGenerateScript(String&amp; generatedScript, Exception&amp; exception) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/BuildScriptGenerator.cs:line 63
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildCommand.Execute(IServiceProvider serviceProvider, IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/BuildCommand.cs:line 278
+   at Microsoft.Oryx.BuildScriptGeneratorCli.CommandBase.OnExecute(IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/CommandBase.cs:line 87
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8de342f4acb4e1e --compress-destination-dir | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+   at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 3ms -->
+        </step><!-- duration: 9326ms -->
+        <step title="Reloading status file with latest updates" date="2025-12-05T18:51:35.345" >
+          <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2025-12-05T18:51:35.355" /><!-- duration: 222ms -->
+        </step><!-- duration: 235ms -->
+        <step title="Error occurred" date="2025-12-05T18:51:35.587" type="error" text="Error: Oops... An unexpected error has occurred.
+Error: Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Current JsonReader item is not an object: StartArray. Path &apos;&apos;, line 1, position 1.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Microsoft.Oryx.Detector.ParserHelper.ParseJsonFile(ISourceRepo sourceRepo, String filePath) in /__w/1/s/Oryx/src/Detector/ParserHelper.cs:line 86
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoJsonFile(ISourceRepo sourceRepo, String[] subPaths) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 229
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.IsHugoApp(ISourceRepo sourceRepo, String&amp; appDirectory) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 157
+   at Microsoft.Oryx.Detector.Hugo.HugoDetector.Detect(DetectorContext context) in /__w/1/s/Oryx/src/Detector/Hugo/HugoDetector.cs:line 49
+   at Microsoft.Oryx.BuildScriptGenerator.Hugo.HugoPlatform.Detect(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/Hugo/HugoPlatform.cs:line 61
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultPlatformsInformationProvider.GetPlatformsInfo(RepositoryContext context) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultPlatformsInformationProvider.cs:line 65
+   at Microsoft.Oryx.BuildScriptGenerator.DefaultBuildScriptGenerator.GenerateBashScript(BuildScriptGeneratorContext context, String&amp; script, List`1 checkerMessageSink) in /__w/1/s/Oryx/src/BuildScriptGenerator/DefaultBuildScriptGenerator.cs:line 75
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildScriptGenerator.TryGenerateScript(String&amp; generatedScript, Exception&amp; exception) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/BuildScriptGenerator.cs:line 63
+   at Microsoft.Oryx.BuildScriptGeneratorCli.BuildCommand.Execute(IServiceProvider serviceProvider, IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/BuildCommand.cs:line 278
+   at Microsoft.Oryx.BuildScriptGeneratorCli.CommandBase.OnExecute(IConsole console) in /__w/1/s/Oryx/src/BuildScriptGeneratorCli/Commands/CommandBase.cs:line 87
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8de342f4acb4e1e --compress-destination-dir | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+   at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 3ms -->
+        <step title="Marking deployment as failed and cleaning up the temp deployment" date="2025-12-05T18:51:35.656" /><!-- duration: 4ms -->
+      </step><!-- duration: 12368ms -->
+      <step title="Error occurred" date="2025-12-05T18:51:35.802" type="error" text="One or more errors occurred. (Deployment failed)" stackTrace="   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Kudu.Core.Deployment.FetchDeploymentManager.&lt;&gt;c__DisplayClass22_1.&lt;PerformBackgroundDeployment&gt;b__3() in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 414
+   at Kudu.Contracts.Infrastructure.LockExtensions.TryLockOperation(IOperationLock lockObj, Action operation, String operationName, TimeSpan timeout) in /tmp/KuduLite/Kudu.Contracts/Infrastructure/LockExtensions.cs:line 34
+   at Kudu.Contracts.Infrastructure.LockExtensions.LockOperation(IOperationLock lockObj, Action operation, String operationName, TimeSpan timeout) in /tmp/KuduLite/Kudu.Contracts/Infrastructure/LockExtensions.cs:line 46
+   at Kudu.Core.Deployment.FetchDeploymentManager.&lt;&gt;c__DisplayClass22_0.&lt;PerformBackgroundDeployment&gt;b__1() in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 393" innerText="Deployment failed" innerStackTrace="   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 307
+   at Kudu.Core.Deployment.FetchDeploymentManager.PerformDeployment(DeploymentInfoBase deploymentInfo, IDisposable tempDeployment, ChangeSet tempChangeSet, DeployStatusApiResult updateStatusObj) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 230" /><!-- duration: 3ms -->
+    </step><!-- duration: 12419ms -->

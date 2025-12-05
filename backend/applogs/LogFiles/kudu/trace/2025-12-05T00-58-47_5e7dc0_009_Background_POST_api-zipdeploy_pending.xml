@@ -1,0 +1,12 @@
+<step title="BackgroundTrace" date="2025-12-05T00:58:47.498" instance="5e7dc0" url="/api/zipdeploy" method="POST" >
+  <step title="Cleanup Xml Logs" date="2025-12-05T00:58:47.519" /><!-- duration: 10ms -->
+  <step title="Creating temporary deployment - FetchDeploymentManager" date="2025-12-05T00:58:47.613" /><!-- duration: 4ms -->
+  <step title="Creating temporary deployment" date="2025-12-05T00:58:47.620" /><!-- duration: 69ms -->
+  <step title="Performing fetch based deployment" date="2025-12-05T00:58:47.730" >
+    <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/1e16cf3a-0e77-4124-95bf-56c05ff54390.zip (49.12 MB) to /tmp/zipdeploy/extracted" date="2025-12-05T00:58:49.008" >
+      <step title="ChmodRecursive Process exited with total time taken in ms: 84" date="2025-12-05T00:58:50.309" /><!-- duration: 12ms -->
+    </step><!-- duration: 1320ms -->
+    <step title="Deployment timer started" date="2025-12-05T00:58:52.336" >
+      <step title="DeploymentManager.Deploy(id:0094d1dc-bbfb-451a-99c8-bc5f29c3815d)" date="2025-12-05T00:58:52.343" >
+        <step title="Collecting changeset information" date="2025-12-05T00:58:52.398" /><!-- duration: 182ms -->
+        <step title="Updating submodules" date="2025-12-05T00:58:52.586" 

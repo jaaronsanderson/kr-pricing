@@ -1,0 +1,4472 @@
+{
+  "A1BANNER": {
+    "name": "A-1 Banner & Sign Co",
+    "zip": "76710",
+    "column_break": "VN7ST8PC7AP0PE7SA0",
+    "freight_column_offset": -1
+  },
+  "A1GRAPHIC": {
+    "name": "A-1 Graphic Solutions",
+    "zip": "79701",
+    "column_break": "VN1ST3PC0AP0PE2SA0",
+    "freight_column_offset": -3
+  },
+  "AADRYSTRIP": {
+    "name": "A&A Dry Strip",
+    "zip": "73111",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -3
+  },
+  "ABOX": {
+    "name": "Abox Packaging Co",
+    "zip": "75126",
+    "column_break": "VN7ST6PC0AP7PE4SA0",
+    "freight_column_offset": -2
+  },
+  "ABCO": {
+    "name": "ABCO INC",
+    "zip": "75215",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ABFPRINT": {
+    "name": "ABF Printing Services",
+    "zip": "77017",
+    "column_break": "VN0ST4PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ABLECARD": {
+    "name": "Able Card",
+    "zip": "91702",
+    "column_break": "VN6ST0PC1AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "ABSSPEC": {
+    "name": "ABS Specialty Graphics",
+    "zip": "18066",
+    "column_break": "VN3ST0PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "ABSCOLOR": {
+    "name": "Absolute Color",
+    "zip": "77067",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -2
+  },
+  "ABSINDUST": {
+    "name": "Absolute Industrial Safety",
+    "zip": "46350",
+    "column_break": "VN0ST0PC0AP0PE0SA8",
+    "freight_column_offset": -7
+  },
+  "ACPLASTICS": {
+    "name": "A&C Plastics",
+    "zip": "77087",
+    "column_break": "VN2ST6PC6AP0PE2SA2",
+    "freight_column_offset": -2
+  },
+  "ACPRINT": {
+    "name": "AC Printing Co Inc",
+    "zip": "66061",
+    "column_break": "VN6ST8PC0AP0PE0SA0",
+    "freight_column_offset": -4
+  },
+  "ACWELLMAN": {
+    "name": "AC Wellman",
+    "zip": "44094",
+    "column_break": "VN6ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "ACCUFORM": {
+    "name": "Accuform Mfg",
+    "zip": "34604",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -7
+  },
+  "ACCUPLAST": {
+    "name": "Accurate Plastic Printers",
+    "zip": "07013",
+    "column_break": "VN3ST3PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "ACCUREPRO": {
+    "name": "Accurate Repro Inc",
+    "zip": "60563",
+    "column_break": "VN6ST8PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "ACECAL": {
+    "name": "ACE CALENDARING ENT.",
+    "zip": "91761",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "ACEDESIGN": {
+    "name": "Ace Designs, Inc.",
+    "zip": "19007",
+    "column_break": "VN1ST0PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "ACIKC": {
+    "name": "ACI Plastics - Kansas City",
+    "zip": "64125",
+    "column_break": "VN3ST0PC3AP0PE0SA0",
+    "freight_column_offset": -4
+  },
+  "ACICORP": {
+    "name": "ACI Plastics Corporate - St Louis MO",
+    "zip": "63108",
+    "column_break": "VN3ST0PC0AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "ACILR": {
+    "name": "ACI Plastics- Little Rock AR",
+    "zip": "72114",
+    "column_break": "VN0ST0PC0AP0PE2SA0",
+    "freight_column_offset": -3
+  },
+  "ACPINTL": {
+    "name": "ACP International",
+    "zip": "76011",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -2
+  },
+  "ACRYLSRC": {
+    "name": "Acrylic Source",
+    "zip": "76017",
+    "column_break": "VN2ST0PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ACTIONSIGN": {
+    "name": "Action Sign",
+    "zip": "28697",
+    "column_break": "VN0ST7PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "ACTIONSUP": {
+    "name": "Action Supply Products",
+    "zip": "15108",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -9
+  },
+  "ADCRAFT": {
+    "name": "Ad Craft Of Arkansas",
+    "zip": "72203",
+    "column_break": "VN7ST7PC6AP0PE0SA0",
+    "freight_column_offset": -3
+  },
+  "ADGRAPH": {
+    "name": "Ad Graphics",
+    "zip": "70123",
+    "column_break": "VN4ST4PC4AP0PE4SA0",
+    "freight_column_offset": -3
+  },
+  "ADAHOTEL": {
+    "name": "ADA Hotel Signs Spindle Company, Inc.",
+    "zip": "86301",
+    "column_break": "VN0ST8PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "ADAMSMCC": {
+    "name": "Adams McClure",
+    "zip": "80223",
+    "column_break": "VN6ST7PC0AP0PE0SA0",
+    "freight_column_offset": -6
+  },
+  "ADARTLA": {
+    "name": "AdArt Company - Los Angeles",
+    "zip": "90058",
+    "column_break": "VN4ST4PC3AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "ADCO": {
+    "name": "Adco & QEH Enterprises",
+    "zip": "75042",
+    "column_break": "VN0ST6PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ADDICKS": {
+    "name": "Addicks Fire & Safety",
+    "zip": "77043",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ADHESIVET": {
+    "name": "Adhesive Tapes International",
+    "zip": "06810",
+    "column_break": "VN0ST0PC3AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "ADHUE": {
+    "name": "Adhue Graphic Resources",
+    "zip": "55449",
+    "column_break": "VN7ST3PC0AP0PE3SA0",
+    "freight_column_offset": -7
+  },
+  "ADPOWER": {
+    "name": "Adpower",
+    "zip": "77033",
+    "column_break": "VN0ST8PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ADVGRAPH": {
+    "name": "Advanced Graphic Products",
+    "zip": "75019",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -2
+  },
+  "ADVNAME": {
+    "name": "Advanced Nameplates",
+    "zip": "75243",
+    "column_break": "VN6ST8PC6AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ADVPLAST": {
+    "name": "Advanced Plastics",
+    "zip": "37209",
+    "column_break": "VN6ST6PC5AP4PE0SA0",
+    "freight_column_offset": -5
+  },
+  "ADVANYTNG": {
+    "name": "Advertising Anything",
+    "zip": "74110",
+    "column_break": "VN6ST7PC6AP0PE6SA6",
+    "freight_column_offset": -3
+  },
+  "ADVCREATE": {
+    "name": "Advertising Creations",
+    "zip": "53713",
+    "column_break": "VN7ST8PC7AP0PE7SA0",
+    "freight_column_offset": -7
+  },
+  "ADVOCATE": {
+    "name": "Advocate Printing Solutions Inc.",
+    "zip": "37203",
+    "column_break": "VN7ST7PC7AP0PE6SA0",
+    "freight_column_offset": -5
+  },
+  "AFFIRMED": {
+    "name": "Affirmed First Aid & Safety",
+    "zip": "79708",
+    "column_break": "VN0ST0PC0AP0PE0SA7",
+    "freight_column_offset": -3
+  },
+  "AGATE": {
+    "name": "AGATE",
+    "zip": "85256",
+    "column_break": "VN8ST8PC8AP8PE8SA8",
+    "freight_column_offset": -6
+  },
+  "AGILITY": {
+    "name": "Agility Retail Group",
+    "zip": "02048",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -10
+  },
+  "AIRGAS": {
+    "name": "Airgas Safety",
+    "zip": "19007",
+    "column_break": "VN8ST8PC8AP8PE8SA8",
+    "freight_column_offset": -10
+  },
+  "AIRMARK": {
+    "name": "Airmark Co.",
+    "zip": "90701",
+    "column_break": "VN0ST0PC6AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "AIRMARKCO": {
+    "name": "AIRMARK COMPANY",
+    "zip": "90701",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "AKONNI": {
+    "name": "Akonni Biosystems",
+    "zip": "21701",
+    "column_break": "VN0ST0PC0AP0PE3SA0",
+    "freight_column_offset": -9
+  },
+  "ALASAFE": {
+    "name": "Alabama Safety Products",
+    "zip": "36203",
+    "column_break": "VN0ST0PC0AP0PE0SA7",
+    "freight_column_offset": -5
+  },
+  "ALAMEDA": {
+    "name": "Alameda Company",
+    "zip": "92807",
+    "column_break": "VN3ST5PC6AP0PE2SA0",
+    "freight_column_offset": -8
+  },
+  "ALBHERN": {
+    "name": "Albert Hernandez",
+    "zip": "78228",
+    "column_break": "VN5ST0PC0AP0PE0SA0",
+    "freight_column_offset": -1
+  },
+  "ALBUSIGN": {
+    "name": "Albuquerque Sign Print",
+    "zip": "87116",
+    "column_break": "VN0ST4PC0AP0PE3SA0",
+    "freight_column_offset": -5
+  },
+  "ALEXCLARK": {
+    "name": "Alexander Clark Printing",
+    "zip": "83713",
+    "column_break": "VN6ST6PC0AP0PE6SA0",
+    "freight_column_offset": -8
+  },
+  "ALGLABEL": {
+    "name": "ALG Labels & Graphics Corp",
+    "zip": "35233",
+    "column_break": "VN6ST6PC8AP0PE6SA6",
+    "freight_column_offset": -5
+  },
+  "ALLCOLOR": {
+    "name": "All Color Badge And Awards",
+    "zip": "75247",
+    "column_break": "VN5ST5PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ALLPLASTF": {
+    "name": "All Plastics And Fiberglass, Inc.",
+    "zip": "36608",
+    "column_break": "VN0ST0PC0AP0PE0SA7",
+    "freight_column_offset": -5
+  },
+  "ALLSTATE": {
+    "name": "All State Supply Co",
+    "zip": "28401",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "ALLWEATHER": {
+    "name": "All Weather Products Company Llc",
+    "zip": "60007",
+    "column_break": "VN4ST4PC2AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "ALLIEDMN": {
+    "name": "Allied Graphics - Minnesota",
+    "zip": "55376",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -7
+  },
+  "ALLIEDLITH": {
+    "name": "Allied Lithographing Company, Inc.",
+    "zip": "64124",
+    "column_break": "VN0ST6PC0AP0PE0SA0",
+    "freight_column_offset": -4
+  },
+  "ALLIEDPS": {
+    "name": "Allied Plastic Supply",
+    "zip": "75220",
+    "column_break": "VN3ST6PC3AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ALLIEDPSL": {
+    "name": "Allied Plastic Supply, LLC.",
+    "zip": "75006",
+    "column_break": "VN7ST7PC7AP5PE7SA0",
+    "freight_column_offset": -2
+  },
+  "ALLPAK": {
+    "name": "ALLPAK, INC.",
+    "zip": "38017",
+    "column_break": "VN6ST0PC6AP0PE0SA0",
+    "freight_column_offset": -4
+  },
+  "ALLSAFE": {
+    "name": "Allsafe Technologies",
+    "zip": "14228",
+    "column_break": "VN8ST7PC0AP0PE0SA0",
+    "freight_column_offset": -9
+  },
+  "ALLSTPRNT": {
+    "name": "Allstate Printing & Packaging",
+    "zip": "70110",
+    "column_break": "VN2ST3PC0AP0PE0SA0",
+    "freight_column_offset": -3
+  },
+  "ALTUNLIM": {
+    "name": "Alterations Unlimited",
+    "zip": "78223",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -1
+  },
+  "ALUMAGRAPH": {
+    "name": "Aluma Graphics",
+    "zip": "75098",
+    "column_break": "VN7ST7PC7AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "AMBROSE": {
+    "name": "AMBROSE PRINTING COMPANY",
+    "zip": "37228",
+    "column_break": "VN6ST7PC0AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "AMCARTON": {
+    "name": "American Carton Company",
+    "zip": "76063",
+    "column_break": "VN7ST7PC7AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "AMLITHO": {
+    "name": "American Litho",
+    "zip": "60188",
+    "column_break": "VN6ST8PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "AMPRINTBLND": {
+    "name": "American Printing House for the Blind",
+    "zip": "40206",
+    "column_break": "VN5ST0PC0AP0PE5SA0",
+    "freight_column_offset": -6
+  },
+  "AMSAFIND": {
+    "name": "American Safety & Industrial",
+    "zip": "70507",
+    "column_break": "VN0ST0PC0AP0PE0SA7",
+    "freight_column_offset": -3
+  },
+  "AMSAFABATE": {
+    "name": "American Safety And Abatement",
+    "zip": "63104",
+    "column_break": "VN0ST0PC0AP0PE0SA6",
+    "freight_column_offset": -5
+  },
+  "AMSTAMP": {
+    "name": "American Stamp & Marking Products",
+    "zip": "63043",
+    "column_break": "VN6ST8PC0AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "AMERIPLAST": {
+    "name": "Ameriplastic Packaging",
+    "zip": "90670",
+    "column_break": "VN0ST0PC0AP6PE0SA0",
+    "freight_column_offset": -8
+  },
+  "AMSUPPLY": {
+    "name": "AmSupply",
+    "zip": "73137",
+    "column_break": "VN0ST0PC0AP0PE0SA3",
+    "freight_column_offset": -3
+  },
+  "ANASOURCE": {
+    "name": "AnA Sourcing Inc",
+    "zip": "08107",
+    "column_break": "VN0ST0PC0AP0PE0SA6",
+    "freight_column_offset": -10
+  },
+  "ANCHORGRAPH": {
+    "name": "Anchor Graphics",
+    "zip": "75069",
+    "column_break": "VN6ST6PC6AP0PE6SA0",
+    "freight_column_offset": -2
+  },
+  "ANODIZING": {
+    "name": "Anodizing Graphics",
+    "zip": "77497",
+    "column_break": "VN6ST6PC6AP0PE6SA0",
+    "freight_column_offset": -2
+  },
+  "ANRO": {
+    "name": "Anro Inc",
+    "zip": "19382",
+    "column_break": "VN7ST8PC7AP0PE7SA0",
+    "freight_column_offset": -10
+  },
+  "APACTX": {
+    "name": "APAC TX",
+    "zip": "78219",
+    "column_break": "VN0ST0PC0AP1PE0SA0",
+    "freight_column_offset": -1
+  },
+  "APCOSIGNS": {
+    "name": "APCO Signs",
+    "zip": "30312",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -6
+  },
+  "APOLLOMED": {
+    "name": "Apollo Medical Devices",
+    "zip": "44106",
+    "column_break": "VN0ST4PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "APOLLOSAFE": {
+    "name": "Apollo Safety & Industrial",
+    "zip": "91786",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -8
+  },
+  "APOLLOSIGN": {
+    "name": "Apollo Sign Co",
+    "zip": "77505",
+    "column_break": "VN0ST0PC0AP0PE0SA1",
+    "freight_column_offset": -2
+  },
+  "APPLEPRESS": {
+    "name": "Apple Press",
+    "zip": "19341",
+    "column_break": "VN7ST0PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "APPLIEDGR": {
+    "name": "Applied Graphics",
+    "zip": "01913",
+    "column_break": "VN0ST0PC6AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "AZGLOVE": {
+    "name": "Arizona Glove & Safety",
+    "zip": "85385",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -7
+  },
+  "ARMIN": {
+    "name": "Armin Innovative Products RNR",
+    "zip": "02767",
+    "column_break": "VN4ST0PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "ARROWEYE": {
+    "name": "Arroweye Solutions",
+    "zip": "89011",
+    "column_break": "VN8ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "ARTADV": {
+    "name": "Art Advertising",
+    "zip": "72401",
+    "column_break": "VN2ST2PC0AP0PE2SA0",
+    "freight_column_offset": -4
+  },
+  "ARTFAC": {
+    "name": "Art Fac Graphics Ltd",
+    "zip": "68102",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -5
+  },
+  "ARTGUILD": {
+    "name": "Art Guild Binders",
+    "zip": "45237",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -7
+  },
+  "ARTECH": {
+    "name": "Artech",
+    "zip": "83642",
+    "column_break": "VN5ST5PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "ARTISAN": {
+    "name": "Artisan Menu Covers",
+    "zip": "76448",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -2
+  },
+  "ASASAFE": {
+    "name": "ASA Safety Equipment",
+    "zip": "30043",
+    "column_break": "VN0ST0PC0AP0PE0SA7",
+    "freight_column_offset": -6
+  },
+  "ASPENIMG": {
+    "name": "Aspen Imaging",
+    "zip": "77092",
+    "column_break": "VN6ST6PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "ASSOCGRAPH": {
+    "name": "Associated Graphic Arts Inc. Decal Source",
+    "zip": "55021",
+    "column_break": "VN0ST0PC7AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "ATLASTAG": {
+    "name": "Atlas Tag & Label",
+    "zip": "54957",
+    "column_break": "VN5ST0PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "AUBRIGHT": {
+    "name": "Aubright",
+    "zip": "56301",
+    "column_break": "VN8ST8PC8AP8PE8SA8",
+    "freight_column_offset": -7
+  },
+  "AUSTFOAM": {
+    "name": "Austin Foam Plastics",
+    "zip": "75007",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "AZSAFETY": {
+    "name": "A-Z Safety/Work Fitters Tool & Safety",
+    "zip": "80524",
+    "column_break": "VN7ST0PC0AP0PE0SA4",
+    "freight_column_offset": -6
+  },
+  "BRSUPPLY": {
+    "name": "B&R Supply",
+    "zip": "93308",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -8
+  },
+  "BAKERPRINT": {
+    "name": "Baker Printing",
+    "zip": "70704",
+    "column_break": "VN6ST6PC6AP0PE6SA6",
+    "freight_column_offset": -3
+  },
+  "BALLISTIC": {
+    "name": "Ballistic Warehouse",
+    "zip": "77251",
+    "column_break": "VN0ST0PC0AP0PE0SA7",
+    "freight_column_offset": -2
+  },
+  "BANNERSIGN": {
+    "name": "Banner Signs",
+    "zip": "78752",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -1
+  },
+  "BARTONN": {
+    "name": "Barton Nelson",
+    "zip": "64145",
+    "column_break": "VN1ST4PC0AP0PE0SA0",
+    "freight_column_offset": -4
+  },
+  "BASSPRINT": {
+    "name": "Bass Printing Company",
+    "zip": "76119",
+    "column_break": "VN7ST7PC0AP7PE7SA0",
+    "freight_column_offset": -2
+  },
+  "BCINDUST": {
+    "name": "BC Industrial",
+    "zip": "32236",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -7
+  },
+  "BDIDALLAS": {
+    "name": "BDI - Dallas",
+    "zip": "75247",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -2
+  },
+  "BEAEDCORP": {
+    "name": "Beaed Corporation - Alvin, Beaumont, CC",
+    "zip": "77511",
+    "column_break": "VN7ST8PC0AP0PE7SA0",
+    "freight_column_offset": -2
+  },
+  "BEAEDLA": {
+    "name": "Beaed of Louisiana, Inc.",
+    "zip": "70070",
+    "column_break": "VN3ST4PC0AP0PE0SA0",
+    "freight_column_offset": -3
+  },
+  "BECKERFAB": {
+    "name": "Becker's Fabrication",
+    "zip": "92887",
+    "column_break": "VN0ST0PC6AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "BEETLEPLAST": {
+    "name": "Beetle Plastics",
+    "zip": "73401",
+    "column_break": "VN0ST0PC0AP0PE0SA1",
+    "freight_column_offset": -3
+  },
+  "BELCOMFG": {
+    "name": "Belco Mfg",
+    "zip": "76513",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -1
+  },
+  "BERTCO": {
+    "name": "Bert-Co",
+    "zip": "90703",
+    "column_break": "VN7ST7PC0AP7PE0SA0",
+    "freight_column_offset": -8
+  },
+  "BESTPRESS": {
+    "name": "Best Press, Inc",
+    "zip": "75001",
+    "column_break": "VN3ST6PC3AP0PE3SA3",
+    "freight_column_offset": -2
+  },
+  "BETTERWAY": {
+    "name": "Better Way",
+    "zip": "60559",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -7
+  },
+  "BIGCITY": {
+    "name": "Big City Mfg",
+    "zip": "77549",
+    "column_break": "VN7ST6PC7AP0PE5SA0",
+    "freight_column_offset": -2
+  },
+  "BIGTEX": {
+    "name": "Big Tex Welding",
+    "zip": "77087",
+    "column_break": "VN0ST0PC6AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "BIGVISUAL": {
+    "name": "Big Visual Group",
+    "zip": "37013",
+    "column_break": "VN6ST7PC0AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "BLAIRLINE": {
+    "name": "Blair Line",
+    "zip": "64836",
+    "column_break": "VN0ST3PC0AP0PE0SA0",
+    "freight_column_offset": -4
+  },
+  "BLANCIND": {
+    "name": "Blanc Industries",
+    "zip": "07801",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -10
+  },
+  "BLANKSPR": {
+    "name": "Blanks Printing & Color Imaging",
+    "zip": "75208",
+    "column_break": "VN8ST5PC6AP0PE3SA0",
+    "freight_column_offset": -2
+  },
+  "BLISTERPAK": {
+    "name": "Blisterpak inc",
+    "zip": "90040",
+    "column_break": "VN0ST0PC7AP8PE0SA0",
+    "freight_column_offset": -8
+  },
+  "BOLDERVISION": {
+    "name": "Bolder Vision Optik",
+    "zip": "80301",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -6
+  },
+  "BOVIESCRN": {
+    "name": "Bovie Screen Process Printing",
+    "zip": "03304",
+    "column_break": "VN7ST7PC0AP7PE0SA0",
+    "freight_column_offset": -10
+  },
+  "BRADYCORP": {
+    "name": "Brady Corporation",
+    "zip": "53223",
+    "column_break": "VN7ST0PC0AP0PE6SA0",
+    "freight_column_offset": -7
+  },
+  "BRANDPOP": {
+    "name": "BrandPOP",
+    "zip": "78108",
+    "column_break": "VN0ST6PC0AP0PE0SA0",
+    "freight_column_offset": -1
+  },
+  "BRIMARIND": {
+    "name": "Brimar Industries",
+    "zip": "07026",
+    "column_break": "VN6ST6PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "BRODART": {
+    "name": "Brodart Co., Inc.",
+    "zip": "17701",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -9
+  },
+  "BROOKSHIRE": {
+    "name": "Brookshire Print Shop",
+    "zip": "75710",
+    "column_break": "VN4ST0PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "BRYTONPR": {
+    "name": "Bryton Printing",
+    "zip": "92806",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "BURLINGGRAPH": {
+    "name": "Burlington Graphic Systems, Inc.",
+    "zip": "53403",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "BWXTECH": {
+    "name": "BWX Technologies, Inc.",
+    "zip": "24504",
+    "column_break": "VN0ST0PC0AP0PE3SA0",
+    "freight_column_offset": -8
+  },
+  "CDPLAST": {
+    "name": "C&D PLASTICS",
+    "zip": "38017",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -4
+  },
+  "CWFIRE": {
+    "name": "C&W Fire & Safety",
+    "zip": "71111",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -3
+  },
+  "CALSAKNC": {
+    "name": "Calsak Plastics - Charlotte NC",
+    "zip": "28269",
+    "column_break": "VN6ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "CALSAKCORP": {
+    "name": "Calsak Plastics Corporate - Chino Hills CA",
+    "zip": "91709",
+    "column_break": "VN3ST0PC6AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "CAPITALPR": {
+    "name": "Capital Printing Corporation",
+    "zip": "08846",
+    "column_break": "VN4ST5PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "CARDSYSOL": {
+    "name": "Card Systems And Solutions",
+    "zip": "03100",
+    "column_break": "VN7ST7PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "CARLTON": {
+    "name": "Carlton",
+    "zip": "78945",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -1
+  },
+  "CARLTONIND": {
+    "name": "Carlton Industries",
+    "zip": "78945",
+    "column_break": "VN4ST3PC0AP0PE4SA0",
+    "freight_column_offset": -1
+  },
+  "CARTAMUNDI": {
+    "name": "Cartamundi Yaquinto Printing",
+    "zip": "75211",
+    "column_break": "VN3ST6PC0AP6PE0SA0",
+    "freight_column_offset": -2
+  },
+  "CASCADEGR": {
+    "name": "Cascade Graphics & Design",
+    "zip": "97702",
+    "column_break": "VN0ST1PC2AP0PE1SA0",
+    "freight_column_offset": -9
+  },
+  "CAVEMAN": {
+    "name": "Caveman Bodeez",
+    "zip": "28602",
+    "column_break": "VN0ST7PC7AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "CENTRALPR": {
+    "name": "Central Print & Reprographics",
+    "zip": "97401",
+    "column_break": "VN6ST6PC0AP0PE0SA0",
+    "freight_column_offset": -9
+  },
+  "CENTPROD": {
+    "name": "Centralized Production",
+    "zip": "75247",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -2
+  },
+  "CENTPRODLLC": {
+    "name": "Centralized Production, LLC",
+    "zip": "75247",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -2
+  },
+  "CEREUS": {
+    "name": "Cereus Graphics",
+    "zip": "85040",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -6
+  },
+  "CESCOINC": {
+    "name": "CESCO Incorporated",
+    "zip": "29418",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "CHESTCUST": {
+    "name": "Chesterfield Custom",
+    "zip": "01096",
+    "column_break": "VN3ST0PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "CHILIGHT": {
+    "name": "Chicago Lighthouse for the Blind",
+    "zip": "60608",
+    "column_break": "VN6ST0PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "CIRCLEGRAPH": {
+    "name": "Circle Graphics",
+    "zip": "80501",
+    "column_break": "VN4ST4PC3AP0PE3SA0",
+    "freight_column_offset": -6
+  },
+  "CLAMPITT": {
+    "name": "Clampitt Paper",
+    "zip": "77041",
+    "column_break": "VN3ST6PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "CLAMPSWING": {
+    "name": "Clamp-Swing Pricing Co",
+    "zip": "94621",
+    "column_break": "VN4ST5PC0AP0PE4SA0",
+    "freight_column_offset": -9
+  },
+  "CLASSICCOLOR": {
+    "name": "Classic Color",
+    "zip": "60155",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -7
+  },
+  "CLASSICLITH": {
+    "name": "Classic Litho & Design",
+    "zip": "90503",
+    "column_break": "VN6ST6PC6AP6PE6SA0",
+    "freight_column_offset": -8
+  },
+  "CLINTONPR": {
+    "name": "CLINTON PRESS",
+    "zip": "27409",
+    "column_break": "VN6ST7PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "CLOCKSPRING": {
+    "name": "Clock Spring Company, Inc.",
+    "zip": "77073",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "CMINDUST": {
+    "name": "CM Industrial",
+    "zip": "90813",
+    "column_break": "VN0ST0PC0AP0PE0SA5",
+    "freight_column_offset": -8
+  },
+  "CMYKPRINT": {
+    "name": "Cmyk Printing & Graphics",
+    "zip": "38134",
+    "column_break": "VN6ST6PC0AP0PE0SA0",
+    "freight_column_offset": -4
+  },
+  "COASTLABEL": {
+    "name": "Coast To Coast Label, Inc.",
+    "zip": "92708",
+    "column_break": "VN7ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "COASTWELD": {
+    "name": "Coastal Welding Supply",
+    "zip": "77704",
+    "column_break": "VN0ST0PC0AP0PE0SA8",
+    "freight_column_offset": -2
+  },
+  "COCHECOMOLD": {
+    "name": "Cocheco Mold Company",
+    "zip": "03820",
+    "column_break": "VN0ST0PC0AP2PE0SA0",
+    "freight_column_offset": -10
+  },
+  "COLLINSVILLE": {
+    "name": "Collinsville Printing Co",
+    "zip": "24112",
+    "column_break": "VN4ST5PC5AP0PE5SA5",
+    "freight_column_offset": -8
+  },
+  "COLORDYN": {
+    "name": "Color Dynamics",
+    "zip": "75002",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -2
+  },
+  "COLORPROC": {
+    "name": "Color Process",
+    "zip": "63132",
+    "column_break": "VN1ST7PC0AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "COLORPROCINC": {
+    "name": "Color Process Inc.",
+    "zip": "44149",
+    "column_break": "VN7ST8PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "COLORREFL": {
+    "name": "Color Reflections",
+    "zip": "32806",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -7
+  },
+  "COLORTEC": {
+    "name": "Color Tec International",
+    "zip": "92154",
+    "column_break": "VN5ST0PC0AP0PE0SA0",
+    "freight_column_offset": -8
+  },
+  "COLORMARK": {
+    "name": "Colormark Printing",
+    "zip": "75006",
+    "column_break": "VN6ST8PC4AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "COLOURSOL": {
+    "name": "Colour Solutions",
+    "zip": "78216",
+    "column_break": "VN3ST3PC3AP0PE0SA0",
+    "freight_column_offset": -1
+  },
+  "COLUMBIALBL": {
+    "name": "Columbia Label-Rippedsheets.com",
+    "zip": "98133",
+    "column_break": "VN3ST0PC0AP0PE0SA0",
+    "freight_column_offset": -9
+  },
+  "COLBARRIC": {
+    "name": "Columbus Barricade & Safety",
+    "zip": "31907",
+    "column_break": "VN0ST0PC0AP0PE0SA5",
+    "freight_column_offset": -6
+  },
+  "COMGRAPHX": {
+    "name": "Comgraphx",
+    "zip": "74012",
+    "column_break": "VN5ST5PC5AP0PE0SA0",
+    "freight_column_offset": -3
+  },
+  "COMMEMBRND": {
+    "name": "Commemorative Brands",
+    "zip": "78745",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -1
+  },
+  "COMMUNIKAY": {
+    "name": "Communikay Graphics",
+    "zip": "77511",
+    "column_break": "VN8ST7PC6AP0PE7SA0",
+    "freight_column_offset": -2
+  },
+  "COMPOSECURE": {
+    "name": "Composecure",
+    "zip": "08873",
+    "column_break": "VN0ST0PC3AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "CONSOLLBL": {
+    "name": "Consolidated Label",
+    "zip": "32773",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "CONSTSAFE": {
+    "name": "Construction Safety Products",
+    "zip": "71106",
+    "column_break": "VN0ST0PC0AP0PE0SA7",
+    "freight_column_offset": -3
+  },
+  "CONTAINOK": {
+    "name": "Containment Solutions - OK",
+    "zip": "74117",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -3
+  },
+  "CONTAINPA": {
+    "name": "Containment Solutions - PA",
+    "zip": "17066",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -9
+  },
+  "CONTIDPROD": {
+    "name": "Continental Identification Products",
+    "zip": "49345",
+    "column_break": "VN4ST7PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "COPEPLAST": {
+    "name": "Cope Plastics, Inc.",
+    "zip": "62002",
+    "column_break": "VN6ST0PC5AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "CORLEYGASK": {
+    "name": "Corley Gasket Co",
+    "zip": "75227",
+    "column_break": "VN3ST5PC0AP0PE2SA0",
+    "freight_column_offset": -2
+  },
+  "CORPROSCR": {
+    "name": "CorPro Screentech",
+    "zip": "61111",
+    "column_break": "VN3ST0PC0AP0PE0SA0",
+    "freight_column_offset": -6
+  },
+  "CPCNEUTEK": {
+    "name": "CPC Neutek",
+    "zip": "84401",
+    "column_break": "VN6ST8PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "CPICARDGR": {
+    "name": "CPI Card Group, Inc.",
+    "zip": "80127",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -6
+  },
+  "CPYRRD": {
+    "name": "CPY (Chas. P. Young Co), an RRD Company",
+    "zip": "77004",
+    "column_break": "VN3ST5PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "CRAFTMARKID": {
+    "name": "Craftmark Identification",
+    "zip": "76105",
+    "column_break": "VN6ST6PC0AP0PE4SA0",
+    "freight_column_offset": -2
+  },
+  "CREATIVEPLPR": {
+    "name": "Creative Plastic Printing",
+    "zip": "92121",
+    "column_break": "VN3ST6PC0AP0PE3SA0",
+    "freight_column_offset": -8
+  },
+  "CREATIVEPRCO": {
+    "name": "Creative Printing Co.",
+    "zip": "66203",
+    "column_break": "VN3ST6PC3AP0PE5SA0",
+    "freight_column_offset": -4
+  },
+  "CREATIVESCR": {
+    "name": "CREATIVE SCREEN PRINT",
+    "zip": "54669",
+    "column_break": "VN5ST8PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "CREATIVESIGN": {
+    "name": "Creative Sign Inc.",
+    "zip": "54115",
+    "column_break": "VN3ST6PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "CREDITCARD": {
+    "name": "Credit Card Systems",
+    "zip": "60090",
+    "column_break": "VN4ST0PC0AP0PE0SA0",
+    "freight_column_offset": -7
+  },
+  "CROWNDECAL": {
+    "name": "CROWN DECAL PRINTERS",
+    "zip": "70508",
+    "column_break": "VN0ST0PC6AP0PE8SA0",
+    "freight_column_offset": -3
+  },
+  "CRYSTALFORM": {
+    "name": "Crystal Form Coated Fabrics",
+    "zip": "90670",
+    "column_break": "VN5ST5PC5AP5PE0SA0",
+    "freight_column_offset": -8
+  },
+  "CURBELLPL": {
+    "name": "Curbell Plastics",
+    "zip": "85284",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -6
+  },
+  "CURZONPROM": {
+    "name": "Curzon Promotional Graphics",
+    "zip": "68114",
+    "column_break": "VN3ST5PC3AP0PE3SA0",
+    "freight_column_offset": -5
+  },
+  "CUSTPLCARD": {
+    "name": "Custom Plastic Card Company",
+    "zip": "33064",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -7
+  },
+  "CUSTPROD": {
+    "name": "CUSTOM PRODUCTS, INC.",
+    "zip": "37189",
+    "column_break": "VN6ST7PC0AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "CUTTINGEDGE": {
+    "name": "Cutting Edge",
+    "zip": "64111",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -4
+  },
+  "DLLOYD": {
+    "name": "D Lloyd & Associates",
+    "zip": "78216",
+    "column_break": "VN8ST0PC0AP0PE0SA0",
+    "freight_column_offset": -1
+  },
+  "DDSIGNS": {
+    "name": "D&D Signs and Labels",
+    "zip": "38651",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -4
+  },
+  "DALLASLIGHT": {
+    "name": "Dallas Lighthouse For Blind",
+    "zip": "75204",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "DATAGRAPH": {
+    "name": "Data Graphics Printing Solutions",
+    "zip": "32757",
+    "column_break": "VN5ST5PC5AP5PE5SA5",
+    "freight_column_offset": -7
+  },
+  "DATACAL": {
+    "name": "Datacal",
+    "zip": "85233",
+    "column_break": "VN0ST0PC5AP0PE0SA0",
+    "freight_column_offset": -6
+  },
+  "DAVISPRINT": {
+    "name": "Davis Printing Company",
+    "zip": "44203",
+    "column_break": "VN7ST7PC7AP7PE7SA7",
+    "freight_column_offset": -8
+  },
+  "DELMARPROD": {
+    "name": "Delmar Products, Inc.",
+    "zip": "06037",
+    "column_break": "VN4ST0PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "DELTAGRANITE": {
+    "name": "Delta Granite & Marble",
+    "zip": "78209",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -1
+  },
+  "DESIGNFOUR": {
+    "name": "Design Four",
+    "zip": "68107",
+    "column_break": "VN0ST3PC0AP0PE7SA0",
+    "freight_column_offset": -5
+  },
+  "DESIGNTANKS": {
+    "name": "Design Tanks",
+    "zip": "57104",
+    "column_break": "VN0ST0PC0AP0PE0SA8",
+    "freight_column_offset": -6
+  },
+  "DESIGNVENT": {
+    "name": "Design Ventures",
+    "zip": "77521",
+    "column_break": "VN7ST7PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "DESIGNERDEC": {
+    "name": "Designer Decal",
+    "zip": "99202",
+    "column_break": "VN6ST0PC0AP0PE0SA0",
+    "freight_column_offset": -9
+  },
+  "DESIGNERGR": {
+    "name": "Designer Graphics/Danwal",
+    "zip": "75703",
+    "column_break": "VN7ST7PC6AP0PE8SA0",
+    "freight_column_offset": -2
+  },
+  "DETECTACHEM": {
+    "name": "DetectaChem",
+    "zip": "77477",
+    "column_break": "VN6ST0PC0AP0PE0SA0",
+    "freight_column_offset": -2
+  },
+  "DHSMITH": {
+    "name": "DH Smith Company",
+    "zip": "65803",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -4
+  },
+  "DIGDESIGN": {
+    "name": "Digital Design Corporation",
+    "zip": "64108",
+    "column_break": "VN0ST0PC0AP0PE5SA0",
+    "freight_column_offset": -4
+  },
+  "DILCOIND": {
+    "name": "Dilco Industrial",
+    "zip": "92865",
+    "column_break": "VN5ST5PC0AP0PE5SA0",
+    "freight_column_offset": -8
+  },
+  "DILLONSUP": {
+    "name": "Dillon Supply Company",
+    "zip": "28208",
+    "column_break": "VN0ST0PC0AP0PE0SA6",
+    "freight_column_offset": -8
+  },
+  "DIRECTSAFE": {
+    "name": "Direct Safety Solutions",
+    "zip": "93308",
+    "column_break": "VN0ST0PC0AP0PE0SA6",
+    "freight_column_offset": -8
+  },
+  "DISCOUNTEQUIP": {
+    "name": "Discount Equipment",
+    "zip": "79907",
+    "column_break": "VN0ST0PC0AP0PE0SA6",
+    "freight_column_offset": -4
+  },
+  "DIXIESEAL": {
+    "name": "Dixie Seal",
+    "zip": "30084",
+    "column_break": "VN6ST0PC0AP0PE0SA0",
+    "freight_column_offset": -6
+  },
+  "DIXIESIGN": {
+    "name": "Dixie Signs",
+    "zip": "35630",
+    "column_break": "VN4ST4PC3AP0PE7SA0",
+    "freight_column_offset": -5
+  },
+  "DOLPHINGR": {
+    "name": "Dolphin Graphics",
+    "zip": "77036",
+    "column_break": "VN7ST3PC1AP0PE3SA0",
+    "freight_column_offset": -2
+  },
+  "DOUGLASPR": {
+    "name": "DOUGLAS PRINTING, INC.",
+    "zip": "00000",
+    "column_break": "VN6ST7PC0AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "DOUGLASSCR": {
+    "name": "Douglass Screen Printers",
+    "zip": "33815",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -7
+  },
+  "DOVERMOTION": {
+    "name": "Dover Motion",
+    "zip": "01719",
+    "column_break": "VN0ST0PC0AP0PE0SA0",
+    "freight_column_offset": -10
+  },
+  "DUNLAPMFG": {
+    "name": "Dunlap Manufacturing Co.",
+    "zip": "63565",
+    "column_break": "VN0ST0PC8AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "DYNAMARK": {
+    "name": "DYNAMARK",
+    "zip": "37210",
+    "column_break": "VN6ST6PC0AP0PE0SA0",
+    "freight_column_offset": -5
+  },
+  "DYNAMARKGR": {
+    "name": "Dynamark Graphics",
+    "zip": "37210",
+    "column_break": "VN6ST6PC6AP6PE6SA6",
+    "freight_column_offset": -5
+  },
+  "E&T_PLASTICS": {
+    "name": "E&T Plastics of Texas",
+    "zip": "75247",
+    "column_break": "VN0ST0PC4PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "EH_TEASLEY": {
+    "name": "E.H. Teasley",
+    "zip": "75244",
+    "column_break": "VN2ST6PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "EASTERN_ETCHING": {
+    "name": "Eastern Etching & Mfg",
+    "zip": "01013",
+    "column_break": "VN2ST0PC3PE3SA0AP0",
+    "freight_column_offset": -10
+  },
+  "ECS_ENVIRONMENTAL": {
+    "name": "ECS Environmental Solutions",
+    "zip": "76513",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "EDDIES_WELDING": {
+    "name": "Eddies Welding",
+    "zip": "77025",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "EDISON_LITHO": {
+    "name": "Edison Lithographing & Printing Corp",
+    "zip": "07047",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -10
+  },
+  "EG_PRINT": {
+    "name": "EG Print",
+    "zip": "33122",
+    "column_break": "VN5ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "ELBERTS_PAINT": {
+    "name": "Elbert's Paint Shop",
+    "zip": "59102",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "ELLIS_GRAPHICS": {
+    "name": "Ellis Graphics",
+    "zip": "33760",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "EMEDCO": {
+    "name": "Emedco",
+    "zip": "53201-0249",
+    "column_break": "VN7ST5PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "EMPIRE_CAT": {
+    "name": "Empire Cat",
+    "zip": "85210",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -5
+  },
+  "ENGRAVE_TECH": {
+    "name": "Engrave Tech",
+    "zip": "78216",
+    "column_break": "VN0ST5PC3PE2SA0AP0",
+    "freight_column_offset": -1
+  },
+  "ENVIRONMENTAL_SAFETY": {
+    "name": "Environmental Safety Supply",
+    "zip": "46360",
+    "column_break": "VN0ST0PC0PE0SA7AP0",
+    "freight_column_offset": -7
+  },
+  "ENVISION_DALLAS": {
+    "name": "Envision Dallas",
+    "zip": "75204-3680",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "EQUIPMENT_DIRECT": {
+    "name": "Equipment Direct",
+    "zip": "92821",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "ETCHED_MEDIA": {
+    "name": "Etched Media Corporation",
+    "zip": "95008",
+    "column_break": "VN0ST0PC2PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "EVCO_INDUSTRIAL": {
+    "name": "Evco Industrial Hardware",
+    "zip": "77541",
+    "column_break": "VN0ST0PC0PE0SA8AP0",
+    "freight_column_offset": -1
+  },
+  "EXCELL_PRODUCTS": {
+    "name": "Excell Products",
+    "zip": "73020",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "EXEMPLARY_FOAM": {
+    "name": "Exemplary Foam South",
+    "zip": "46515",
+    "column_break": "VN3ST0PC0PE3SA0AP0",
+    "freight_column_offset": -7
+  },
+  "EXT_PLASTICS": {
+    "name": "EXT PLASTICS",
+    "zip": "64024",
+    "column_break": "VN6ST6PC6PE6SA0AP0",
+    "freight_column_offset": -4
+  },
+  "EYEON_FINISHING": {
+    "name": "Eyeon Finishing",
+    "zip": "75229",
+    "column_break": "VN0ST4PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "FALCON_PRESS": {
+    "name": "Falcon Press",
+    "zip": "37211",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "FARCO_FT_LAUDERDALE": {
+    "name": "Farco Plastics - Ft Lauderdale FL",
+    "zip": "33309",
+    "column_break": "VN3ST6PC6PE0SA0AP6",
+    "freight_column_offset": -7
+  },
+  "FARCO_JACKSONVILLE": {
+    "name": "Farco Plastics - Jacksonville FL",
+    "zip": "32256",
+    "column_break": "VN3ST6PC6PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "FARCO_MEMPHIS": {
+    "name": "Farco Plastics - Memphis TN",
+    "zip": "38141",
+    "column_break": "VN6ST6PC6PE0SA0AP6",
+    "freight_column_offset": -4
+  },
+  "FARCO_MONTGOMERY": {
+    "name": "Farco Plastics - Montgomery AL",
+    "zip": "36108",
+    "column_break": "VN3ST6PC6PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "FARCO_ORLANDO": {
+    "name": "Farco Plastics - Orlando FL",
+    "zip": "32809-5738",
+    "column_break": "VN3ST6PC6PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "FARCO_CORPORATE": {
+    "name": "Farco Plastics Corporate - Clearwater FL",
+    "zip": "33764",
+    "column_break": "VN3ST6PC6PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "FARO_SCREEN": {
+    "name": "Faro Screen Process",
+    "zip": "48187",
+    "column_break": "VN6ST8PC4PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "FERNANDEZ_MUSIC": {
+    "name": "Fernandez Music",
+    "zip": "53029",
+    "column_break": "VN6ST6PC6PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "FET_ENGINEERING": {
+    "name": "FET Engineering, Inc.",
+    "zip": "40004",
+    "column_break": "VN1ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "FINISHING_MAILING": {
+    "name": "Finishing & Mailing Center",
+    "zip": "75212-5015",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "FISERV": {
+    "name": "Fiserv",
+    "zip": "37207-3219",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "FIVE_STAR_SAFETY": {
+    "name": "Five Star Safety Equipment",
+    "zip": "60103",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -7
+  },
+  "FL_BOXES": {
+    "name": "FL Boxes, LLC",
+    "zip": "33178",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -7
+  },
+  "FLASH_REPRODUCTIONS": {
+    "name": "Flash Reproductions",
+    "zip": "M(W 5P1",
+    "column_break": "VN5ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "FLOOR_PRODUCTIONS": {
+    "name": "Floor Productions, Llc",
+    "zip": "30721",
+    "column_break": "VN0ST6PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "FOCUS_33": {
+    "name": "Focus 33, Inc - Prev. Prime Print",
+    "zip": "55447",
+    "column_break": "VN5ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "FORZAFORM": {
+    "name": "Forzaform",
+    "zip": "04950",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "FOX_LAMINATING": {
+    "name": "Fox Laminating & Printing",
+    "zip": "6110-1955",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "FOXMARK": {
+    "name": "Foxmark Corporation",
+    "zip": "77040-6668",
+    "column_break": "VN0ST0PC0PE5SA0AP0",
+    "freight_column_offset": -1
+  },
+  "FRANZEN_GRAPHICS": {
+    "name": "Franzen Graphics & Display",
+    "zip": "53083",
+    "column_break": "VN0ST7PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "FUJIFILM": {
+    "name": "FUJIFILM North America Corporation",
+    "zip": "39284-8397",
+    "column_break": "VN0ST5PC5PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "GP_PRODUCTS": {
+    "name": "G&P Products Inc",
+    "zip": "60534-0720",
+    "column_break": "VN0ST0PC0PE0SA7AP0",
+    "freight_column_offset": -7
+  },
+  "GA_SAFETY": {
+    "name": "GA Safety Supply",
+    "zip": "24016",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -8
+  },
+  "GAM_ENTERPRISES": {
+    "name": "Gam Enterprises",
+    "zip": "91311",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "GARLICH_PRINTING": {
+    "name": "Garlich Printing Company",
+    "zip": "63026",
+    "column_break": "VN2ST6PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "GARVEY_GROUP": {
+    "name": "Garvey Group - Wisconsin",
+    "zip": "53132",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -7
+  },
+  "GAS_AND_SUPPLY": {
+    "name": "Gas and Supply",
+    "zip": "70802",
+    "column_break": "VN7ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "GEI_GRAPHICS": {
+    "name": "GEI Graphics",
+    "zip": "60106",
+    "column_break": "VN5ST4PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "GENERAL_LABEL": {
+    "name": "General Label",
+    "zip": "55426",
+    "column_break": "VN7ST7PC7PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "GENERAL_SERVICES": {
+    "name": "General Services",
+    "zip": "17104",
+    "column_break": "VN0ST7PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "GEORGE_GEORGE": {
+    "name": "George & George Company",
+    "zip": "74145",
+    "column_break": "VN0ST0PC0PE0SA1AP0",
+    "freight_column_offset": -3
+  },
+  "GIBRALTAR_PLASTIC": {
+    "name": "Gibraltar Plastic Products Corp.",
+    "zip": "91342",
+    "column_break": "VN5ST5PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "GLADTAGS": {
+    "name": "Gladtags",
+    "zip": "70808",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "GM_NAMEPLATE": {
+    "name": "GM Nameplate",
+    "zip": "98119-2783",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "GOLDEN_ARTIST": {
+    "name": "Golden Artist Colors",
+    "zip": "13411-9527",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -9
+  },
+  "GOLDEN_EAGLE": {
+    "name": "Golden Eagle Bindery & Tag",
+    "zip": "77581",
+    "column_break": "VN6ST0PC0PE6SA0AP0",
+    "freight_column_offset": -1
+  },
+  "GPA": {
+    "name": "GPA - Gum Paper of America",
+    "zip": "60525",
+    "column_break": "VN4ST6PC3PE4SA0AP0",
+    "freight_column_offset": -7
+  },
+  "GRAFIX_PLASTICS": {
+    "name": "Grafix Plastics",
+    "zip": "44137",
+    "column_break": "VN6ST5PC5PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "GRAHAM_GRAPHICS": {
+    "name": "Graham Graphics",
+    "zip": "78232",
+    "column_break": "VN0ST0PC0PE2SA0AP0",
+    "freight_column_offset": -1
+  },
+  "GRAPHIC_CONVERTING": {
+    "name": "Graphic Converting",
+    "zip": "75006",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "GRAPHIC_IMAGES": {
+    "name": "Graphic Images",
+    "zip": "33069",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "GRAPHIC_SOLUTIONS": {
+    "name": "Graphic Solutions Group, Inc.",
+    "zip": "75244",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "GRAPHIC_SPECIALTIES": {
+    "name": "Graphic Specialties",
+    "zip": "48150",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "GRAPHIC_VISIONS": {
+    "name": "Graphic Visions",
+    "zip": "30349",
+    "column_break": "VN7ST7PC0PE7SA0AP0",
+    "freight_column_offset": -5
+  },
+  "GRAPHIC_VISUAL": {
+    "name": "Graphic Visual Solutions, Inc.",
+    "zip": "27410",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "GRAPHICS_22": {
+    "name": "Graphics 22 Signs",
+    "zip": "15207",
+    "column_break": "VN6ST6PC6PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "GRAPHICS_OUTPUT": {
+    "name": "Graphics Output",
+    "zip": "46803",
+    "column_break": "VN7ST5PC0PE5SA0AP0",
+    "freight_column_offset": -6
+  },
+  "GREENBERG_GRANT": {
+    "name": "Greenberg Grant & Richards",
+    "zip": "77057",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "GRIMCO": {
+    "name": "Grimco - formerly Midwest Sign & Screen Printing",
+    "zip": "55117",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "GROGANS_FARM": {
+    "name": "Grogan's Farm and Ranch",
+    "zip": "76901",
+    "column_break": "VN0ST0PC0PE0SA7AP0",
+    "freight_column_offset": -2
+  },
+  "GSP_MARKETING": {
+    "name": "GSP Marketing Technologies",
+    "zip": "33760",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "GULF_COAST_SALES": {
+    "name": "Gulf Coast Sales & Supply",
+    "zip": "77541",
+    "column_break": "VN0ST0PC0PE0SA6AP0",
+    "freight_column_offset": -1
+  },
+  "GULF_SALES": {
+    "name": "Gulf Sales & Supply",
+    "zip": "39567",
+    "column_break": "VN0ST0PC0PE0SA8AP0",
+    "freight_column_offset": -4
+  },
+  "GULFPORT_INDUSTRIAL": {
+    "name": "Gulfport Industrial Safety",
+    "zip": "39503",
+    "column_break": "VN0ST0PC0PE0SA1AP0",
+    "freight_column_offset": -4
+  },
+  "H_TOWN_OXYGEN": {
+    "name": "H Town Oxygen",
+    "zip": "77093",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "HACKWORTH": {
+    "name": "Hackworth Reprographics, Inc.",
+    "zip": "23324",
+    "column_break": "VN2ST6PC8PE2SA0AP0",
+    "freight_column_offset": -8
+  },
+  "HANDIRAMP": {
+    "name": "Handiramp - Biggies",
+    "zip": "60048",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "HARVEY_DUPRIEST": {
+    "name": "Harvey Dupriest Inc",
+    "zip": "75211",
+    "column_break": "VN6ST8PC6PE6SA0AP0",
+    "freight_column_offset": -1
+  },
+  "HEB_SIGN": {
+    "name": "Heb Sign Shop",
+    "zip": "78218",
+    "column_break": "VN2ST5PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "HEINN_CHAPMAN": {
+    "name": "Heinn Chapman Corporation",
+    "zip": "53209",
+    "column_break": "VN7ST7PC6PE6SA7AP0",
+    "freight_column_offset": -7
+  },
+  "HELGET_SAFETY": {
+    "name": "Helget Safety Supply",
+    "zip": "68127",
+    "column_break": "VN0ST0PC0PE0SA6AP0",
+    "freight_column_offset": -5
+  },
+  "HEMLOCK": {
+    "name": "HEMLOCK",
+    "zip": "V5J 4S4",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "HERMITAGE_BOOK": {
+    "name": "Hermitage Book Shop",
+    "zip": "80206",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "HOGGS_SADLERY": {
+    "name": "Hoggs Sadlery",
+    "zip": "72058",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -3
+  },
+  "HOLLAND_LITHO": {
+    "name": "Holland Litho",
+    "zip": "49464",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "HOPP_COMPANIES": {
+    "name": "Hopp Companies",
+    "zip": "11040",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "HOUSE_OF_SAFETY": {
+    "name": "House of Safety",
+    "zip": "60639",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "HP_MANUFACTURING": {
+    "name": "HP Manufacturing Co Inc",
+    "zip": "44115",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "HUGE_PAPER": {
+    "name": "Huge Paper",
+    "zip": "L4G 1H9",
+    "column_break": "VN5ST5PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "I2DIGITAL": {
+    "name": "i2Digital",
+    "zip": "33010",
+    "column_break": "VN7ST8PC7PE7SA0AP0",
+    "freight_column_offset": -7
+  },
+  "IDAHO_PACKAGE": {
+    "name": "IADAHO PACKAGE",
+    "zip": "83402",
+    "column_break": "VN5ST6PC5PE5SA0AP0",
+    "freight_column_offset": -8
+  },
+  "IDENTITY_GROUP": {
+    "name": "Identity Group Graphics Systems",
+    "zip": "67211",
+    "column_break": "VN8ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "IDESCO_SAFETY": {
+    "name": "Idesco Safety Co. LLC",
+    "zip": "10550",
+    "column_break": "VN7ST7PC0PE7SA0AP0",
+    "freight_column_offset": -10
+  },
+  "IDX_CORP": {
+    "name": "IDX CORPORATION",
+    "zip": "63045",
+    "column_break": "VN4ST4PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "IGRAPHICS": {
+    "name": "iGraphics Precision Printing",
+    "zip": "49345",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -7
+  },
+  "ILOGO": {
+    "name": "iLOGO",
+    "zip": "84043",
+    "column_break": "VN0ST0PC0PE1SA0AP0",
+    "freight_column_offset": -6
+  },
+  "IMAGE_WORKS": {
+    "name": "IMAGE WORKS PRINTING & GRAPHICS",
+    "zip": "37409",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "IMAGICORP": {
+    "name": "ImagiCorp",
+    "zip": "98053",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "IMPRO_GRAPHICS": {
+    "name": "Impro Graphics",
+    "zip": "60004",
+    "column_break": "VN3ST0PC0PE3SA0AP0",
+    "freight_column_offset": -7
+  },
+  "INDUSTRIAL_FIRE": {
+    "name": "Industrial Fire & Safety",
+    "zip": "35202",
+    "column_break": "VN0ST0PC0PE0SA8AP0",
+    "freight_column_offset": -5
+  },
+  "INDUSTRIAL_LININGS": {
+    "name": "Industrial Linings",
+    "zip": "36619",
+    "column_break": "VN0ST0PC0PE0SA5AP0",
+    "freight_column_offset": -4
+  },
+  "INDUSTRIAL_MILL": {
+    "name": "Industrial Mill & Maintenance",
+    "zip": "75505-6188",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -2
+  },
+  "INKR_PRINTING": {
+    "name": "Inkr Printing",
+    "zip": "83616",
+    "column_break": "VN5ST5PC0PE5SA0AP0",
+    "freight_column_offset": -8
+  },
+  "INOVAR_PKG": {
+    "name": "Inovar Pkg Group",
+    "zip": "75238",
+    "column_break": "VN6ST6PC6PE6SA0AP0",
+    "freight_column_offset": -1
+  },
+  "INSIGHTS_NA": {
+    "name": "Insights North America",
+    "zip": "78759",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -1
+  },
+  "INSTAPRINT_WEST": {
+    "name": "INSTAPRINT - WEST 6TH",
+    "zip": "97402",
+    "column_break": "VN3ST3PC3PE3SA3AP3",
+    "freight_column_offset": -9
+  },
+  "INSTAPRINT_WILLAMETTE": {
+    "name": "INSTAPRINT - WILLAMETTE",
+    "zip": "97405",
+    "column_break": "VN3ST3PC3PE3SA3AP3",
+    "freight_column_offset": -9
+  },
+  "INSUL_FAB": {
+    "name": "Insul-Fab of Texas",
+    "zip": "75019",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "INTEGRAL_DESIGN": {
+    "name": "Integral Design Group",
+    "zip": "80122",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -5
+  },
+  "INTENSE_PRINTING": {
+    "name": "Intense Printing",
+    "zip": "75247",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "INTERNATIONAL_LABEL": {
+    "name": "International Label",
+    "zip": "60007",
+    "column_break": "VN2ST2PC2PE2SA0AP0",
+    "freight_column_offset": -7
+  },
+  "INTERNATIONAL_LABEL_PRINT": {
+    "name": "International Label & Printing",
+    "zip": "60007",
+    "column_break": "VN6ST6PC6PE6SA0AP0",
+    "freight_column_offset": -7
+  },
+  "INTERSTATE_DECAL": {
+    "name": "Interstate Decal",
+    "zip": "52402",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -6
+  },
+  "INTERSTATE_AUSTIN": {
+    "name": "Interstate Plastics - Austin TX",
+    "zip": "95853",
+    "column_break": "VN0ST0PC4PE5SA0AP0",
+    "freight_column_offset": -8
+  },
+  "INTERSTATE_DES_MOINES": {
+    "name": "Interstate Plastics - Des Moines IA",
+    "zip": "50322",
+    "column_break": "VN5ST0PC3PE3SA0AP0",
+    "freight_column_offset": -6
+  },
+  "INVIEW_GRAPHICS": {
+    "name": "INVIEW GRAPHICS",
+    "zip": "37422",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "IPOLY": {
+    "name": "iPoly",
+    "zip": "L2V 1Y5",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "IPS": {
+    "name": "iPS",
+    "zip": "29644",
+    "column_break": "VN3ST3PC3PE3SA3AP3",
+    "freight_column_offset": -6
+  },
+  "IWCO_DIRECT": {
+    "name": "IWCO Direct",
+    "zip": "55317-9502",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "JJ_PRINTING": {
+    "name": "J&J Printing Inc",
+    "zip": "66219",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "JN_WHITE_ASSOC": {
+    "name": "J.N. White Associates, Inc.",
+    "zip": "14530-0219",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "JAMES_SMITH_PRINT": {
+    "name": "James W. Smith Printing Company",
+    "zip": "60031",
+    "column_break": "VN0ST7PC0PE7SA0AP0",
+    "freight_column_offset": -7
+  },
+  "JARVIS_SIGN": {
+    "name": "Jarvis Sign",
+    "zip": "37115",
+    "column_break": "VN0ST0PC0PE7SA0AP0",
+    "freight_column_offset": -5
+  },
+  "JCJ_PROMO": {
+    "name": "JCJ Promo LLC",
+    "zip": "77410",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "JN_WHITE": {
+    "name": "JN WHITE",
+    "zip": "95814",
+    "column_break": "VN0ST0PC8PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "JOHNS_BYRNE": {
+    "name": "Johns Byrne Co",
+    "zip": "60714",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -7
+  },
+  "JOHNSON_FIBERGLASS": {
+    "name": "Johnson Fiberglass & Resin Co.",
+    "zip": "77587",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "JOHNSON_PRINTING": {
+    "name": "Johnson Printing & Pkg Corp",
+    "zip": "55432",
+    "column_break": "VN3ST5PC0PE3SA0AP0",
+    "freight_column_offset": -7
+  },
+  "JOSEPH_MERRITT": {
+    "name": "Joseph Merritt & Company, Inc.",
+    "zip": "06114",
+    "column_break": "VN0ST4PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "JUSTMAN_PKG": {
+    "name": "Justman Packaging & Display",
+    "zip": "90040",
+    "column_break": "VN7ST7PC0PE7SA0AP0",
+    "freight_column_offset": -6
+  },
+  "KJ_SUPPLY": {
+    "name": "K&J Supply Co",
+    "zip": "32534",
+    "column_break": "VN0ST0PC0PE0SA3AP0",
+    "freight_column_offset": -5
+  },
+  "KC_RUBBER": {
+    "name": "Kansas City Rubber & Belting, Co.",
+    "zip": "64127",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "KANSAS_GRAPHICS": {
+    "name": "Kansas Graphics",
+    "zip": "66845",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -4
+  },
+  "KAY_TOLEDO": {
+    "name": "Kay Toledo Tag",
+    "zip": "43612",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -7
+  },
+  "KING_INTERNATIONAL": {
+    "name": "King International",
+    "zip": "27021",
+    "column_break": "VN3ST8PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "KMAC": {
+    "name": "KMAC",
+    "zip": "49548",
+    "column_break": "VN3ST0PC2PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "KOLBI_PIPE": {
+    "name": "Kolbi Pipe Marker",
+    "zip": "60004",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -7
+  },
+  "KOMORI": {
+    "name": "KOMORI - USA",
+    "zip": "60008",
+    "column_break": "VN0ST9PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "KONA_PRINTING": {
+    "name": "Kona Printing and Promotions Inc.",
+    "zip": "77521",
+    "column_break": "VN2ST2PC0PE2SA0AP0",
+    "freight_column_offset": -1
+  },
+  "LABEL_AID": {
+    "name": "Label-aid Systems",
+    "zip": "35758",
+    "column_break": "VN4ST3PC4PE3SA0AP0",
+    "freight_column_offset": -5
+  },
+  "LACO_VINYL": {
+    "name": "Laco Vinyl Products",
+    "zip": "11776",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "LAIRD_AUSTIN": {
+    "name": "Laird Plastics - Austin TX",
+    "zip": "78753",
+    "column_break": "VN2ST6PC7PE2SA2AP0",
+    "freight_column_offset": -1
+  },
+  "LAIRD_BATON_ROUGE": {
+    "name": "Laird Plastics - Baton Rouge LA",
+    "zip": "70809",
+    "column_break": "VN3ST4PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "LAIRD_CHARLOTTE": {
+    "name": "Laird Plastics - Charlotte NC",
+    "zip": "28269",
+    "column_break": "VN2ST0PC5PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "LAIRD_CHICAGO": {
+    "name": "Laird Plastics - Chicago IL",
+    "zip": "60106",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "LAIRD_COLUMBUS": {
+    "name": "Laird Plastics - Columbus OH",
+    "zip": "43228",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -7
+  },
+  "LAIRD_DALLAS": {
+    "name": "Laird Plastics - Dallas TX",
+    "zip": "75220",
+    "column_break": "VN2ST2PC2PE2SA2AP0",
+    "freight_column_offset": -1
+  },
+  "LAIRD_KC": {
+    "name": "Laird Plastics - Kansas City MO",
+    "zip": "64117",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "LAIRD_ROCHESTER": {
+    "name": "Laird Plastics - Rochester NY",
+    "zip": "14606",
+    "column_break": "VN7ST2PC2PE2SA2AP0",
+    "freight_column_offset": -9
+  },
+  "LAIRD_STL": {
+    "name": "Laird Plastics - St Louis MO",
+    "zip": "63043",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "LAKE_COUNTY": {
+    "name": "Lake County Press",
+    "zip": "60085",
+    "column_break": "VN6ST8PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "LAKE_PRINTING": {
+    "name": "Lake Printing Co.",
+    "zip": "65065",
+    "column_break": "VN0ST6PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "LAMCO_SAFETY": {
+    "name": "Lamco Safety Products",
+    "zip": "17331",
+    "column_break": "VN0ST0PC0PE0SA7AP0",
+    "freight_column_offset": -9
+  },
+  "LV_COLOR_GRAPHICS": {
+    "name": "Las Vegas Color Graphics, Inc.",
+    "zip": "89118",
+    "column_break": "VN7ST7PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "LAWTON_PRINTING": {
+    "name": "Lawton Printing Inc",
+    "zip": "99202-4497",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "LAWTON_REPRO": {
+    "name": "Lawton Reprographics",
+    "zip": "75244",
+    "column_break": "VN0ST0PC2PE3SA0AP0",
+    "freight_column_offset": -1
+  },
+  "LEGEND_PRESS": {
+    "name": "Legend Press",
+    "zip": "75041",
+    "column_break": "VN2ST2PC3PE2SA2AP0",
+    "freight_column_offset": -1
+  },
+  "LEM_PRODUCTS": {
+    "name": "Lem Products Inc.",
+    "zip": "18936",
+    "column_break": "VN6ST5PC6PE6SA0AP0",
+    "freight_column_offset": -9
+  },
+  "LESLIE_COMPANY": {
+    "name": "Leslie Company",
+    "zip": "66062",
+    "column_break": "VN6ST2PC2PE2SA2AP0",
+    "freight_column_offset": -4
+  },
+  "LEWISBURG_PRINT": {
+    "name": "Lewisburg Printing, Inc.",
+    "zip": "37091-2800",
+    "column_break": "VN0ST6PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "LF_MANUFACTURING": {
+    "name": "LF Manufacturing",
+    "zip": "78942",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "LINCO_PLANT": {
+    "name": "Linco Plant Identification",
+    "zip": "38632",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "LINCO_SAFETY": {
+    "name": "Linco Safety Signs was Linco Plant Identification",
+    "zip": "38632",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -4
+  },
+  "LINCOLN_PRESS": {
+    "name": "Lincoln Press",
+    "zip": "75247",
+    "column_break": "VN4ST7PC0PE4SA0AP0",
+    "freight_column_offset": -1
+  },
+  "LINCOLN_PRINTING": {
+    "name": "Lincoln Printing Corp",
+    "zip": "46808",
+    "column_break": "VN2ST3PC0PE4SA0AP0",
+    "freight_column_offset": -6
+  },
+  "LONE_STAR_SAFETY": {
+    "name": "Lone Star Safety",
+    "zip": "75220",
+    "column_break": "VN0ST0PC0PE0SA7AP0",
+    "freight_column_offset": -1
+  },
+  "LONE_STAR_SCREEN": {
+    "name": "Lone Star Screen",
+    "zip": "77076",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "LONE_STAR_SIGNS": {
+    "name": "LONE STAR SIGNS",
+    "zip": "75150",
+    "column_break": "VN7ST7PC7PE6SA0AP0",
+    "freight_column_offset": -1
+  },
+  "LOWEN_CORP": {
+    "name": "Lowen Corporation",
+    "zip": "67504-1528",
+    "column_break": "VN2ST4PC3PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "LOWEST_PRICE": {
+    "name": "Lowest Price Print",
+    "zip": "95691",
+    "column_break": "VN5ST0PC0PE5SA0AP0",
+    "freight_column_offset": -8
+  },
+  "LP_PRINTING": {
+    "name": "LP Printing",
+    "zip": "77063",
+    "column_break": "VN4ST3PC3PE3SA0AP0",
+    "freight_column_offset": -1
+  },
+  "LPC_LEWISBURG": {
+    "name": "LPC Lewisburg TN",
+    "zip": "37091",
+    "column_break": "VN7ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "LPC_TX": {
+    "name": "LPC TX",
+    "zip": "75001",
+    "column_break": "VN6ST8PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "LUCITE_CREATIONS": {
+    "name": "Lucite Creations",
+    "zip": "33186",
+    "column_break": "VN6ST8PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "MAS_INDUSTRIES": {
+    "name": "M.A.S. Industries, Inc.",
+    "zip": "53073",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -7
+  },
+  "MACORE": {
+    "name": "Macore Company Inc",
+    "zip": "97301",
+    "column_break": "VN7ST7PC0PE7SA0AP0",
+    "freight_column_offset": -9
+  },
+  "MAGID_GLOVE": {
+    "name": "Magid Glove & Safety",
+    "zip": "60446",
+    "column_break": "VN0ST0PC0PE0SA8AP0",
+    "freight_column_offset": -7
+  },
+  "MAGNA_IV": {
+    "name": "Magna IV Communications",
+    "zip": "72206",
+    "column_break": "VN0ST6PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "MAJESTIC_PRINTING": {
+    "name": "Majestic Printing Services (MPS)",
+    "zip": "92505",
+    "column_break": "VN4ST4PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "MANDEL_COMPANY": {
+    "name": "Mandel Company",
+    "zip": "53205",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "MARIAN_MEXICO": {
+    "name": "Marian Mexico Inc",
+    "zip": "79936",
+    "column_break": "VN5ST4PC6PE3SA3AP0",
+    "freight_column_offset": -3
+  },
+  "MARKING_SYSTEMS": {
+    "name": "Marking Systems",
+    "zip": "75041",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "MARKIT_GRAPHICS": {
+    "name": "Mark-It Graphics",
+    "zip": "54020",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "MARLO_PLASTIC": {
+    "name": "Marlo Plastic Products",
+    "zip": "07753",
+    "column_break": "VN7ST0PC6PE6SA0AP0",
+    "freight_column_offset": -10
+  },
+  "MARSHALL_BRUCE": {
+    "name": "Marshall & Bruce Company",
+    "zip": "37202",
+    "column_break": "VN7ST8PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "MARVERICK_COLOR": {
+    "name": "Marverick Color Labs",
+    "zip": "75006-5052",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "MASTER_GRAPHICS": {
+    "name": "Master Graphics",
+    "zip": "78207",
+    "column_break": "VN3ST2PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "MASTERPIECE_GRAPHIX": {
+    "name": "Masterpiece Graphix",
+    "zip": "63026",
+    "column_break": "VN4ST6PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "MASTERPIECE_GRAPHIX_INC": {
+    "name": "Masterpiece Graphix, Inc.",
+    "zip": "63026",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "MAXIMUM_IND": {
+    "name": "Maximum Ind",
+    "zip": "75038",
+    "column_break": "VN3ST5PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "MAY_GROUP": {
+    "name": "May Group International",
+    "zip": "76140-5013",
+    "column_break": "VN7ST7PC7PE7SA0AP0",
+    "freight_column_offset": -1
+  },
+  "MCCOYZ_GRAPHICS": {
+    "name": "Mccoyz Graphics",
+    "zip": "60155",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "MCCREELESS": {
+    "name": "McCreless Company",
+    "zip": "79761",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "MCDONALD_TANK": {
+    "name": "McDonald Tank & Equipment Co",
+    "zip": "67530",
+    "column_break": "VN0ST0PC0PE0SA5AP0",
+    "freight_column_offset": -4
+  },
+  "MDP_HOLDINGS": {
+    "name": "MDP Holdings Inc",
+    "zip": "92802-3015",
+    "column_break": "VN4ST4PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "MEMBRANE_SWITCH": {
+    "name": "MEMBRANE SWITCH AND PANEL",
+    "zip": "CA 92626",
+    "column_break": "VN0ST0PC8PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "MERCHANTS_BAKERY": {
+    "name": "Merchants Bakery Supply",
+    "zip": "75234",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "MERCURY_SIGN": {
+    "name": "Mercury Sign & Display",
+    "zip": "77080",
+    "column_break": "VN3ST8PC2PE3SA2AP0",
+    "freight_column_offset": -1
+  },
+  "MERIT_PLAQUES": {
+    "name": "Merit Plaques",
+    "zip": "06114",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -10
+  },
+  "MERRITT_BIG_COLOR": {
+    "name": "Merritt Big Color",
+    "zip": "06108",
+    "column_break": "VN0ST4PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "METAL_TECH": {
+    "name": "Metal Tech Co",
+    "zip": "75355-1354",
+    "column_break": "VN5ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "MI5_PRINT": {
+    "name": "Mi 5 Print & Digital - Nashville",
+    "zip": "37122",
+    "column_break": "VN7ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "MIDCONTINENT_SAFETY": {
+    "name": "Midcontinent Safety",
+    "zip": "67226",
+    "column_break": "VN0ST0PC0PE0SA6AP0",
+    "freight_column_offset": -4
+  },
+  "MIDLAND_METAL": {
+    "name": "Midland Metal Products Co.",
+    "zip": "46320",
+    "column_break": "VN0ST6PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "MIDLAND_PAPER": {
+    "name": "Midland Paper",
+    "zip": "92618",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "MIDSTREAM_SUPPLY": {
+    "name": "Midstream Supply & Rental",
+    "zip": "71111",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -3
+  },
+  "MIDTOWN_PRINTING": {
+    "name": "MIDTOWN PRINTING - NASHVILLE",
+    "zip": "37203",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "MIGHTY_LINE": {
+    "name": "Mighty Line",
+    "zip": "44116",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "MILLERS_OFFICE": {
+    "name": "Miller's Office Products",
+    "zip": "22122-1335",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "MINOR_DESIGN": {
+    "name": "Minor Design Group",
+    "zip": "77019",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "MINUTEMAN_PRESS": {
+    "name": "Minuteman Press",
+    "zip": "77043",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "MITTERA_HOUSTON": {
+    "name": "Mittera Houston",
+    "zip": "77024",
+    "column_break": "VN4ST6PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "MKS_GLOBAL": {
+    "name": "MKS Global Supply",
+    "zip": "77060",
+    "column_break": "VN0ST0PC3PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "MMSI": {
+    "name": "MMSI",
+    "zip": "70364",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "MOBILE_AG": {
+    "name": "Mobile Ag & Industrial Supply",
+    "zip": "93308",
+    "column_break": "VN0ST0PC0PE0SA1AP0",
+    "freight_column_offset": -7
+  },
+  "MODERNISTIC": {
+    "name": "Modernistic",
+    "zip": "55082",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "MOLLET": {
+    "name": "MOLLET",
+    "zip": "97211",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "MORGAN_CITY": {
+    "name": "Morgan City Supply",
+    "zip": "70381",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -3
+  },
+  "MOSITE_RUBBER": {
+    "name": "Mosite Rubber Co",
+    "zip": "76113",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "MOUNTAIN_COMMERCIAL": {
+    "name": "Mountain Commercial Graphics",
+    "zip": "77040",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "MUELLER": {
+    "name": "Mueller",
+    "zip": "28273-4565",
+    "column_break": "VN4ST4PC4PE4SA4AP4",
+    "freight_column_offset": -7
+  },
+  "MULTI_PKG_LANSING": {
+    "name": "Multi Packaging Solution - Lansing, MI",
+    "zip": "48906",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "NAMEPLATES": {
+    "name": "Nameplates",
+    "zip": "74159",
+    "column_break": "VN6ST2PC2PE2SA0AP0",
+    "freight_column_offset": -3
+  },
+  "NAP_TAGS": {
+    "name": "Nap Tags",
+    "zip": "49341",
+    "column_break": "VN5ST5PC5PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "NATIONAL_MARKER": {
+    "name": "National Marker",
+    "zip": "02896",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "NATIONAL_MARKING": {
+    "name": "National Marking Products",
+    "zip": "23228",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "NATIONAL_POSTERS": {
+    "name": "National Posters",
+    "zip": "37404",
+    "column_break": "VN0ST5PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "NATIONAL_PRINT": {
+    "name": "National Print Wholesale (NPW)",
+    "zip": "30339",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "NATIONWIDE_PENNANT": {
+    "name": "Nationwide Pennant & Flag Mfg",
+    "zip": "78238",
+    "column_break": "VN0ST3PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "NATIONWIDE_PLASTICS": {
+    "name": "Nationwide Plastics",
+    "zip": "76010",
+    "column_break": "VN3ST0PC6PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "NEW_ENGLAND_LASER": {
+    "name": "New England Laser",
+    "zip": "01960",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "NJ_SAFETY": {
+    "name": "New Jersey Safety Equipment",
+    "zip": "7456",
+    "column_break": "VN0ST0PC0PE0SA2AP0",
+    "freight_column_offset": -10
+  },
+  "NEW_PROCESS": {
+    "name": "New Process Corp",
+    "zip": "46825",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -6
+  },
+  "NEXTPAGE": {
+    "name": "NextPage",
+    "zip": "64161",
+    "column_break": "VN1ST3PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "NIEMAN_PRINTING": {
+    "name": "Nieman Printing",
+    "zip": "75220",
+    "column_break": "VN6ST6PC5PE5SA0AP0",
+    "freight_column_offset": -1
+  },
+  "NITE_OWL": {
+    "name": "Nite Owl Printing",
+    "zip": "50314",
+    "column_break": "VN2ST0PC0PE3SA0AP0",
+    "freight_column_offset": -5
+  },
+  "NORDEC": {
+    "name": "Nordec",
+    "zip": "44224",
+    "column_break": "VN3ST3PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "NORTHEAST_PLASTIC": {
+    "name": "Northeast Plastic Supply",
+    "zip": "19154",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -9
+  },
+  "NORTHERN_TOOL": {
+    "name": "Northern Tool and Equipment",
+    "zip": "55306",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "NORTHWEST_LAMINATING": {
+    "name": "Northwest Laminating",
+    "zip": "98107",
+    "column_break": "VN5ST4PC4PE4SA4AP0",
+    "freight_column_offset": -9
+  },
+  "NORTON_INDUSTRIES": {
+    "name": "Norton Industries",
+    "zip": "44107",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "NORTON_LEWIS": {
+    "name": "Norton Lewis Printing",
+    "zip": "78216",
+    "column_break": "VN6ST0PC1PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "NOV_FIBERGLASS": {
+    "name": "NOV Fiber Glass Systems (formerly Fiberglass Structures)",
+    "zip": "59044",
+    "column_break": "VN3ST3PC3PE3SA3AP3",
+    "freight_column_offset": -8
+  },
+  "NOVACHROME": {
+    "name": "NovaChrome",
+    "zip": "63144",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "NUTIS_PRESS": {
+    "name": "Nutis Press",
+    "zip": "43227",
+    "column_break": "VN7ST8PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "NUWAVE": {
+    "name": "Nuwave Diecutting",
+    "zip": "60612",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "ODONNELL": {
+    "name": "O Donnell Corp",
+    "zip": "32803",
+    "column_break": "VN7ST8PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "OAK_LEAF": {
+    "name": "Oak Leaf Printers",
+    "zip": "77014",
+    "column_break": "VN8ST3PC0PE4SA0AP0",
+    "freight_column_offset": -1
+  },
+  "ODEE": {
+    "name": "Odee Company",
+    "zip": "75238",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "OEC_GRAPHICS": {
+    "name": "OEC Graphics",
+    "zip": "54903",
+    "column_break": "VN6ST8PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "OLMSTEAD_KIRK": {
+    "name": "Olmstead-Kirk Paper Co",
+    "zip": "77041",
+    "column_break": "VN3ST4PC3PE3SA3AP0",
+    "freight_column_offset": -1
+  },
+  "ONETOUCHPOINT": {
+    "name": "OneTouchPoint Corp.",
+    "zip": "80239",
+    "column_break": "VN3ST4PC0PE3SA0AP0",
+    "freight_column_offset": -5
+  },
+  "OREGON_FORESTRY": {
+    "name": "Oregon Dept of Forestry",
+    "zip": "97116",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -9
+  },
+  "ORORA_VISUAL": {
+    "name": "Orora Visual LLC-Franklin",
+    "zip": "53132",
+    "column_break": "VN0ST8PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PA_GRAPHICS": {
+    "name": "P&A Graphics",
+    "zip": "75069",
+    "column_break": "VN5ST7PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "PACIFIC_INDUSTRIAL": {
+    "name": "Pacific Industrial Supply Co",
+    "zip": "98108",
+    "column_break": "VN0ST0PC0PE0SA1AP0",
+    "freight_column_offset": -9
+  },
+  "PACIFIC_STANDARD": {
+    "name": "PACIFIC STANDARD PRINT",
+    "zip": "95818",
+    "column_break": "VN5ST5PC0PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "PACKAGING_CORP": {
+    "name": "Packaging Corporation",
+    "zip": "60045",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PAGE_INTL": {
+    "name": "Page International Communications",
+    "zip": "77055",
+    "column_break": "VN3ST7PC3PE3SA0AP0",
+    "freight_column_offset": -1
+  },
+  "PALMER_TX": {
+    "name": "Palmer Of Texas",
+    "zip": "79714",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "PAM_BONO": {
+    "name": "Pam Bono Designs",
+    "zip": "80204",
+    "column_break": "VN1ST3PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PANDUIT_MIDWEST": {
+    "name": "Panduit Midwest Sign & Screen Printing Supply",
+    "zip": "55117",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PARAGON_PRESS": {
+    "name": "Paragon Press",
+    "zip": "84119",
+    "column_break": "VN5ST6PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "PARAMOUNT_PRESS": {
+    "name": "Paramount Press",
+    "zip": "80002",
+    "column_break": "VN6ST3PC0PE4SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PARK_PRINTING": {
+    "name": "Park Printing",
+    "zip": "53593",
+    "column_break": "VN6ST0PC6PE6SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PARKER_BUSINESS": {
+    "name": "PARKER BUSINESS FORMS",
+    "zip": "77702",
+    "column_break": "VN6ST6PC5PE5SA0AP0",
+    "freight_column_offset": -2
+  },
+  "PARRIS_PRINTING": {
+    "name": "PARRIS PRINTING",
+    "zip": "37210",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PBC_INDUSTRIAL": {
+    "name": "PBC Industrial Safety Supplier",
+    "zip": "70815",
+    "column_break": "VN0ST0PC0PE0SA6AP0",
+    "freight_column_offset": -3
+  },
+  "PCL_GRAPHICS": {
+    "name": "PCL Graphics",
+    "zip": "L6G 1B9",
+    "column_break": "VN5ST6PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "PEACOCK_PRESS": {
+    "name": "Peacock Press",
+    "zip": "75042",
+    "column_break": "VN6ST3PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "PECZUH_GJ": {
+    "name": "Peczuh - Grand Junction Utah",
+    "zip": "84501",
+    "column_break": "VN5ST6PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "PECZUH_PRICE": {
+    "name": "Peczuh - Price Utah",
+    "zip": "84501",
+    "column_break": "VN5ST6PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "PECZUH_LINDON": {
+    "name": "Peczuh Printing- Lindon, Utah",
+    "zip": "84042",
+    "column_break": "VN5ST6PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "PERFORMANCE_POP": {
+    "name": "Performance POP",
+    "zip": "75247",
+    "column_break": "VN4ST6PC6PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "PERMALITH": {
+    "name": "Permalith Plastics, Llc.",
+    "zip": "60174",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "PERMIAN_SALES": {
+    "name": "Permian Sales",
+    "zip": "79763",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "PETRA_HOLUM": {
+    "name": "Petra & Holum, LLC",
+    "zip": "60707",
+    "column_break": "VN7ST7PC0PE7SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PEXCO": {
+    "name": "Pexco Cy-Tex",
+    "zip": "77041",
+    "column_break": "VN0ST7PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "PHILLIPS_PRINTING": {
+    "name": "Phillips Printing (NO Plastic Usage)",
+    "zip": "37206",
+    "column_break": "VN7ST6PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PHOENIX_ASSOC": {
+    "name": "Phoenix Associates",
+    "zip": "44023",
+    "column_break": "VN5ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PHOENIX_GROUP": {
+    "name": "Phoenix Group",
+    "zip": "75431",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -2
+  },
+  "PHOENIX_VETERANS": {
+    "name": "Phoenix-Veterans Print",
+    "zip": "60517",
+    "column_break": "VN4ST7PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PIEDMONT_PLASTICS": {
+    "name": "Piedmont Plastics",
+    "zip": "77477",
+    "column_break": "VN5ST6PC5PE6SA0AP0",
+    "freight_column_offset": -1
+  },
+  "PIEDMONT_CHARLOTTE": {
+    "name": "Piedmont Plastics - Charlotte NC",
+    "zip": "28269",
+    "column_break": "VN8ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PIEDMONT_HARAHAN": {
+    "name": "Piedmont Plastics - Harahan LA",
+    "zip": "70123",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -3
+  },
+  "PIEDMONT_LITTLETON": {
+    "name": "Piedmont Plastics - Littleton CO",
+    "zip": "80120",
+    "column_break": "VN0ST0PC0PE6SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PLAS_TECH": {
+    "name": "Plas-Tech Inc.",
+    "zip": "L4K 5C1",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "PLASTIC_METAL": {
+    "name": "Plastic and Metal Center",
+    "zip": "92653",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -6
+  },
+  "PLASTIC_ENGINEERING": {
+    "name": "Plastic Engineering",
+    "zip": "74147",
+    "column_break": "VN6ST7PC6PE6SA6AP0",
+    "freight_column_offset": -3
+  },
+  "PLASTI_FAB": {
+    "name": "Plasti-Fab, Inc.",
+    "zip": "48220-1570",
+    "column_break": "VN5ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PLASTI_PRINT": {
+    "name": "Plasti-Print",
+    "zip": "94010",
+    "column_break": "VN4ST4PC0PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "PLATT_LUGGAGE": {
+    "name": "PLATT LUGGAGE INC.",
+    "zip": "60632",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PMP_PACKAGING": {
+    "name": "PMP Packaging",
+    "zip": "94568",
+    "column_break": "VN2ST4PC0PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "POINTSMITH": {
+    "name": "Pointsmith",
+    "zip": "77449",
+    "column_break": "VN7ST7PC8PE5SA0AP0",
+    "freight_column_offset": -1
+  },
+  "POLLOCK_PRINTING": {
+    "name": "Pollock Printing Company, Inc.",
+    "zip": "37203",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "POLYMER_MARKETING": {
+    "name": "Polymer Marketing Inc",
+    "zip": "93065",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "POLYMER_RESOURCES": {
+    "name": "Polymer Resources",
+    "zip": "63043",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -4
+  },
+  "POLYMERSHAPES_NAPERVILLE": {
+    "name": "Polymershapes - Naperville, IL",
+    "zip": "60540",
+    "column_break": "VN5ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "POLYMERSHAPES_ROCHESTER": {
+    "name": "Polymershapes - Rochester NY",
+    "zip": "14613",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -9
+  },
+  "POLYMERSHAPES_TYNGSBORO": {
+    "name": "Polymershapes - Tyngsboro MA",
+    "zip": "01879",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "PORT_PLASTICS_CHANDLER": {
+    "name": "Port Plastics - Chandler AZ",
+    "zip": "85225",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PORT_PLASTICS_FTW": {
+    "name": "Port Plastics - Ft Worth TX",
+    "zip": "76117",
+    "column_break": "VN7ST8PC8PE5SA0AP0",
+    "freight_column_offset": -1
+  },
+  "POST_PRESS": {
+    "name": "Post Press Specialties",
+    "zip": "64056",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "PPS": {
+    "name": "PPS",
+    "zip": "66062-9304",
+    "column_break": "VN2ST0PC2PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "PR1MARY_COLOR": {
+    "name": "Pr1mary color",
+    "zip": "90630",
+    "column_break": "VN5ST5PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "PRECISION_BUSINESS": {
+    "name": "Precision Business Solutions",
+    "zip": "43551",
+    "column_break": "VN6ST7PC0PE6SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PRECISION_DIE": {
+    "name": "Precision Die- Cutting, Inc.",
+    "zip": "97070",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "PREFERRED_PRINTING": {
+    "name": "Preferred Printing",
+    "zip": "57104",
+    "column_break": "VN0ST5PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "PREMIER": {
+    "name": "PREMIER",
+    "zip": "97217",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "PRENTICE_PRODUCTS": {
+    "name": "Prentice Products",
+    "zip": "46809",
+    "column_break": "VN4ST3PC4PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "PRESSSENSE": {
+    "name": "PressSense",
+    "zip": "60491",
+    "column_break": "VN6ST7PC6PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "PRESTONE_PRINTING": {
+    "name": "Prestone Printing",
+    "zip": "30318-5419",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -5
+  },
+  "PRIMARY_COLOR": {
+    "name": "Primary Color",
+    "zip": "90630",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -6
+  },
+  "PRIMARY_COLOR_INC": {
+    "name": "Primary Color, Inc.",
+    "zip": "75247",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -1
+  },
+  "PRIME_SOURCE": {
+    "name": "Prime Source",
+    "zip": "30336",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PRINTING_ETC": {
+    "name": "Printing Etc.",
+    "zip": "37210",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PRODUCT_ID": {
+    "name": "Product Identification Co",
+    "zip": "07026",
+    "column_break": "VN6ST0PC6PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "PROFESSIONAL_PLASTICS": {
+    "name": "Professional Plastics",
+    "zip": "92831-4847",
+    "column_break": "VN4ST0PC3PE3SA0AP0",
+    "freight_column_offset": -6
+  },
+  "PROFESSIONAL_SANDBLAST": {
+    "name": "Professional Sandblasting",
+    "zip": "79108",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "PROFESSIONAL_WELDING": {
+    "name": "Professional Welding Supply",
+    "zip": "77043",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "PROGRAPHICS": {
+    "name": "PROGRAPHICS BLUEPRINT COMPANY",
+    "zip": "37203",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PROTEC": {
+    "name": "Protec",
+    "zip": "07724",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "PRP": {
+    "name": "PRP",
+    "zip": "V5X 2X7",
+    "column_break": "VN1ST1PC1PE1SA1AP1",
+    "freight_column_offset": -10
+  },
+  "PSP_RELIABLE": {
+    "name": "PSP Simply Reliable",
+    "zip": "30035",
+    "column_break": "VN0ST8PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PUBLICOM": {
+    "name": "Publicom",
+    "zip": "77055",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "PVC_TECH": {
+    "name": "Pvc Tech Corp",
+    "zip": "90220-6106",
+    "column_break": "VN6ST5PC4PE5SA0AP0",
+    "freight_column_offset": -6
+  },
+  "QSL_PRINT": {
+    "name": "QSL PRINT COMMUNICATIONS",
+    "zip": "97477",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "QUAD_GRAPHICS": {
+    "name": "Quad/Graphics, Inc.",
+    "zip": "53089-3995",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -7
+  },
+  "QUALITY_VISION": {
+    "name": "Quality Vision Graphics",
+    "zip": "90248",
+    "column_break": "VN0ST0PC5PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "QUANTUM_GROUP": {
+    "name": "Quantum  Group",
+    "zip": "60053",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "QUEEN_CITY": {
+    "name": "Queen City Polymers, Inc.",
+    "zip": "45069",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "QUEST_GRAPHICS": {
+    "name": "Quest Graphics L.L.C.",
+    "zip": "63043",
+    "column_break": "VN0ST6PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "QUICK_CARDS": {
+    "name": "Quick Cards",
+    "zip": "N3E 1A4",
+    "column_break": "VN3ST4PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "QUILTING_CREATIONS": {
+    "name": "Quilting Creations",
+    "zip": "44697",
+    "column_break": "VN0ST0PC0PE4SA0AP0",
+    "freight_column_offset": -7
+  },
+  "RD_INDUSTRIES": {
+    "name": "R&D Industries",
+    "zip": "63131",
+    "column_break": "VN3ST6PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "RD_MARBLE": {
+    "name": "R&D Marble, Inc.",
+    "zip": "77378",
+    "column_break": "VN0ST0PC0PE0SA8AP0",
+    "freight_column_offset": -1
+  },
+  "RD_WELDING": {
+    "name": "R&D WELDING",
+    "zip": "E4B 2T3",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -10
+  },
+  "RACELITE": {
+    "name": "Racelite Protection",
+    "zip": "33431",
+    "column_break": "VN0ST0PC4PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "RADIANS": {
+    "name": "Radians",
+    "zip": "27360",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -7
+  },
+  "RAINBOW_PENNANT": {
+    "name": "Rainbow Pennant",
+    "zip": "73105",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "RAND_GRAPHICS": {
+    "name": "Rand Graphics",
+    "zip": "67215",
+    "column_break": "VN6ST8PC7PE6SA6AP0",
+    "freight_column_offset": -4
+  },
+  "RAVEN_INDUSTRIAL": {
+    "name": "Raven Industrial Supply",
+    "zip": "83638",
+    "column_break": "VN0ST0PC0PE0SA8AP0",
+    "freight_column_offset": -8
+  },
+  "RED_EWALD": {
+    "name": "Red Ewald",
+    "zip": "78118",
+    "column_break": "VN0ST0PC0PE0SA2AP0",
+    "freight_column_offset": -1
+  },
+  "REECE_DALLAS": {
+    "name": "Reece Supply - Dallas TX",
+    "zip": "75062",
+    "column_break": "VN0ST8PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "REECE_HARAHAN": {
+    "name": "Reece Supply - Harahan LA",
+    "zip": "70123",
+    "column_break": "VN1ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "REECE_SAN_ANTONIO": {
+    "name": "Reece Supply - San Antonio TX",
+    "zip": "78218-3716",
+    "column_break": "VN0ST8PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "REED_FIBERGLASS": {
+    "name": "Reed Fiberglass",
+    "zip": "79761-5917",
+    "column_break": "VN0ST0PC0PE0SA2AP0",
+    "freight_column_offset": -3
+  },
+  "REFLECTIVE_EDGE": {
+    "name": "Reflective Edge",
+    "zip": "73127",
+    "column_break": "VN6ST5PC5PE5SA3AP0",
+    "freight_column_offset": -3
+  },
+  "REGAL_GAMES": {
+    "name": "Regal Games LLC",
+    "zip": "60618-3105",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "REGAL_GRAPHICS_KC": {
+    "name": "Regal Graphics - Kansas City",
+    "zip": "64116",
+    "column_break": "VN6ST3PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "REGAL_PLASTIC_TULSA": {
+    "name": "Regal Plastic - Tulsa OK",
+    "zip": "74146",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "REGAL_PLASTICS_AUSTIN": {
+    "name": "Regal Plastics - Austin TX",
+    "zip": "78758",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -1
+  },
+  "REGAL_PLASTICS_FTW": {
+    "name": "Regal Plastics - Ft Worth TX",
+    "zip": "76119",
+    "column_break": "VN2ST6PC2PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "REGAL_PLASTICS_HOU": {
+    "name": "Regal Plastics - Houston TX",
+    "zip": "77055",
+    "column_break": "VN4ST6PC2PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "REGAL_PLASTICS_SA": {
+    "name": "Regal Plastics - San Ant TX",
+    "zip": "78218",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "REGAL_PLASTICS_CORP": {
+    "name": "Regal Plastics Corporate - Dallas TX",
+    "zip": "75229",
+    "column_break": "VN8ST7PC6PE6SA0AP0",
+    "freight_column_offset": -1
+  },
+  "REGAL_PIEDMONT": {
+    "name": "Regal-Piedmont Plastics, LLC",
+    "zip": "28269",
+    "column_break": "VN4ST6PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "REPRO_GRAPHICS": {
+    "name": "Repro Graphics",
+    "zip": "60007",
+    "column_break": "VN0ST8PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "RESTEX": {
+    "name": "Restex Composites",
+    "zip": "78154",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "RICHARDSON_SAFETY": {
+    "name": "Richardson Safety Equipment Co",
+    "zip": "27263",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "RIPPEDSHEETS": {
+    "name": "Rippedsheets.com",
+    "zip": "99320",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "RISTAU_STUDIO": {
+    "name": "Ristau Studio",
+    "zip": "80528",
+    "column_break": "VN0ST0PC4PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "RITZ_SAFETY": {
+    "name": "Ritz Safety (Safety Source Inc)",
+    "zip": "36582",
+    "column_break": "VN0ST0PC0PE0SA6AP0",
+    "freight_column_offset": -4
+  },
+  "RODAK_GROUP": {
+    "name": "RODAK GROUP",
+    "zip": "33711",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -7
+  },
+  "ROSS_PRINTING": {
+    "name": "Ross Pritning",
+    "zip": "99202",
+    "column_break": "VN5ST6PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "SAFEHOUSE_SIGNS": {
+    "name": "Safehouse Signs",
+    "zip": "24012",
+    "column_break": "VN6ST4PC5PE6SA1AP0",
+    "freight_column_offset": -7
+  },
+  "SAFETY_PLUS_SC": {
+    "name": "Safety Plus - South Carolina 2",
+    "zip": "29169",
+    "column_break": "VN0ST0PC0PE0SA6AP0",
+    "freight_column_offset": -6
+  },
+  "SAFETY_SOUTH": {
+    "name": "Safety South Supplies",
+    "zip": "30165",
+    "column_break": "VN0ST0PC0PE0SA5AP0",
+    "freight_column_offset": -5
+  },
+  "SAFEWAY_SIGNS": {
+    "name": "Safeway Signs",
+    "zip": "77229-4705",
+    "column_break": "VN8ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SAFT_GLOVE": {
+    "name": "Saf-T-Glove",
+    "zip": "75053",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SAMS_SAFETY": {
+    "name": "Sam's Safety Equipment",
+    "zip": "77043",
+    "column_break": "VN0ST0PC0PE0SA2AP0",
+    "freight_column_offset": -1
+  },
+  "SANDPAPER_TX": {
+    "name": "Sandpaper Of Texas",
+    "zip": "75243",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SCEPTER": {
+    "name": "Scepter",
+    "zip": "13148",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -9
+  },
+  "SCHIELE_GROUP": {
+    "name": "Schiele Group",
+    "zip": "60007-5718",
+    "column_break": "VN8ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "SCHOFIELD_PRINTING": {
+    "name": "Schofield Printing",
+    "zip": "02860",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -10
+  },
+  "SCOTT_LARGE": {
+    "name": "SCOTT LARGE FORMAT",
+    "zip": "37210",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "SCOTTS_PRINTING": {
+    "name": "Scott's Printing and Copying",
+    "zip": "73106",
+    "column_break": "VN0ST0PC4PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "SCREEN_CRAFTS": {
+    "name": "Screen Crafts, Inc.",
+    "zip": "23230",
+    "column_break": "VN5ST6PC5PE5SA0AP0",
+    "freight_column_offset": -8
+  },
+  "SCREEN_TEK": {
+    "name": "Screen Tek, Inc.",
+    "zip": "99019",
+    "column_break": "VN0ST0PC4PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "SEACHANGE": {
+    "name": "SeaChange Print Innovations",
+    "zip": "55447",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -7
+  },
+  "SECURITY_SAFETY": {
+    "name": "Security Safety & Supply",
+    "zip": "70767",
+    "column_break": "VN0ST0PC0PE0SA7AP0",
+    "freight_column_offset": -3
+  },
+  "SEIDLS_BINDERY": {
+    "name": "Seidl's Bindery",
+    "zip": "77055",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SELECT_IMPRESSIONS": {
+    "name": "Select Impressions",
+    "zip": "97301",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "SEMASYS_HOUSTON": {
+    "name": "Semasys - Houston",
+    "zip": "77041",
+    "column_break": "VN6ST6PC0PE3SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SEMASYS_OK": {
+    "name": "Semasys - Oklahoma",
+    "zip": "73152-3444",
+    "column_break": "VN6ST6PC6PE3SA0AP0",
+    "freight_column_offset": -3
+  },
+  "SENTRY_SAFETY": {
+    "name": "Sentry Safety Supply",
+    "zip": "61656-1607",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -6
+  },
+  "SERIGRAPHIC_ARTS": {
+    "name": "Serigraphic Arts - Florida",
+    "zip": "33610",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -6
+  },
+  "SERIGRAPHIC_SCREEN": {
+    "name": "Serigraphic Screen Print Inc",
+    "zip": "54603-1817",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -7
+  },
+  "SHADOWGRAPH": {
+    "name": "Shadowgraph, Inc.",
+    "zip": "77489",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "SHAPCO": {
+    "name": "Shapco Printing Company",
+    "zip": "55422",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -7
+  },
+  "SHARPE_SAFETY": {
+    "name": "Sharpe Safety Supply",
+    "zip": "23836",
+    "column_break": "VN0ST0PC0PE0SA5AP0",
+    "freight_column_offset": -8
+  },
+  "SHAWMUT": {
+    "name": "Shawmut Communication Group",
+    "zip": "01923-2579",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "SIERRA_SCREEN": {
+    "name": "Sierra Screenprinting / Repacorp",
+    "zip": "85043",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "SIGN_QUICK": {
+    "name": "Sign Quick",
+    "zip": "77586",
+    "column_break": "VN0ST0PC0PE2SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SIGNARAMA": {
+    "name": "SIGNARAMA",
+    "zip": "37203",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "SIGNATURE_ASPEN": {
+    "name": "Signature Aspen",
+    "zip": "77092",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "SIGNS_CENTER": {
+    "name": "Signs Center",
+    "zip": "77530",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SIGNS_UP": {
+    "name": "Signs Up",
+    "zip": "78624",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "SIMON_PRINTING": {
+    "name": "Simon Printing, Co.",
+    "zip": "77025",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SIMPSONS_PRINTING": {
+    "name": "SIMPSONS PRINTING",
+    "zip": "82716",
+    "column_break": "VN0ST5PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "SMALL_CREATIONS": {
+    "name": "Small Creations",
+    "zip": "76092",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SOLUTIONS_UNLIMITED": {
+    "name": "Solutions Unlimited",
+    "zip": "92831",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -6
+  },
+  "SOUTH_BAY": {
+    "name": "South Bay Abrams",
+    "zip": "92649",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "SOUTHEAST_SAFETY": {
+    "name": "Southeast Safety",
+    "zip": "70123",
+    "column_break": "VN5ST5PC5PE5SA7AP0",
+    "freight_column_offset": -3
+  },
+  "SOUTHERN_COATING": {
+    "name": "Southern Coating & Nameplate",
+    "zip": "72117",
+    "column_break": "VN5ST6PC6PE6SA0AP0",
+    "freight_column_offset": -3
+  },
+  "SOUTHWEST_PRECISION": {
+    "name": "Southwest Precision Printers",
+    "zip": "77043",
+    "column_break": "VN4ST4PC3PE3SA3AP0",
+    "freight_column_offset": -1
+  },
+  "SPACE_AGE": {
+    "name": "Space Age Laminating",
+    "zip": "77007",
+    "column_break": "VN3ST4PC3PE1SA1AP0",
+    "freight_column_offset": -1
+  },
+  "SPANGLER_GRAPHICS": {
+    "name": "Spangler Graphics",
+    "zip": "66106",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "SPARK_PRINTING": {
+    "name": "Spark Printing",
+    "zip": "38118",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "SPC_GRAPHICS": {
+    "name": "SPC Graphics",
+    "zip": "63401",
+    "column_break": "VN2ST2PC2PE2SA2AP0",
+    "freight_column_offset": -4
+  },
+  "SPICERS": {
+    "name": "Spicers - Kitchener, Ontario",
+    "zip": "N2R 1K1",
+    "column_break": "VN0ST5PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "SPINNER_PLASTIC": {
+    "name": "Spinner Plastic",
+    "zip": "62702",
+    "column_break": "VN0ST0PC7PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "SPRINT_DENVER": {
+    "name": "Sprint Denver, Inc.",
+    "zip": "80239",
+    "column_break": "VN0ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "STL_TAG": {
+    "name": "St. Louis Tag",
+    "zip": "63143-3797",
+    "column_break": "VN6ST4PC4PE4SA4AP0",
+    "freight_column_offset": -4
+  },
+  "STANDARD_EQUIPMENT": {
+    "name": "Standard Equipment",
+    "zip": "36602",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "STANPAC": {
+    "name": "Stanpac",
+    "zip": "77833",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "STATE_SAFETY": {
+    "name": "State Safety & Compliance",
+    "zip": "46203",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -6
+  },
+  "STAUFFER_GLOVE": {
+    "name": "Stauffer Glove & Safety",
+    "zip": "18076",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "STEPHEN_GOULD": {
+    "name": "Stephen Gould Corporation",
+    "zip": "07981",
+    "column_break": "VN0ST0PC0PE3SA0AP0",
+    "freight_column_offset": -10
+  },
+  "STERLING_SCREEN": {
+    "name": "Sterling Screen Printing",
+    "zip": "66226",
+    "column_break": "VN1ST0PC0PE3SA0AP0",
+    "freight_column_offset": -4
+  },
+  "STEVENS_DECAL": {
+    "name": "Stevens Decal Company, Inc.",
+    "zip": "85009",
+    "column_break": "VN0ST0PC5PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "STONEHOUSE_SIGNS": {
+    "name": "Stonehouse Signs, Inc.",
+    "zip": "80003",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "STORE_DECOR": {
+    "name": "Store Decor",
+    "zip": "75088",
+    "column_break": "VN5ST8PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "STOUSE": {
+    "name": "Stouse",
+    "zip": "66031",
+    "column_break": "VN6ST8PC6PE6SA0AP0",
+    "freight_column_offset": -4
+  },
+  "STOVER_MFG": {
+    "name": "Stover Manufacturing",
+    "zip": "32129",
+    "column_break": "VN3ST3PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "STRANCO": {
+    "name": "Stranco",
+    "zip": "46360",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -7
+  },
+  "SUNRISE_PRESS": {
+    "name": "Sunrise Press",
+    "zip": "84070",
+    "column_break": "VN5ST6PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "SUPER_COLOR": {
+    "name": "Super Color Digital",
+    "zip": "92606",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -6
+  },
+  "SUPERIOR_GASKETS": {
+    "name": "Superior Gaskets",
+    "zip": "75126",
+    "column_break": "VN0ST0PC6PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "SUPREME_COLOR": {
+    "name": "Supreme Color Graphics",
+    "zip": "70471",
+    "column_break": "VN0ST6PC0PE4SA0AP0",
+    "freight_column_offset": -3
+  },
+  "SUPREME_SAFETY": {
+    "name": "Supreme Safety",
+    "zip": "18974",
+    "column_break": "VN0ST0PC0PE0SA4AP0",
+    "freight_column_offset": -9
+  },
+  "SWIFT_SCREEN": {
+    "name": "Swift Screen Printing",
+    "zip": "75042",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "SYNCHRO_TECH": {
+    "name": "SYNCHRO-TECH",
+    "zip": "77006",
+    "column_break": "VN5ST5PC5PE5SA5AP5",
+    "freight_column_offset": -1
+  },
+  "TACKLE_WITH_LOVE": {
+    "name": "Tackle With Love",
+    "zip": "59106",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -9
+  },
+  "TAGS_4_LESS": {
+    "name": "Tags 4 Less",
+    "zip": "34293-1032",
+    "column_break": "VN5ST0PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "TANQUARY": {
+    "name": "Tanquary & Associates Inc",
+    "zip": "64108",
+    "column_break": "VN7ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "TCG_LEGACY": {
+    "name": "TCG Legacy",
+    "zip": "27529",
+    "column_break": "VN5ST6PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "TECHNIPRINT": {
+    "name": "TechniPrint",
+    "zip": "55317",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "TECHNOLOGY_CONTAINER": {
+    "name": "Technology Container Corp.",
+    "zip": "75115-2537",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -1
+  },
+  "TEK_ID": {
+    "name": "Tek ID",
+    "zip": "19454",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -9
+  },
+  "TELE_PAK": {
+    "name": "Tele-Pak, Inc",
+    "zip": "10952-2835",
+    "column_break": "VN0ST8PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "TEXAS_NAMEPLATE": {
+    "name": "Texas Nameplate Co., Inc.",
+    "zip": "75215-2001",
+    "column_break": "VN7ST1PC6PE1SA0AP0",
+    "freight_column_offset": -1
+  },
+  "TEXTEN": {
+    "name": "TexTen Graphics LLC",
+    "zip": "75033",
+    "column_break": "VN6ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "BERNARD_GROUP": {
+    "name": "The Bernard Group Inc",
+    "zip": "55317",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -7
+  },
+  "GRAPHICS_SHOP": {
+    "name": "The Graphics Shop / Hackworth Company",
+    "zip": "23324",
+    "column_break": "VN5ST6PC5PE4SA0AP0",
+    "freight_column_offset": -8
+  },
+  "PRETTIEST_PIXEL": {
+    "name": "The Prettiest Pixel",
+    "zip": "66216",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -4
+  },
+  "PRINT_AUTHORITY": {
+    "name": "THE PRINT AUTHORITY",
+    "zip": "37027",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "PRINTING_SOURCE": {
+    "name": "The Printing Source, Inc.",
+    "zip": "63146",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -4
+  },
+  "TRADE_GROUP": {
+    "name": "The Trade Group",
+    "zip": "75007",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -1
+  },
+  "THERMAL_PAPER": {
+    "name": "Thermal Paper & Printing",
+    "zip": "75244",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "THRUST_IND": {
+    "name": "Thrust Industries",
+    "zip": "47725",
+    "column_break": "VN6ST8PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "TIMSCO": {
+    "name": "Timsco",
+    "zip": "20748",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -8
+  },
+  "TOTAL_GRAPHIC": {
+    "name": "Total Graphic Solutions",
+    "zip": "30101",
+    "column_break": "VN5ST6PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "TOTAL_PLASTICS_CHI": {
+    "name": "Total Plastics - Chicago IL",
+    "zip": "60007",
+    "column_break": "VN0ST0PC0PE4SA0AP0",
+    "freight_column_offset": -7
+  },
+  "TOTAL_PLASTICS_INTL": {
+    "name": "Total Plastics International",
+    "zip": "98057",
+    "column_break": "VN0ST0PC0PE5SA0AP0",
+    "freight_column_offset": -9
+  },
+  "TPC_PRINTING": {
+    "name": "TPC Printing and Packaging",
+    "zip": "37412",
+    "column_break": "VN4ST0PC0PE0SA0AP4",
+    "freight_column_offset": -5
+  },
+  "TRACER_IMAGING": {
+    "name": "Tracer Imaging, LLC",
+    "zip": "10562",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -10
+  },
+  "TRANSCENDIA": {
+    "name": "Transcendia aka Transilwrap",
+    "zip": "44149",
+    "column_break": "VN6ST4PC3PE3SA3AP0",
+    "freight_column_offset": -7
+  },
+  "TRANSPARENT_CONTAINER": {
+    "name": "Transparent Container Company",
+    "zip": "60101",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -7
+  },
+  "TRIGON": {
+    "name": "Trigon Incorp",
+    "zip": "70560",
+    "column_break": "VN0ST0PC0PE0SA4AP0",
+    "freight_column_offset": -3
+  },
+  "TRUCOLOR": {
+    "name": "TRUCOLOR LITHO",
+    "zip": "37203",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "TRU_VISION": {
+    "name": "Tru-Vision Plastics Co",
+    "zip": "77834",
+    "column_break": "VN7ST7PC7PE7SA7AP7",
+    "freight_column_offset": -1
+  },
+  "TTC_TRAMMELL": {
+    "name": "TTC Trammell",
+    "zip": "77011",
+    "column_break": "VN2ST3PC0PE2SA0AP0",
+    "freight_column_offset": -1
+  },
+  "TUCK_VISOR": {
+    "name": "Tuck Visor",
+    "zip": "95608",
+    "column_break": "VN0ST0PC1PE3SA0AP0",
+    "freight_column_offset": -8
+  },
+  "TUKAIZ": {
+    "name": "Tukaiz LLC",
+    "zip": "60131",
+    "column_break": "VN6ST7PC0PE7SA0AP0",
+    "freight_column_offset": -7
+  },
+  "TURNER_SUPPLY": {
+    "name": "Turner Supply",
+    "zip": "36602",
+    "column_break": "VN6ST6PC6PE6SA6AP6",
+    "freight_column_offset": -4
+  },
+  "US_NAMEPLATE": {
+    "name": "U.S. Nameplate",
+    "zip": "52314",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "UNIFIED_GRAPHICS": {
+    "name": "Unified Graphics & Signs",
+    "zip": "76119",
+    "column_break": "VN2ST0PC2PE2SA0AP0",
+    "freight_column_offset": -1
+  },
+  "USSERY_PRINTING": {
+    "name": "Ussery Printing",
+    "zip": "75062",
+    "column_break": "VN3ST3PC3PE3SA3AP0",
+    "freight_column_offset": -1
+  },
+  "VALERIAN": {
+    "name": "Valerian Signature Cards, LP.",
+    "zip": "75081",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "VANGUARD_PKG": {
+    "name": "Vanguard Packaging, Inc.",
+    "zip": "64161",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "VERITIV_MD": {
+    "name": "Veritiv - MD",
+    "zip": "21076",
+    "column_break": "VN0ST3PC0PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "VERITIV_MI": {
+    "name": "Veritiv - MI",
+    "zip": "48150",
+    "column_break": "VN1ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "VERITIV_CORP": {
+    "name": "Veritiv Corp",
+    "zip": "45262",
+    "column_break": "VN3ST5PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "VERNON_COMPANY": {
+    "name": "Vernon Company",
+    "zip": "50208",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "VICTOR_CORNELIUS": {
+    "name": "Victor Cornelius",
+    "zip": "76448",
+    "column_break": "VN4ST0PC0PE0SA0AP0",
+    "freight_column_offset": -2
+  },
+  "VICTOR_ENVELOPE": {
+    "name": "Victor Envelope/Thermo Graphic",
+    "zip": "60106",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "VICTORY_GLASS": {
+    "name": "Victory Glass Co.",
+    "zip": "50263",
+    "column_break": "VN0ST0PC6PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "VINCENT_PRINTING": {
+    "name": "VINCENT PRINTING",
+    "zip": "37406",
+    "column_break": "VN6ST7PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "VIONX": {
+    "name": "VIONX ENERGY",
+    "zip": "01801",
+    "column_break": "VN5ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "VISION_GRAPHICS": {
+    "name": "Vision Graphics",
+    "zip": "84119",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "VISION_GRAPHICS_INC": {
+    "name": "Vision Graphics Inc",
+    "zip": "80216",
+    "column_break": "VN7ST8PC0PE0SA0AP0",
+    "freight_column_offset": -5
+  },
+  "VISIPAK": {
+    "name": "VisiPak, Inc.",
+    "zip": "63010",
+    "column_break": "VN8ST8PC8PE8SA8AP8",
+    "freight_column_offset": -4
+  },
+  "VISTA_COLOR": {
+    "name": "VISTA COLOR CORPORATION",
+    "zip": "33126",
+    "column_break": "VN6ST6PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "VISTACRAFT": {
+    "name": "Vistacraft",
+    "zip": "31908",
+    "column_break": "VN6ST4PC2PE2SA2AP0",
+    "freight_column_offset": -5
+  },
+  "VISUAL_CITI": {
+    "name": "Visual Citi, Inc.",
+    "zip": "11704",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "VIVID_INK": {
+    "name": "Vivid Ink",
+    "zip": "70815-8128",
+    "column_break": "VN6ST6PC0PE6SA0AP0",
+    "freight_column_offset": -3
+  },
+  "VOMELA": {
+    "name": "Vomela",
+    "zip": "55107",
+    "column_break": "VN2ST6PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "WALLACE_CARLSON": {
+    "name": "Wallace Carlson Printing",
+    "zip": "55305",
+    "column_break": "VN0ST8PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "WALMART_PRINTING": {
+    "name": "Walmart Ptg & Mailing",
+    "zip": "72712",
+    "column_break": "VN2ST6PC2PE2SA2AP0",
+    "freight_column_offset": -3
+  },
+  "WARD_KRAFT": {
+    "name": "Ward Kraft",
+    "zip": "66701",
+    "column_break": "VN5ST5PC0PE4SA0AP0",
+    "freight_column_offset": -4
+  },
+  "WASIP": {
+    "name": "Wasip Ltd",
+    "zip": "M1W 3Z5",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -10
+  },
+  "WATKINS_LITHO": {
+    "name": "Watkins Lithographic, Inc.",
+    "zip": "64116",
+    "column_break": "VN7ST7PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "WELDERS_SUPPLY": {
+    "name": "Welder's Supply & Equipment",
+    "zip": "70767",
+    "column_break": "VN0ST0PC0PE0SA7AP0",
+    "freight_column_offset": -3
+  },
+  "WELDERS_WAREHOUSE": {
+    "name": "Welders Warehouse",
+    "zip": "75247",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "WEST_TX_PRINTING": {
+    "name": "West Texas Printing Co",
+    "zip": "76801",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -2
+  },
+  "WESTERN_PLASTICS": {
+    "name": "Western Plastics",
+    "zip": "73108",
+    "column_break": "VN0ST0PC8PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "WESTERN_PLASTICS_PROD": {
+    "name": "Western Plastics Products",
+    "zip": "90680",
+    "column_break": "VN0ST6PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  },
+  "WESTERN_SAFETY": {
+    "name": "Western Safety Products",
+    "zip": "98134",
+    "column_break": "VN0ST0PC0PE0SA6AP0",
+    "freight_column_offset": -9
+  },
+  "WESTERN_BRW": {
+    "name": "Western-BRW Paper Co",
+    "zip": "75006",
+    "column_break": "VN7ST6PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "WISE_SAFETY": {
+    "name": "Wise Safety & Environmental",
+    "zip": "63132-0360",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "WRIGHT_LABELS": {
+    "name": "Wright Labels",
+    "zip": "27360",
+    "column_break": "VN3ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "WW_LICK": {
+    "name": "WW & Lick",
+    "zip": "72902-0168",
+    "column_break": "VN2ST2PC0PE0SA0AP0",
+    "freight_column_offset": -3
+  },
+  "WW_FIBERGLASS": {
+    "name": "WW Fiberglass",
+    "zip": "79065",
+    "column_break": "VN0ST0PC0PE0SA6AP0",
+    "freight_column_offset": -3
+  },
+  "X_PLUS_SCENIC": {
+    "name": "X Plus Scenic Group",
+    "zip": "75006",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -1
+  },
+  "XERXES": {
+    "name": "Xerxes Corporation",
+    "zip": "92807",
+    "column_break": "VN0ST0PC0PE0SA7AP0",
+    "freight_column_offset": -6
+  },
+  "XERXES_HAGERSTOWN": {
+    "name": "Xerxes Corporation Hagerstown",
+    "zip": "21795",
+    "column_break": "VN0ST0PC0PE0SA0AP0",
+    "freight_column_offset": -8
+  },
+  "XERXES_TX": {
+    "name": "Xerxes Corporation TX",
+    "zip": "78155",
+    "column_break": "VN0ST0PC0PE0SA3AP0",
+    "freight_column_offset": -1
+  },
+  "YUNKER": {
+    "name": "Yunker Industries",
+    "zip": "53121",
+    "column_break": "VN7ST0PC0PE0SA0AP0",
+    "freight_column_offset": -7
+  },
+  "ZANE_WILLIAMS": {
+    "name": "Zane Williams now Craftsmen",
+    "zip": "63110",
+    "column_break": "VN7ST0PC8PE0SA0AP0",
+    "freight_column_offset": -4
+  },
+  "ZIP_GRAPHIC": {
+    "name": "Zip Graphic",
+    "zip": "84115",
+    "column_break": "VN2ST0PC0PE0SA0AP0",
+    "freight_column_offset": -6
+  }
+}

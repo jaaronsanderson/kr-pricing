@@ -1,0 +1,17 @@
+<step title="Incoming Request" date="2025-12-05T00:05:01.831" instance="5e7dc0" url="/api/zipdeploy?isAsync=true" method="POST" type="request" pid="767,1,7" Accept="*/*" Host="kr-pricing-api.scm.azurewebsites.net" User-Agent="AZURECLI/2.80.0 (MSI)" Accept-Encoding="gzip, deflate" Authorization="Bea..." Cache-Control="no-cache" Content-Type="application/octet-stream" Content-Length="67233" x-ms-client-request-id="f6ec43a6-d16d-11f0-8a6f-7412b3bc5cec" x-ms-artifact-checksum="1c771750460a16a7d0d2602fb624a24f356c3a5e73f8e6087602112c5d70007b" X-ARR-LOG-ID="f6ec43a6-d16d-11f0-8a6f-7412b3bc5cec" CLIENT-IP="24.227.166.130:64519" X-SITE-DEPLOYMENT-ID="kr-pricing-api" WAS-DEFAULT-HOSTNAME="kr-pricing-api.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/zipdeploy?isAsync=true" X-Client-IP="24.227.166.130" X-Client-Port="64519" >
+  <step title="ZipPushDeploy" date="2025-12-05T00:05:03.491" >
+    <step title="ZipDeploy. Extract zip." date="2025-12-05T00:05:03.569" /><!-- duration: 38ms -->
+    <step title="None repository commit" date="2025-12-05T00:05:03.638" >
+      <step title="Commit id: eb95ee25-daa2-4fc0-9d7f-3396f0fe0b90" date="2025-12-05T00:05:03.656" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 10ms -->
+    </step><!-- duration: 48ms -->
+    <step title="Starting PushDeployAsync" date="2025-12-05T00:05:03.723" /><!-- duration: 12ms -->
+    <step title="Writing artifact to /tmp/zipdeploy/ea7cc183-6275-4c7d-b0d4-816361781766.zip" date="2025-12-05T00:05:03.810" >
+      <step title="Writing multipart request body to /tmp/zipdeploy/ea7cc183-6275-4c7d-b0d4-816361781766.zip" date="2025-12-05T00:05:03.820" /><!-- duration: 11ms -->
+    </step><!-- duration: 183ms -->
+    <step title="Start deployment in the background" date="2025-12-05T00:05:04.014" >
+      <step title="Acquiring Deployment Lock" date="2025-12-05T00:05:04.108" /><!-- duration: 11ms -->
+      <step title="Acquired Deployment Lock" date="2025-12-05T00:05:04.253" /><!-- duration: 26ms -->
+    </step><!-- duration: 526ms -->
+  </step><!-- duration: 1069ms -->
+  <step title="Outgoing response" date="2025-12-05T00:05:04.628" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 17ms -->
+</step><!-- duration: 2827ms -->
