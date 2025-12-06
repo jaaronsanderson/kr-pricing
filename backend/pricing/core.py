@@ -367,11 +367,14 @@ def price_custom_line(
     sell_price_per_unit = apply_order_minimums(raw_price_per_unit, sheets, width)
     extended = sell_price_per_unit * sheets
 
+    # Format: ".030 White Matte/Matte Vinyl 28X40"
+    # gauge as decimal, color, surface, material, widthXlength
+    auto_description = f"{gauge:.3f} {color} {surface} {material} {int(width)}X{int(length)}"
+
     return LinePriceResult(
         type=line.type,
         sku=None,
-        description=line.description
-        or f"Custom {material} {gauge}ga {width}x{length}",
+        description=line.description or auto_description,
         quantity=sheets,
         weight_per_unit=weight_per_unit,
         base_cost_per_unit=round(base_cost_per_unit, 4),
