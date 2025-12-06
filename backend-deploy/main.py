@@ -4,8 +4,9 @@ from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from auth import get_current_user, CurrentUser
+from pydantic import BaseModel
 from pricing.models import QuoteRequest, QuoteResponse
-from pricing.settings_loader import load_settings
+from pricing.settings_loader import load_settings, save_customers, save_items
 from pricing.core import calculate_quote
 from pricing.quote_log import (
     append_quote_record,
@@ -23,6 +24,20 @@ from pricing.custom_rules import (
 )
 
 app = FastAPI(title="KR Pricing Backend", version="1.0.0")
+
+
+# -------------------------------------------------------------------
+# Request models for PATCH endpoints
+# -------------------------------------------------------------------
+
+
+class CustomerUpdate(BaseModel):
+    column_break: Optional[str] = None
+    freight_column_offset: Optional[int] = None
+
+
+class ItemUpdate(BaseModel):
+    description: Optional[str] = None
 
 # CORS so the React app can call us from localhost:5173 or production
 origins = [
@@ -97,6 +112,65 @@ def list_items(user: CurrentUser = Depends(get_current_user)):
         }
         for item in items
     ]
+
+
+@app.patch("/customers/{customer_id}")
+def update_customer(
+    customer_id: str,
+    updates: CustomerUpdate,
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Update a customer's column_break and/or freight_column_offset.
+    Persists changes to customers.json.
+    """
+    customers = SETTINGS["customers"]
+    if customer_id not in customers:
+        raise HTTPException(status_code=404, detail=f"Customer not found: {customer_id}")
+
+    # Apply updates
+    if updates.column_break is not None:
+        customers[customer_id]["column_break"] = updates.column_break
+    if updates.freight_column_offset is not None:
+        customers[customer_id]["freight_column_offset"] = updates.freight_column_offset
+
+    # Save to disk
+    save_customers(customers)
+
+    return {
+        "id": customer_id,
+        "name": customers[customer_id].get("name", customer_id),
+        "column_break": customers[customer_id].get("column_break", ""),
+        "freight_column_offset": customers[customer_id].get("freight_column_offset", 0),
+    }
+
+
+@app.patch("/items/{sku}")
+def update_item(
+    sku: str,
+    updates: ItemUpdate,
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Update an item's description.
+    Persists changes to items.json.
+    """
+    items = SETTINGS["items"]
+    item = next((i for i in items if i.get("sku") == sku), None)
+    if not item:
+        raise HTTPException(status_code=404, detail=f"Item not found: {sku}")
+
+    # Apply updates
+    if updates.description is not None:
+        item["description"] = updates.description
+
+    # Save to disk
+    save_items(items)
+
+    return {
+        "sku": sku,
+        "description": item.get("description", ""),
+    }
 
 
 # -------------------------------------------------------------------
