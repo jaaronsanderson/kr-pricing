@@ -14,6 +14,21 @@ def _load_json(path: Path):
         return json.load(f)
 
 
+def _save_json(path: Path, data):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
+
+
+def save_customers(customers: dict):
+    """Save customers dictionary to customers.json."""
+    _save_json(CONFIG_DIR / "customers.json", customers)
+
+
+def save_items(items: list):
+    """Save items list to items.json."""
+    _save_json(CONFIG_DIR / "items.json", items)
+
+
 def load_settings() -> dict:
     """
     Central place to load all JSON-backed settings.
