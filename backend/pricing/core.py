@@ -106,23 +106,29 @@ def lookup_multiplier(total_column: int, column_multipliers_cfg: Dict[str, Any])
 def apply_order_minimums(price_per_unit: float, quantity: float, item_width: float) -> float:
     """
     Applies:
-      - $150 global minimum
-      - $550 minimum if width > 47"
+      - $150 global minimum (MINIMUM_ORDER_VALUE)
+      - $550 minimum if width > 47" (WIDE_SHEET_MINIMUM_VALUE if > WIDE_SHEET_THRESHOLD)
     Returns adjusted price_per_unit.
     """
+    from .custom_rules import (
+        MINIMUM_ORDER_VALUE,
+        WIDE_SHEET_THRESHOLD,
+        WIDE_SHEET_MINIMUM_VALUE,
+    )
+
     if quantity <= 0:
         return price_per_unit
 
     extended = price_per_unit * quantity
 
-    # $150 global minimum
-    if extended < 150:
-        price_per_unit = 150.0 / quantity
+    # Global minimum order value
+    if extended < MINIMUM_ORDER_VALUE:
+        price_per_unit = MINIMUM_ORDER_VALUE / quantity
         extended = price_per_unit * quantity
 
-    # $550 wide-sheet minimum
-    if item_width > 47 and extended < 550:
-        price_per_unit = 550.0 / quantity
+    # Wide-sheet minimum
+    if item_width > WIDE_SHEET_THRESHOLD and extended < WIDE_SHEET_MINIMUM_VALUE:
+        price_per_unit = WIDE_SHEET_MINIMUM_VALUE / quantity
 
     return price_per_unit
 
@@ -298,6 +304,9 @@ def price_custom_line(
     column_multipliers_cfg: Dict[str, Any],
     include_freight: bool,
 ) -> LinePriceResult:
+    # Import custom rules for material specs
+    from .custom_rules import get_material_spec, MINIMUM_WEIGHT_LBS
+
     material = line.material or ""
     color = line.color or ""
     surface = line.surface or ""
@@ -307,21 +316,25 @@ def price_custom_line(
     sheets = float(line.sheets or 0.0)
 
     mat_key = material.lower()
-    if mat_key in ("vinyl", "apet"):
+
+    # Get material specification from custom_rules
+    spec = get_material_spec(material)
+    if spec:
+        weight_factor = spec.weight_factor
+        material_code = spec.material_code
+    elif mat_key in ("vinyl", "apet"):
         weight_factor = 0.05
         material_code = "VN" if mat_key == "vinyl" else "AP"
-        default_width_for_min = 25.0
     else:
         # treat other customs like Styrene for now
         weight_factor = 0.04
         material_code = "ST"
-        default_width_for_min = 40.0
 
     weight_per_sheet = weight_factor * gauge * width * length
     total_weight = weight_per_sheet * sheets
 
     # ~2000 lbs minimum run (mirroring original logic)
-    if total_weight < 2000 and weight_per_sheet > 0:
+    if total_weight < MINIMUM_WEIGHT_LBS and weight_per_sheet > 0:
         sheets = ceil(2010.0 / weight_per_sheet)
 
     weight_per_unit = weight_per_sheet
@@ -350,9 +363,8 @@ def price_custom_line(
         column_multipliers_cfg=column_multipliers_cfg,
     )
 
-    sell_price_per_unit = apply_order_minimums(
-        raw_price_per_unit, sheets, default_width_for_min
-    )
+    # Use actual sheet width for minimum order calculations
+    sell_price_per_unit = apply_order_minimums(raw_price_per_unit, sheets, width)
     extended = sell_price_per_unit * sheets
 
     return LinePriceResult(

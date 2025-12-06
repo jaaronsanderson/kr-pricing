@@ -1,6 +1,6 @@
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from auth import get_current_user, CurrentUser
@@ -11,6 +11,15 @@ from pricing.quote_log import (
     append_quote_record,
     load_quote_summaries,
     load_quote_by_id,
+)
+from pricing.custom_rules import (
+    get_custom_materials,
+    get_custom_colors,
+    get_custom_surfaces,
+    get_material_constraints,
+    calculate_sheet_weight,
+    calculate_minimum_sheets,
+    MATERIAL_SPECS,
 )
 
 app = FastAPI(title="KR Pricing Backend", version="1.0.0")
@@ -86,6 +95,140 @@ def list_items(user: CurrentUser = Depends(get_current_user)):
         }
         for item in items
     ]
+
+
+# -------------------------------------------------------------------
+# Custom sheet options endpoints (protected)
+# -------------------------------------------------------------------
+
+
+@app.get("/custom/materials")
+def list_custom_materials(user: CurrentUser = Depends(get_current_user)):
+    """
+    Return the list of materials available for custom sheets.
+    """
+    return get_custom_materials()
+
+
+@app.get("/custom/colors")
+def list_custom_colors(
+    material: str = Query(..., description="Material name (Vinyl, Styrene, APET)"),
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Return the list of valid colors for a given material.
+    """
+    colors = get_custom_colors(material)
+    if not colors:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unknown material: {material}. Valid materials: {', '.join(get_custom_materials())}",
+        )
+    return colors
+
+
+@app.get("/custom/surfaces")
+def list_custom_surfaces(
+    material: str = Query(..., description="Material name (Vinyl, Styrene, APET)"),
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Return the list of valid surfaces for a given material.
+    """
+    surfaces = get_custom_surfaces(material)
+    if not surfaces:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unknown material: {material}. Valid materials: {', '.join(get_custom_materials())}",
+        )
+    return surfaces
+
+
+@app.get("/custom/constraints")
+def get_custom_constraints(
+    material: str = Query(..., description="Material name (Vinyl, Styrene, APET)"),
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Return the dimension constraints (gauge, width, length) for a given material.
+    """
+    constraints = get_material_constraints(material)
+    if not constraints:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unknown material: {material}. Valid materials: {', '.join(get_custom_materials())}",
+        )
+    return constraints
+
+
+@app.get("/custom/all-options")
+def get_all_custom_options(user: CurrentUser = Depends(get_current_user)):
+    """
+    Return all custom sheet options in a single response.
+    Useful for populating form dropdowns.
+    """
+    materials = get_custom_materials()
+    result = {}
+
+    for material in materials:
+        mat_key = material.lower()
+        spec = MATERIAL_SPECS.get(mat_key)
+        result[material] = {
+            "colors": get_custom_colors(material),
+            "surfaces": get_custom_surfaces(material),
+            "constraints": {
+                "gauge": {"min": spec.min_gauge, "max": spec.max_gauge} if spec else None,
+                "width": {"min": spec.min_width, "max": spec.max_width} if spec else None,
+                "length": {"min": spec.min_length, "max": spec.max_length} if spec else None,
+            },
+            "weight_factor": spec.weight_factor if spec else None,
+        }
+
+    return {
+        "materials": materials,
+        "options": result,
+    }
+
+
+@app.get("/custom/calculate-weight")
+def calculate_custom_weight(
+    material: str = Query(..., description="Material name"),
+    gauge: float = Query(..., description="Gauge (thickness)"),
+    width: float = Query(..., description="Width in inches"),
+    length: float = Query(..., description="Length in inches"),
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Calculate the weight of a single custom sheet.
+    """
+    weight = calculate_sheet_weight(material, gauge, width, length)
+    return {
+        "weight_per_sheet": round(weight, 4),
+        "unit": "lbs",
+    }
+
+
+@app.get("/custom/minimum-sheets")
+def get_minimum_sheets(
+    material: str = Query(..., description="Material name"),
+    gauge: float = Query(..., description="Gauge (thickness)"),
+    width: float = Query(..., description="Width in inches"),
+    length: float = Query(..., description="Length in inches"),
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Calculate the minimum number of sheets required to meet the 2000 lb minimum.
+    """
+    weight_per_sheet = calculate_sheet_weight(material, gauge, width, length)
+    min_sheets = calculate_minimum_sheets(material, gauge, width, length)
+    total_weight = weight_per_sheet * min_sheets
+
+    return {
+        "weight_per_sheet": round(weight_per_sheet, 4),
+        "minimum_sheets": min_sheets,
+        "total_weight": round(total_weight, 2),
+        "minimum_weight_required": 2000,
+    }
 
 
 # -------------------------------------------------------------------
