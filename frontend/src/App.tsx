@@ -17,6 +17,8 @@ import type {
   BackendLineItemRequest,
 } from "./types";
 
+import { DEFAULT_CUSTOM_VALUES } from "./types";
+
 import {
   fetchCustomers,
   fetchItems,
@@ -29,7 +31,6 @@ import {
   Header,
   QuoteResult,
   QuoteHistory,
-  QuoteSummaryCard,
   StockLineEditor,
   CustomLineEditor,
   AdHocLineEditor,
@@ -225,13 +226,13 @@ function App() {
   function addCustomLine() {
     const line: CustomLine = {
       kind: "custom",
-      material: "Vinyl",
-      color: "White",
-      surface: "Gloss/Gloss",
-      gauge: 10,
-      width: 48,
-      length: 96,
-      sheets: 100,
+      material: DEFAULT_CUSTOM_VALUES.material,
+      color: DEFAULT_CUSTOM_VALUES.color,
+      surface: DEFAULT_CUSTOM_VALUES.surface,
+      gauge: DEFAULT_CUSTOM_VALUES.gauge,
+      width: DEFAULT_CUSTOM_VALUES.width,
+      length: DEFAULT_CUSTOM_VALUES.length,
+      sheets: DEFAULT_CUSTOM_VALUES.sheets,
       description: "",
     };
     setLines((prev) => [...prev, line]);
@@ -572,6 +573,44 @@ function App() {
                   );
                 })}
               </div>
+
+              {/* Calculate Quote Button */}
+              {lines.length > 0 && (
+                <div className="mt-6">
+                  <button
+                    onClick={submitQuote}
+                    disabled={!account || !customerId || loadingQuote}
+                    className={cn(
+                      "w-full rounded-xl py-4 text-base font-semibold transition-all shadow-lg",
+                      account && customerId && !loadingQuote
+                        ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl"
+                        : "bg-zinc-200 text-zinc-400 cursor-not-allowed"
+                    )}
+                  >
+                    {loadingQuote ? (
+                      <span className="flex items-center justify-center gap-2">
+                        <svg className="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                        </svg>
+                        Calculating...
+                      </span>
+                    ) : (
+                      <span className="flex items-center justify-center gap-2">
+                        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
+                        </svg>
+                        Calculate Quote
+                      </span>
+                    )}
+                  </button>
+                  {!customerId && (
+                    <p className="mt-2 text-center text-xs text-zinc-500">
+                      Select a customer to calculate the quote
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Quote Result */}
@@ -583,17 +622,8 @@ function App() {
             )}
           </div>
 
-          {/* Right Column - Summary & History */}
+          {/* Right Column - History Only */}
           <div className="space-y-6">
-            <QuoteSummaryCard
-              lines={lines}
-              customerId={customerId}
-              includeFreight={includeFreight}
-              isCalculating={loadingQuote}
-              onCalculate={submitQuote}
-              disabled={!account}
-            />
-
             <QuoteHistory
               quotes={quotesHistory}
               selectedQuote={selectedQuote}
