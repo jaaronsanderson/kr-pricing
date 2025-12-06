@@ -4,8 +4,9 @@ from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from auth import get_current_user, CurrentUser
+from pydantic import BaseModel
 from pricing.models import QuoteRequest, QuoteResponse
-from pricing.settings_loader import load_settings
+from pricing.settings_loader import load_settings, save_customers, save_items
 from pricing.core import calculate_quote
 from pricing.quote_log import (
     append_quote_record,
@@ -23,6 +24,21 @@ from pricing.custom_rules import (
 )
 
 app = FastAPI(title="KR Pricing Backend", version="1.0.0")
+
+
+# -------------------------------------------------------------------
+# Request models for PATCH endpoints
+# -------------------------------------------------------------------
+
+
+class CustomerUpdate(BaseModel):
+    column_break: Optional[str] = None
+    freight_column_offset: Optional[int] = None
+
+
+class ItemUpdate(BaseModel):
+    description: Optional[str] = None
+    avg_cost: Optional[float] = None
 
 # CORS so the React app can call us from localhost:5173 or production
 origins = [
@@ -64,7 +80,7 @@ def list_customers(user: CurrentUser = Depends(get_current_user)):
     """
     Return a simple list of customers:
     [
-      { "id": "CNG", "name": "CNG" },
+      { "id": "CNG", "name": "CNG", "column_break": "VN6ST0PC1AP0PE0SA0", "freight_column_offset": -8 },
       ...
     ]
     """
@@ -73,6 +89,8 @@ def list_customers(user: CurrentUser = Depends(get_current_user)):
         {
             "id": cid,
             "name": data.get("name", cid),
+            "column_break": data.get("column_break", ""),
+            "freight_column_offset": data.get("freight_column_offset", 0),
         }
         for cid, data in customers.items()
     ]
@@ -83,7 +101,7 @@ def list_items(user: CurrentUser = Depends(get_current_user)):
     """
     Return a simple list of items:
     [
-      { "sku": "VN10ST20AP15", "description": "..." },
+      { "sku": "VN10ST20AP15", "description": "...", "avg_cost": 1.50 },
       ...
     ]
     """
@@ -92,9 +110,111 @@ def list_items(user: CurrentUser = Depends(get_current_user)):
         {
             "sku": item.get("sku"),
             "description": item.get("description", ""),
+            "avg_cost": item.get("avg_cost", 0.0),
         }
         for item in items
     ]
+
+
+@app.patch("/customers/{customer_id}")
+def update_customer(
+    customer_id: str,
+    updates: CustomerUpdate,
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Update a customer's column_break and/or freight_column_offset.
+    Persists changes to customers.json.
+    """
+    customers = SETTINGS["customers"]
+    if customer_id not in customers:
+        raise HTTPException(status_code=404, detail=f"Customer not found: {customer_id}")
+
+    # Apply updates
+    if updates.column_break is not None:
+        customers[customer_id]["column_break"] = updates.column_break
+    if updates.freight_column_offset is not None:
+        customers[customer_id]["freight_column_offset"] = updates.freight_column_offset
+
+    # Save to disk
+    save_customers(customers)
+
+    return {
+        "id": customer_id,
+        "name": customers[customer_id].get("name", customer_id),
+        "column_break": customers[customer_id].get("column_break", ""),
+        "freight_column_offset": customers[customer_id].get("freight_column_offset", 0),
+    }
+
+
+@app.patch("/items/{sku}")
+def update_item(
+    sku: str,
+    updates: ItemUpdate,
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Update an item's description and/or avg_cost.
+    Persists changes to items.json.
+    """
+    items = SETTINGS["items"]
+    item = next((i for i in items if i.get("sku") == sku), None)
+    if not item:
+        raise HTTPException(status_code=404, detail=f"Item not found: {sku}")
+
+    # Apply updates
+    if updates.description is not None:
+        item["description"] = updates.description
+    if updates.avg_cost is not None:
+        item["avg_cost"] = updates.avg_cost
+
+    # Save to disk
+    save_items(items)
+
+    return {
+        "sku": sku,
+        "description": item.get("description", ""),
+        "avg_cost": item.get("avg_cost", 0.0),
+    }
+
+
+@app.delete("/customers/{customer_id}")
+def delete_customer(
+    customer_id: str,
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Delete a customer.
+    Persists changes to customers.json.
+    """
+    customers = SETTINGS["customers"]
+    if customer_id not in customers:
+        raise HTTPException(status_code=404, detail=f"Customer not found: {customer_id}")
+
+    del customers[customer_id]
+    save_customers(customers)
+
+    return {"deleted": customer_id}
+
+
+@app.delete("/items/{sku}")
+def delete_item(
+    sku: str,
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Delete an item.
+    Persists changes to items.json.
+    """
+    items = SETTINGS["items"]
+    item_index = next((i for i, item in enumerate(items) if item.get("sku") == sku), None)
+    if item_index is None:
+        raise HTTPException(status_code=404, detail=f"Item not found: {sku}")
+
+    items.pop(item_index)
+    save_items(items)
+
+    return {"deleted": sku}
 
 
 # -------------------------------------------------------------------

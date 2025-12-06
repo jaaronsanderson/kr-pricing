@@ -38,6 +38,7 @@ class CustomerUpdate(BaseModel):
 
 class ItemUpdate(BaseModel):
     description: Optional[str] = None
+    avg_cost: Optional[float] = None
 
 # CORS so the React app can call us from localhost:5173 or production
 origins = [
@@ -100,7 +101,7 @@ def list_items(user: CurrentUser = Depends(get_current_user)):
     """
     Return a simple list of items:
     [
-      { "sku": "VN10ST20AP15", "description": "..." },
+      { "sku": "VN10ST20AP15", "description": "...", "avg_cost": 1.50 },
       ...
     ]
     """
@@ -109,6 +110,7 @@ def list_items(user: CurrentUser = Depends(get_current_user)):
         {
             "sku": item.get("sku"),
             "description": item.get("description", ""),
+            "avg_cost": item.get("avg_cost", 0.0),
         }
         for item in items
     ]
@@ -152,7 +154,7 @@ def update_item(
     user: CurrentUser = Depends(get_current_user),
 ):
     """
-    Update an item's description.
+    Update an item's description and/or avg_cost.
     Persists changes to items.json.
     """
     items = SETTINGS["items"]
@@ -163,6 +165,8 @@ def update_item(
     # Apply updates
     if updates.description is not None:
         item["description"] = updates.description
+    if updates.avg_cost is not None:
+        item["avg_cost"] = updates.avg_cost
 
     # Save to disk
     save_items(items)
@@ -170,7 +174,47 @@ def update_item(
     return {
         "sku": sku,
         "description": item.get("description", ""),
+        "avg_cost": item.get("avg_cost", 0.0),
     }
+
+
+@app.delete("/customers/{customer_id}")
+def delete_customer(
+    customer_id: str,
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Delete a customer.
+    Persists changes to customers.json.
+    """
+    customers = SETTINGS["customers"]
+    if customer_id not in customers:
+        raise HTTPException(status_code=404, detail=f"Customer not found: {customer_id}")
+
+    del customers[customer_id]
+    save_customers(customers)
+
+    return {"deleted": customer_id}
+
+
+@app.delete("/items/{sku}")
+def delete_item(
+    sku: str,
+    user: CurrentUser = Depends(get_current_user),
+):
+    """
+    Delete an item.
+    Persists changes to items.json.
+    """
+    items = SETTINGS["items"]
+    item_index = next((i for i, item in enumerate(items) if item.get("sku") == sku), None)
+    if item_index is None:
+        raise HTTPException(status_code=404, detail=f"Item not found: {sku}")
+
+    items.pop(item_index)
+    save_items(items)
+
+    return {"deleted": sku}
 
 
 # -------------------------------------------------------------------
