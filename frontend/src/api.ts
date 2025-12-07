@@ -77,3 +77,49 @@ export async function fetchQuoteDetail(
     headers: buildHeaders(accessToken),
   });
 }
+
+// --------- Settings update endpoints ---------
+
+export async function updateCustomer(
+  customerId: string,
+  updates: { column_break?: string; freight_column_offset?: number },
+  accessToken?: string
+): Promise<Customer> {
+  return jsonFetch<Customer>(`${API_BASE}/customers/${encodeURIComponent(customerId)}`, {
+    method: "PATCH",
+    headers: buildHeaders(accessToken),
+    body: JSON.stringify(updates),
+  });
+}
+
+export async function updateItem(
+  sku: string,
+  updates: { description?: string; avg_cost?: number },
+  accessToken?: string
+): Promise<Item> {
+  return jsonFetch<Item>(`${API_BASE}/items/${encodeURIComponent(sku)}`, {
+    method: "PATCH",
+    headers: buildHeaders(accessToken),
+    body: JSON.stringify(updates),
+  });
+}
+
+export async function deleteCustomer(
+  customerId: string,
+  accessToken?: string
+): Promise<{ deleted: string }> {
+  return jsonFetch<{ deleted: string }>(`${API_BASE}/customers/${encodeURIComponent(customerId)}`, {
+    method: "DELETE",
+    headers: buildHeaders(accessToken),
+  });
+}
+
+export async function deleteItem(
+  sku: string,
+  accessToken?: string
+): Promise<{ deleted: string }> {
+  return jsonFetch<{ deleted: string }>(`${API_BASE}/items/${encodeURIComponent(sku)}`, {
+    method: "DELETE",
+    headers: buildHeaders(accessToken),
+  });
+}

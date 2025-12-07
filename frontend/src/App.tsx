@@ -25,12 +25,17 @@ import {
   createQuote,
   fetchQuotesHistory,
   fetchQuoteDetail,
+  updateCustomer,
+  updateItem,
+  deleteCustomer,
+  deleteItem,
 } from "./api";
 
 import {
   Header,
   QuoteResult,
   QuoteHistory,
+  Settings,
   StockLineEditor,
   CustomLineEditor,
   AdHocLineEditor,
@@ -59,6 +64,7 @@ function App() {
   const [loadingQuote, setLoadingQuote] = useState(false);
   const [loadingHistory, setLoadingHistory] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   // ---------------- Get access token ----------------
   const getAccessToken = async (): Promise<string | undefined> => {
@@ -270,6 +276,77 @@ function App() {
     });
   }
 
+  // ---------------- Settings handlers ----------------
+  async function handleUpdateCustomer(id: string, updates: Partial<Customer>) {
+    // Update local state immediately for responsiveness
+    setCustomers((prev) =>
+      prev.map((c) => (c.id === id ? { ...c, ...updates } : c))
+    );
+
+    // Persist to backend
+    try {
+      const token = await getAccessToken();
+      await updateCustomer(id, {
+        column_break: updates.column_break,
+        freight_column_offset: updates.freight_column_offset,
+      }, token);
+    } catch (err) {
+      console.error("Failed to save customer update:", err);
+      setError("Failed to save customer changes. Please try again.");
+    }
+  }
+
+  async function handleUpdateItem(sku: string, updates: Partial<Item>) {
+    // Update local state immediately for responsiveness
+    setItems((prev) =>
+      prev.map((i) => (i.sku === sku ? { ...i, ...updates } : i))
+    );
+
+    // Persist to backend
+    try {
+      const token = await getAccessToken();
+      await updateItem(sku, {
+        description: updates.description,
+        avg_cost: updates.avg_cost,
+      }, token);
+    } catch (err) {
+      console.error("Failed to save item update:", err);
+      setError("Failed to save item changes. Please try again.");
+    }
+  }
+
+  async function handleDeleteCustomer(id: string) {
+    try {
+      const token = await getAccessToken();
+      await deleteCustomer(id, token);
+      // Remove from local state
+      setCustomers((prev) => prev.filter((c) => c.id !== id));
+      // Clear selection if the deleted customer was selected
+      if (customerId === id) {
+        setCustomerId("");
+      }
+    } catch (err) {
+      console.error("Failed to delete customer:", err);
+      setError("Failed to delete customer. Please try again.");
+    }
+  }
+
+  async function handleDeleteItem(sku: string) {
+    try {
+      const token = await getAccessToken();
+      await deleteItem(sku, token);
+      // Remove from local state
+      setItems((prev) => prev.filter((i) => i.sku !== sku));
+      // Remove any stock lines referencing this item
+      setLines((prev) =>
+        prev.filter((line) => line.kind !== "stock" || line.itemSku !== sku)
+      );
+    } catch (err) {
+      console.error("Failed to delete item:", err);
+      setError("Failed to delete item. Please try again.");
+    }
+  }
+
   // ---------------- Submit quote ----------------
   async function submitQuote() {
     if (!account) {
@@ -394,21 +471,39 @@ function App() {
             <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold text-zinc-900">Quote Settings</h2>
-                <button
-                  onClick={clearQuote}
-                  disabled={!account}
-                  className={cn(
-                    "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all",
-                    account
-                      ? "border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 hover:border-zinc-300"
-                      : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
-                  )}
-                >
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                  </svg>
-                  New Quote
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setSettingsOpen(true)}
+                    disabled={!account}
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all",
+                      account
+                        ? "border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 hover:border-zinc-300"
+                        : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
+                    )}
+                  >
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Settings
+                  </button>
+                  <button
+                    onClick={clearQuote}
+                    disabled={!account}
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all",
+                      account
+                        ? "border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 hover:border-zinc-300"
+                        : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
+                    )}
+                  >
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    New Quote
+                  </button>
+                </div>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 {/* Customer Select */}
@@ -429,7 +524,7 @@ function App() {
                     <option value="">Select customer...</option>
                     {customers.map((c) => (
                       <option key={c.id} value={c.id}>
-                        {c.name} ({c.id})
+                        {c.name} ({c.column_break || c.id})
                       </option>
                     ))}
                   </select>
@@ -635,6 +730,18 @@ function App() {
           </div>
         </div>
       </main>
+
+      {/* Settings Modal */}
+      <Settings
+        isOpen={settingsOpen}
+        onClose={() => setSettingsOpen(false)}
+        customers={customers}
+        items={items}
+        onUpdateCustomer={handleUpdateCustomer}
+        onUpdateItem={handleUpdateItem}
+        onDeleteCustomer={handleDeleteCustomer}
+        onDeleteItem={handleDeleteItem}
+      />
     </div>
   );
 }

@@ -70,9 +70,8 @@ export const WIDE_SHEET_MINIMUM_VALUE = 550;
 export interface Customer {
   id: string;
   name: string;
-  column_min?: number;
-  column_max?: number;
-  freight_offset?: number;
+  column_break?: string;
+  freight_column_offset?: number;
 }
 
 export interface Item {
@@ -84,6 +83,7 @@ export interface Item {
   length?: number;
   weight_per_unit?: number;
   base_column?: number;
+  avg_cost?: number;
 }
 
 // ============ Line Types ============

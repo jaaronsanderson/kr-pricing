@@ -12,22 +12,21 @@ export function QuoteResult({ quote }: QuoteResultProps) {
   const lines = (quote as any).lines || [];
 
   const copyToClipboard = () => {
-    const headerRow = ["Description", "Qty", "Weight (lb)", "Sell/Unit", "Extended"].join("\t");
-    
+    const freightNote = quote.include_freight ? " delivered" : "";
+
     const lineRows = lines.map((line: any) => {
       const desc = line.description || line.sku || "";
       const qty = line.quantity ?? "";
-      const weight = line.weight_per_unit ? Number(line.weight_per_unit).toFixed(2) : "";
-      const sellPerUnit = line.sell_price_per_unit ? "$" + Number(line.sell_price_per_unit).toFixed(2) : "";
-      const extended = line.extended_sell_price ? "$" + Number(line.extended_sell_price).toFixed(2) : "";
-      
-      return [desc, qty, weight, sellPerUnit, extended].join("\t");
+      const unit = "sheets";
+      const sellPerUnit = line.sell_price_per_unit
+        ? "$" + Number(line.sell_price_per_unit).toFixed(2) + " per sheet" + freightNote
+        : "";
+
+      return [desc, qty, unit, sellPerUnit].join("\t");
     });
 
-    const totalRow = ["", "", "", "Total:", "$" + Number(quote.quote_total).toFixed(2)].join("\t");
-    
-    const clipboardText = [headerRow, ...lineRows, totalRow].join("\n");
-    
+    const clipboardText = lineRows.join("\n");
+
     navigator.clipboard.writeText(clipboardText).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
