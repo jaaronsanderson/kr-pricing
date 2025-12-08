@@ -103,26 +103,38 @@ def lookup_multiplier(total_column: int, column_multipliers_cfg: Dict[str, Any])
     return default_above_max
 
 
-def apply_order_minimums(price_per_unit: float, quantity: float, item_width: float) -> float:
+def apply_order_minimums(price_per_unit: float, quantity: float, item_width: float, item_length: float) -> float:
     """
     Applies:
-      - $150 global minimum
-      - $550 minimum if width > 47"
+      - $150 global minimum (MINIMUM_ORDER_VALUE)
+      - $550 minimum for large sheets (40x72 or larger)
     Returns adjusted price_per_unit.
     """
+    from .custom_rules import (
+        MINIMUM_ORDER_VALUE,
+        LARGE_SHEET_MIN_DIMENSION,
+        LARGE_SHEET_MAX_DIMENSION,
+        LARGE_SHEET_MINIMUM_VALUE,
+    )
+
     if quantity <= 0:
         return price_per_unit
 
     extended = price_per_unit * quantity
 
-    # $150 global minimum
-    if extended < 150:
-        price_per_unit = 150.0 / quantity
+    # Global minimum order value
+    if extended < MINIMUM_ORDER_VALUE:
+        price_per_unit = MINIMUM_ORDER_VALUE / quantity
         extended = price_per_unit * quantity
 
-    # $550 wide-sheet minimum
-    if item_width > 47 and extended < 550:
-        price_per_unit = 550.0 / quantity
+    # Large sheet minimum (40x72 or larger)
+    # Check that the smaller dimension is >= 40 and the larger dimension is >= 72
+    min_dim = min(item_width, item_length)
+    max_dim = max(item_width, item_length)
+    is_large_sheet = min_dim >= LARGE_SHEET_MIN_DIMENSION and max_dim >= LARGE_SHEET_MAX_DIMENSION
+
+    if is_large_sheet and extended < LARGE_SHEET_MINIMUM_VALUE:
+        price_per_unit = LARGE_SHEET_MINIMUM_VALUE / quantity
 
     return price_per_unit
 
@@ -253,6 +265,7 @@ def price_stock_line(
     surface = item.get("surface", "")
     weight_per_unit = float(item.get("weight_per_unit", 0.0))
     item_width = float(item.get("width", 48.0))
+    item_length = float(item.get("length", 48.0))
 
     base_cost_per_unit = build_base_cost_per_unit(
         material, color, surface, weight_per_unit, base_costs
@@ -274,7 +287,7 @@ def price_stock_line(
         column_multipliers_cfg=column_multipliers_cfg,
     )
 
-    sell_price_per_unit = apply_order_minimums(raw_price_per_unit, line.quantity, item_width)
+    sell_price_per_unit = apply_order_minimums(raw_price_per_unit, line.quantity, item_width, item_length)
     extended = sell_price_per_unit * line.quantity
 
     return LinePriceResult(
@@ -298,6 +311,9 @@ def price_custom_line(
     column_multipliers_cfg: Dict[str, Any],
     include_freight: bool,
 ) -> LinePriceResult:
+    # Import custom rules for material specs
+    from .custom_rules import get_material_spec, MINIMUM_WEIGHT_LBS
+
     material = line.material or ""
     color = line.color or ""
     surface = line.surface or ""
@@ -307,21 +323,25 @@ def price_custom_line(
     sheets = float(line.sheets or 0.0)
 
     mat_key = material.lower()
-    if mat_key in ("vinyl", "apet"):
+
+    # Get material specification from custom_rules
+    spec = get_material_spec(material)
+    if spec:
+        weight_factor = spec.weight_factor
+        material_code = spec.material_code
+    elif mat_key in ("vinyl", "apet"):
         weight_factor = 0.05
         material_code = "VN" if mat_key == "vinyl" else "AP"
-        default_width_for_min = 25.0
     else:
         # treat other customs like Styrene for now
         weight_factor = 0.04
         material_code = "ST"
-        default_width_for_min = 40.0
 
     weight_per_sheet = weight_factor * gauge * width * length
     total_weight = weight_per_sheet * sheets
 
     # ~2000 lbs minimum run (mirroring original logic)
-    if total_weight < 2000 and weight_per_sheet > 0:
+    if total_weight < MINIMUM_WEIGHT_LBS and weight_per_sheet > 0:
         sheets = ceil(2010.0 / weight_per_sheet)
 
     weight_per_unit = weight_per_sheet
@@ -350,16 +370,18 @@ def price_custom_line(
         column_multipliers_cfg=column_multipliers_cfg,
     )
 
-    sell_price_per_unit = apply_order_minimums(
-        raw_price_per_unit, sheets, default_width_for_min
-    )
+    # Use actual sheet dimensions for minimum order calculations
+    sell_price_per_unit = apply_order_minimums(raw_price_per_unit, sheets, width, length)
     extended = sell_price_per_unit * sheets
+
+    # Format: ".030 White Matte/Matte Vinyl 28X40"
+    # gauge as decimal, color, surface, material, widthXlength
+    auto_description = f"{gauge:.3f} {color} {surface} {material} {int(width)}X{int(length)}"
 
     return LinePriceResult(
         type=line.type,
         sku=None,
-        description=line.description
-        or f"Custom {material} {gauge}ga {width}x{length}",
+        description=line.description or auto_description,
         quantity=sheets,
         weight_per_unit=weight_per_unit,
         base_cost_per_unit=round(base_cost_per_unit, 4),
@@ -399,8 +421,8 @@ def price_ad_hoc_line(
         column_multipliers_cfg=column_multipliers_cfg,
     )
 
-    # No specific width given, assume 48" for minimums
-    sell_price_per_unit = apply_order_minimums(raw_price_per_unit, line.quantity, 48.0)
+    # No specific dimensions given for ad-hoc lines, use 0 to apply only $150 minimum (not $550)
+    sell_price_per_unit = apply_order_minimums(raw_price_per_unit, line.quantity, 0.0, 0.0)
     extended = sell_price_per_unit * line.quantity
 
     return LinePriceResult(

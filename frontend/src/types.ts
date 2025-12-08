@@ -62,8 +62,10 @@ export const DEFAULT_CUSTOM_VALUES = {
 // Minimum order constants
 export const MINIMUM_WEIGHT_LBS = 2000;
 export const MINIMUM_ORDER_VALUE = 150;
-export const WIDE_SHEET_THRESHOLD = 47;
-export const WIDE_SHEET_MINIMUM_VALUE = 550;
+// Large sheet threshold: sheets 40x72 or larger get $550 minimum
+export const LARGE_SHEET_MIN_DIMENSION = 40;
+export const LARGE_SHEET_MAX_DIMENSION = 72;
+export const LARGE_SHEET_MINIMUM_VALUE = 550;
 
 // ============ Customer & Item ============
 
