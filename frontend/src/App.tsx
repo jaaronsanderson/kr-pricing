@@ -522,11 +522,26 @@ function App() {
                     )}
                   >
                     <option value="">Select customer...</option>
-                    {customers.map((c) => (
-                      <option key={c.id} value={c.id}>
-                        {c.name} ({c.column_break || c.id})
-                      </option>
-                    ))}
+                    {/* Column customers first (sorted numerically), then real customers alphabetically */}
+                    {[...customers]
+                      .sort((a, b) => {
+                        const aIsColumn = a.name.startsWith("Column ");
+                        const bIsColumn = b.name.startsWith("Column ");
+                        if (aIsColumn && bIsColumn) {
+                          // Sort columns numerically
+                          const aNum = parseInt(a.name.replace("Column ", ""), 10);
+                          const bNum = parseInt(b.name.replace("Column ", ""), 10);
+                          return aNum - bNum;
+                        }
+                        if (aIsColumn) return -1;
+                        if (bIsColumn) return 1;
+                        return a.name.localeCompare(b.name);
+                      })
+                      .map((c) => (
+                        <option key={c.id} value={c.id}>
+                          {c.name} ({c.column_break || c.id})
+                        </option>
+                      ))}
                   </select>
                 </div>
 
