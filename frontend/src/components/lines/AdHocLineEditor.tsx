@@ -80,6 +80,7 @@ export function AdHocLineEditor({
             step={0.01}
             value={line.weightPerUnit}
             onChange={(e) => onUpdate(index, { weightPerUnit: Number(e.target.value) || 0 })}
+            onFocus={(e) => e.target.select()}
             className={cn(
               "w-full rounded-lg border border-amber-200 bg-white px-3 py-2.5 text-sm text-zinc-900",
               "focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/20",
@@ -99,6 +100,7 @@ export function AdHocLineEditor({
             step={0.01}
             value={line.landedCostPerUnit}
             onChange={(e) => onUpdate(index, { landedCostPerUnit: Number(e.target.value) || 0 })}
+            onFocus={(e) => e.target.select()}
             className={cn(
               "w-full rounded-lg border border-amber-200 bg-white px-3 py-2.5 text-sm text-zinc-900",
               "focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/20",
@@ -118,6 +120,7 @@ export function AdHocLineEditor({
             step={1}
             value={line.quantity}
             onChange={(e) => onUpdate(index, { quantity: Number(e.target.value) || 1 })}
+            onFocus={(e) => e.target.select()}
             className={cn(
               "w-full rounded-lg border border-amber-200 bg-white px-3 py-2.5 text-sm text-zinc-900",
               "focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/20",

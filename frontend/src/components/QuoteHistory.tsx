@@ -9,6 +9,7 @@ interface QuoteHistoryProps {
   onRefresh: () => void;
   onSelectQuote: (id: number) => void;
   disabled: boolean;
+  tabIndex?: number;
 }
 
 export function QuoteHistory({
@@ -18,6 +19,7 @@ export function QuoteHistory({
   onRefresh,
   onSelectQuote,
   disabled,
+  tabIndex = 0,
 }: QuoteHistoryProps) {
   const [showSelectedJson, setShowSelectedJson] = useState(false);
 
@@ -45,6 +47,7 @@ export function QuoteHistory({
           <button
             onClick={onRefresh}
             disabled={isLoading || disabled}
+            tabIndex={tabIndex}
             className={cn(
               "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all",
               isLoading || disabled
@@ -125,6 +128,7 @@ export function QuoteHistory({
               <button
                 key={q.id}
                 onClick={() => onSelectQuote(q.id)}
+                tabIndex={tabIndex}
                 className={cn(
                   "w-full px-5 py-3 text-left transition-colors",
                   selectedQuote?.id === q.id
@@ -166,6 +170,7 @@ export function QuoteHistory({
               </h3>
               <button
                 onClick={() => setShowSelectedJson((prev) => !prev)}
+                tabIndex={tabIndex}
                 className="text-xs text-zinc-500 hover:text-zinc-700"
               >
                 {showSelectedJson ? "Hide" : "Show"} JSON

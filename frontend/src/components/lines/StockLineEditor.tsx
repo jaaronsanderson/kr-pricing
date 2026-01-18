@@ -63,6 +63,7 @@ export function StockLineEditor({
           <select
             value={line.itemSku}
             onChange={(e) => onUpdate(index, { itemSku: e.target.value })}
+            tabIndex={6}
             className={cn(
               "w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900",
               "focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20",
@@ -89,6 +90,8 @@ export function StockLineEditor({
             step={1}
             value={line.quantity}
             onChange={(e) => onUpdate(index, { quantity: Number(e.target.value) || 1 })}
+            onFocus={(e) => e.target.select()}
+            tabIndex={7}
             className={cn(
               "w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900",
               "focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20",

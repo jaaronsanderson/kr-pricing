@@ -467,43 +467,47 @@ function App() {
         <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
           {/* Left Column - Quote Builder */}
           <div className="space-y-6">
+            {/* New Quote Button - Prominent */}
+            <button
+              onClick={clearQuote}
+              disabled={!account}
+              tabIndex={1}
+              className={cn(
+                "w-full rounded-xl py-3 text-base font-semibold transition-all shadow-md mb-4",
+                account
+                  ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg"
+                  : "bg-zinc-200 text-zinc-400 cursor-not-allowed"
+              )}
+            >
+              <span className="flex items-center justify-center gap-2">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                New Quote
+              </span>
+            </button>
+
             {/* Customer & Settings Card */}
             <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold text-zinc-900">Quote Settings</h2>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setSettingsOpen(true)}
-                    disabled={!account}
-                    className={cn(
-                      "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all",
-                      account
-                        ? "border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 hover:border-zinc-300"
-                        : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
-                    )}
-                  >
-                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    Settings
-                  </button>
-                  <button
-                    onClick={clearQuote}
-                    disabled={!account}
-                    className={cn(
-                      "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all",
-                      account
-                        ? "border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 hover:border-zinc-300"
-                        : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
-                    )}
-                  >
-                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                    </svg>
-                    New Quote
-                  </button>
-                </div>
+                <button
+                  onClick={() => setSettingsOpen(true)}
+                  disabled={!account}
+                  tabIndex={-1}
+                  className={cn(
+                    "inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-all",
+                    account
+                      ? "border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 hover:border-zinc-300"
+                      : "bg-zinc-100 text-zinc-400 cursor-not-allowed"
+                  )}
+                >
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Settings
+                </button>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 {/* Customer Select */}
@@ -515,6 +519,7 @@ function App() {
                     value={customerId}
                     onChange={(e) => setCustomerId(e.target.value)}
                     disabled={!account}
+                    tabIndex={2}
                     className={cn(
                       "w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900",
                       "focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20",
@@ -575,6 +580,7 @@ function App() {
                   <button
                     onClick={addStockLine}
                     disabled={!account}
+                    tabIndex={3}
                     className={cn(
                       "inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all",
                       account
@@ -590,6 +596,7 @@ function App() {
                   <button
                     onClick={addCustomLine}
                     disabled={!account}
+                    tabIndex={4}
                     className={cn(
                       "inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all",
                       account
@@ -605,6 +612,7 @@ function App() {
                   <button
                     onClick={addAdHocLine}
                     disabled={!account}
+                    tabIndex={5}
                     className={cn(
                       "inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all",
                       account
@@ -690,6 +698,7 @@ function App() {
                   <button
                     onClick={submitQuote}
                     disabled={!account || !customerId || loadingQuote}
+                    tabIndex={8}
                     className={cn(
                       "w-full rounded-xl py-4 text-base font-semibold transition-all shadow-lg",
                       account && customerId && !loadingQuote
@@ -733,7 +742,7 @@ function App() {
           </div>
 
           {/* Right Column - History Only */}
-          <div className="space-y-6">
+          <div className="space-y-6" tabIndex={-1}>
             <QuoteHistory
               quotes={quotesHistory}
               selectedQuote={selectedQuote}
@@ -741,6 +750,7 @@ function App() {
               onRefresh={loadQuotesHistoryHandler}
               onSelectQuote={loadQuoteById}
               disabled={!account}
+              tabIndex={-1}
             />
           </div>
         </div>

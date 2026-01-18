@@ -74,6 +74,7 @@ export function Header({
                 </div>
                 <button
                   onClick={onLogout}
+                  tabIndex={-1}
                   className="rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50 hover:border-zinc-300"
                 >
                   Sign out

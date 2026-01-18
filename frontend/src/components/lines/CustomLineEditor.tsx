@@ -243,6 +243,7 @@ export function CustomLineEditor({
             step={0.001}
             value={line.gauge}
             onChange={(e) => onUpdate(index, { gauge: Number(e.target.value) || 0 })}
+            onFocus={(e) => e.target.select()}
             className={cn(
               "w-full rounded-lg border bg-white px-3 py-2.5 text-sm text-zinc-900",
               "focus:outline-none focus:ring-2 transition-colors",
@@ -271,6 +272,7 @@ export function CustomLineEditor({
             step={0.1}
             value={line.width}
             onChange={(e) => onUpdate(index, { width: Number(e.target.value) || 0 })}
+            onFocus={(e) => e.target.select()}
             className={cn(
               "w-full rounded-lg border bg-white px-3 py-2.5 text-sm text-zinc-900",
               "focus:outline-none focus:ring-2 transition-colors",
@@ -299,6 +301,7 @@ export function CustomLineEditor({
             step={0.1}
             value={line.length}
             onChange={(e) => onUpdate(index, { length: Number(e.target.value) || 0 })}
+            onFocus={(e) => e.target.select()}
             className={cn(
               "w-full rounded-lg border bg-white px-3 py-2.5 text-sm text-zinc-900",
               "focus:outline-none focus:ring-2 transition-colors",
@@ -323,6 +326,7 @@ export function CustomLineEditor({
             step={1}
             value={line.sheets}
             onChange={(e) => onUpdate(index, { sheets: Number(e.target.value) || 1 })}
+            onFocus={(e) => e.target.select()}
             className={cn(
               "w-full rounded-lg border border-emerald-200 bg-white px-3 py-2.5 text-sm text-zinc-900",
               "focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20",
